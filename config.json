@@ -1,0 +1,937 @@
+[
+    {
+        "name": "Xanax Taken",
+        "log": 2290,
+        "type": "count",
+        "header": [
+            "Date",
+            "Success",
+            "Overdose"
+        ],
+        "options": {
+            "height": 480,
+            "animation": {
+                "startup": true
+            },
+            "title": "Xanax Taken",
+            "vAxis": {
+                "title": "Count"
+            },
+            "seriesType": "bars",
+            "series": {
+                "0": {
+                    "axis": "counts",
+                    "type": "bars",
+                    "color": "blue"
+                },
+                "1": {
+                    "axis": "counts",
+                    "type": "bars",
+                    "color": "red"
+                }
+            }
+        }
+    },
+    {
+        "name": "Revive Data",
+        "log": 5410,
+        "type": "revive",
+        "header": [
+            "Date",
+            "Successes",
+            "Failures"
+        ],
+        "options": {
+            "height": 480,
+            "animation": {
+                "startup": true
+            },
+            "seriesType": "area",
+            "title": "Revive Data"
+        }
+    },
+    {
+        "name": "Cracking Data",
+        "log": 9010,
+        "header": [
+            "Date",
+            "Successes",
+            "Failures",
+            "Money"
+        ],
+        "crime_action": "password",
+        "type": "S/F",
+        "options": {
+            "height": 480,
+            "animation": {
+                "startup": true
+            },
+            "title": "Cracking Data",
+            "series": {
+                "0": {
+                    "axis": "counts",
+                    "targetAxisIndex": 1,
+                    "type": "bars",
+                    "color": "green"
+                },
+                "1": {
+                    "axis": "counts",
+                    "targetAxisIndex": 1,
+                    "type": "bars",
+                    "color": "red"
+                },
+                "2": {
+                    "type": "line",
+                    "targetAxisIndex": 0,
+                    "axis": "money",
+                    "color": "blue"
+                }
+            },
+            "axes": {
+                "y": {
+                    "counts": {
+                        "label": "Success/Failure"
+                    },
+                    "money": {
+                        "side": "right",
+                        "label": "Money"
+                    }
+                }
+            }
+        }
+    },
+    {
+        "name": "Racing finish Data",
+        "log": 8731,
+        "header": [
+            "Date",
+            "Winner",
+            "Loser"
+        ],
+        "type": "Race",
+        "options": {
+            "seriesType": "bars",
+            "title": "Racing finish Data"
+        }
+    },
+    {
+        "name": "Bootlegging Data",
+        "log": 9050,
+        "header": [
+            "Date",
+            "Successes",
+            "Failures",
+            "Money"
+        ],
+        "crime_action": "DVDs|online",
+        "type": "S/F",
+        "options": {
+            "height": 480,
+            "animation": {
+                "startup": true
+            },
+            "title": "Bootlegging Data",
+            "series": {
+                "0": {
+                    "axis": "counts",
+                    "targetAxisIndex": 1,
+                    "type": "bars",
+                    "color": "green"
+                },
+                "1": {
+                    "axis": "counts",
+                    "targetAxisIndex": 1,
+                    "type": "bars",
+                    "color": "red"
+                },
+                "2": {
+                    "type": "line",
+                    "targetAxisIndex": 0,
+                    "axis": "money",
+                    "color": "blue"
+                }
+            },
+            "axes": {
+                "y": {
+                    "counts": {
+                        "label": "Success/Failure"
+                    },
+                    "money": {
+                        "side": "right",
+                        "label": "Money"
+                    }
+                }
+            }
+        }
+    },
+    {
+        "name": "Pickpocketing Data",
+        "log": 9020,
+        "header": [
+            "Date",
+            "Successes",
+            "Failures",
+            "Money",
+            "Items"
+        ],
+        "crime_action": "pickpocketing",
+        "type": "S/F",
+        "options": {
+            "height": 480,
+            "animation": {
+                "startup": true
+            },
+            "title": "Pickpocketing Data",
+            "vAxis": {"scaleType":"log"},
+            "series": {
+                "0": {
+                    "axis": "counts",
+                    "targetAxisIndex": 1,
+                    "type": "bars",
+                    "color": "green"
+                },
+                "1": {
+                    "axis": "counts",
+                    "targetAxisIndex": 1,
+                    "type": "bars",
+                    "color": "red"
+                },
+                "2": {
+                    "type": "line",
+                    "targetAxisIndex": 0,
+                    "axis": "money"
+                },
+                "3": {
+                    "type": "bars",
+                    "targetAxisIndex": 1,
+                    "axis": "counts",
+                    "color": "blue"
+                }
+            },
+            "axes": {
+                "y": {
+                    "counts": {
+                        "label": "Success/Failure"
+                    },
+                    "money": {
+                        "side": "right",
+                        "label": "Money"
+                    }
+                }
+            }
+        }
+    },
+    {
+        "name": "Shoplifting Data",
+        "log": 9020,
+        "header": [
+            "Date",
+            "Successes",
+            "Failures",
+            "Money",
+            "Items"
+        ],
+        "crime_action": "shoplifting",
+        "type": "S/F",
+        "options": {
+            "height": 480,
+            "animation": {
+                "startup": true
+            },
+            "title": "Shoplifting Data",
+            "series": {
+                "0": {
+                    "axis": "counts",
+                    "targetAxisIndex": 1,
+                    "type": "bars",
+                    "color": "green"
+                },
+                "1": {
+                    "axis": "counts",
+                    "targetAxisIndex": 1,
+                    "type": "bars",
+                    "color": "red"
+                },
+                "2": {
+                    "type": "line",
+                    "targetAxisIndex": 0,
+                    "axis": "money",
+                    "color": "blue"
+                },
+                "3": {
+                    "type": "bars",
+                    "targetAxisIndex": 1,
+                    "axis": "counts",
+                    "color": "blue"
+                }
+            },
+            "axes": {
+                "y": {
+                    "counts": {
+                        "label": "Success/Failure"
+                    },
+                    "money": {
+                        "side": "right",
+                        "label": "Money"
+                    }
+                }
+            }
+        }
+    },
+    {
+        "name": "Graffiti Data",
+        "header": [
+            "Date",
+            "Successes",
+            "Failures",
+            "Money",
+            "Items"
+        ],
+        "log": "9010",
+        "crime_action": "graffiti",
+        "type": "graffiti",
+        "options": {
+            "height": 480,
+            "animation": {
+                "startup": true
+            },
+            "title": "Graffiti Data",
+            "series": {
+                "0": {
+                    "axis": "counts",
+                    "targetAxisIndex": 1,
+                    "type": "bars",
+                    "color": "green"
+                },
+                "1": {
+                    "axis": "counts",
+                    "targetAxisIndex": 1,
+                    "type": "bars",
+                    "color": "red"
+                },
+                "2": {
+                    "type": "line",
+                    "targetAxisIndex": 0,
+                    "axis": "money",
+                    "color": "blue"
+                },
+                "3": {
+                    "type": "bars",
+                    "targetAxisIndex": 1,
+                    "axis": "counts",
+                    "color": "blue"
+                }
+            },
+            "axes": {
+                "y": {
+                    "counts": {
+                        "label": "Success/Failure"
+                    },
+                    "money": {
+                        "side": "right",
+                        "label": "Money"
+                    }
+                }
+            }
+        }
+    },
+    {
+        "name": "Searching for cash Data",
+        "log": 9020,
+        "header": [
+            "Date",
+            "Successes",
+            "Failures",
+            "Money",
+            "Items"
+        ],
+        "crime_action": "search",
+        "type": "S/F",
+        "options": {
+            "height": 480,
+            "animation": {
+                "startup": true
+            },
+            "title": "Searching for cash Data",
+            "series": {
+                "0": {
+                    "axis": "counts",
+                    "targetAxisIndex": 1,
+                    "type": "bars",
+                    "color": "green"
+                },
+                "1": {
+                    "axis": "counts",
+                    "targetAxisIndex": 1,
+                    "type": "bars",
+                    "color": "red"
+                },
+                "2": {
+                    "type": "line",
+                    "targetAxisIndex": 0,
+                    "axis": "money",
+                    "color": "blue"
+                },
+                "3": {
+                    "axis": "counts",
+                    "targetAxisIndex": 1,
+                    "type": "bars",
+                    "color": "black"
+                }
+            },
+            "axes": {
+                "y": {
+                    "counts": {
+                        "label": "Success/Failure"
+                    },
+                    "money": {
+                        "side": "right",
+                        "label": "Money"
+                    }
+                }
+            }
+        }
+    },
+    {
+        "name": "Burglary Data",
+        "log": 9060,
+        "header": [
+            "Date",
+            "Successes",
+            "Failures",
+            "Money",
+            "Items"
+        ],
+        "crime_action": "burglary",
+        "type": "S/F",
+        "options": {
+            "height": 480,
+            "animation": {
+                "startup": true
+            },
+            "title": "Burglary Data",
+            "series": {
+                "0": {
+                    "axis": "counts",
+                    "targetAxisIndex": 1,
+                    "type": "bars",
+                    "color": "green"
+                },
+                "1": {
+                    "axis": "counts",
+                    "targetAxisIndex": 1,
+                    "type": "bars",
+                    "color": "red"
+                },
+                "2": {
+                    "type": "line",
+                    "targetAxisIndex": 0,
+                    "axis": "money",
+                    "color": "black"
+                },
+                "3": {
+                    "axis": "counts",
+                    "targetAxisIndex": 1,
+                    "type": "bars",
+                    "color": "blue"
+                }
+            },
+            "axes": {
+                "y": {
+                    "counts": {
+                        "label": "Success/Failure",
+                        "scaleType": "log"
+                    },
+                    "money": {
+                        "side": "right",
+                        "label": "Money"
+                    }
+                }
+            }
+        }
+    },
+    {
+        "name": "Skimming Data",
+        "log": 9055,
+        "header": [
+            "Date",
+            "Successes",
+            "Failures",
+            "Money"
+        ],
+        "crime_action": ".*skim.*|.*details.*",
+        "type": "S/F",
+        "options": {
+            "height": 480,
+            "animation": {
+                "startup": true
+            },
+            "title": "Skimming Data",
+            "series": {
+                "0": {
+                    "axis": "counts",
+                    "targetAxisIndex": 1,
+                    "type": "bars",
+                    "color": "green"
+                },
+                "1": {
+                    "axis": "counts",
+                    "targetAxisIndex": 1,
+                    "type": "bars",
+                    "color": "red"
+                },
+                "2": {
+                    "type": "line",
+                    "targetAxisIndex": 0,
+                    "axis": "money",
+                    "color": "blue"
+                },
+                "3": {
+                    "type": "bars",
+                    "targetAxisIndex": 1,
+                    "axis": "money",
+                    "color": "blue"
+                }
+            },
+            "axes": {
+                "y": {
+                    "counts": {
+                        "label": "Success/Failure/Items gained"
+                    },
+                    "money": {
+                        "side": "right",
+                        "label": "Money"
+                    }
+                }
+            }
+        }
+    },
+    {
+        "name": "Forgery Data",
+        "log": 9010,
+        "header": [
+            "Date",
+            "Successes",
+            "Failures",
+            "Items"
+        ],
+        "crime_action": "cutting|printing|signing|drafting|laminating|perforating",
+        "type": "S/F",
+        "options": {
+            "height": 480,
+            "animation": {
+                "startup": true
+            },
+            "title": "Forgery Data",
+            "series": {
+                "0": {
+                    "type": "bars",
+                    "color": "green"
+                },
+                "1": {
+                    "type": "bars",
+                    "color": "red"
+                },
+                "2": {
+                    "type": "bars",
+                    "color": "blue"
+                }
+            }
+        }
+    },
+    {
+        "name": "Cracking Skill",
+        "header": [
+            "Date",
+            "Skill"
+        ],
+        "crime": "cracking",
+        "log": 9005,
+        "type": "skill",
+        "options": {
+            "height": 480,
+            "backgroundColor": "rgba(255,255,255,0.01)",
+            "animation": {
+                "startup": true
+            },
+            "title": "Cracking Skill"
+        }
+    },
+    {
+        "name": "Bootlegging Skill",
+        "header": [
+            "Date",
+            "Skill"
+        ],
+        "crime": "bootlegging",
+        "log": 9005,
+        "type": "skill",
+        "options": {
+            "height": 480,
+            "backgroundColor": "rgba(255,255,255,0.01)",
+            "animation": {
+                "startup": true
+            },
+            "title": "Bootlegging Skill"
+        }
+    },
+    {
+        "name": "Graffiti Skill",
+        "header": [
+            "Date",
+            "Skill"
+        ],
+        "crime": "graffiti",
+        "log": 9005,
+        "type": "skill",
+        "options": {
+            "height": 480,
+            "backgroundColor": "rgba(255,255,255,0.01)",
+            "animation": {
+                "startup": true
+            },
+            "title": "Graffiti Skill"
+        }
+    },
+    {
+        "name": "All Skills",
+        "header": [
+            "Date",
+            "Cracking",
+            "Pickpocketing",
+            "Graffiti",
+            "Skimming",
+            "Forgery",
+            "Searching",
+            "Shoplifting",
+            "Bootlegging",
+            "Burglary"
+
+        ],
+        "crime": "all",
+        "log": 9005,
+        "type": "AllSkills",
+        "options": {
+            "height": 480,
+            "backgroundColor": "rgba(255,255,255,0.01)",
+            "animation": {
+                "startup": true
+            },
+            "curveType": "function",
+            "title": "Skills",
+            "series": {
+                "0": {
+                    "type": "line",
+                    "color": "green"
+                },
+                "1": {
+                    "type": "line",
+                    "color": "red"
+                },
+                "2": {
+                    "type": "line",
+                    "color": "blue"
+                },
+                "3": {
+                    "type": "line",
+                    "color": "yellow"
+                },
+                "4": {
+                    "type": "line",
+                    "color": "orange"
+                },
+                "5": {
+                    "type": "line",
+                    "color": "black"
+                },
+                "6": {
+                    "type": "line",
+                    "color": "blue"
+                },
+                "7": {
+                    "type": "line",
+                    "color": "gray"
+                },
+                "8": {
+                    "type": "line",
+                    "color": "green"
+                }
+            }
+        }
+    },
+    {
+        "name": "Pickpocketing Skill",
+        "header": [
+            "Date",
+            "Skill"
+        ],
+        "crime": "pickpocketing",
+        "log": 9005,
+        "type": "skill",
+        "options": {
+            "height": 480,
+            "backgroundColor": "rgba(255,255,255,0.01)",
+            "animation": {
+                "startup": true
+            },
+            "title": "Pickpocketing Skill"
+        }
+    },
+    {
+        "name": "Shoplifting Skill",
+        "header": [
+            "Date",
+            "Skill"
+        ],
+        "crime": "shoplift",
+        "log": 9005,
+        "type": "skill",
+        "options": {
+            "height": 480,
+            "backgroundColor": "rgba(255,255,255,0.01)",
+            "animation": {
+                "startup": true
+            },
+            "title": "Shoplifting Skill"
+        }
+    },
+    {
+        "name": "Searching for cash Skill",
+        "header": [
+            "Date",
+            "Skill"
+        ],
+        "crime": "searching",
+        "log": 9005,
+        "type": "skill",
+        "options": {
+            "height": 480,
+            "backgroundColor": "rgba(255,255,255,0.01)",
+            "animation": {
+                "startup": true
+            },
+            "title": "Searching for cash Skill"
+        }
+    },
+    {
+        "name": "Burglary Skill",
+        "header": [
+            "Date",
+            "Skill"
+        ],
+        "crime": "burglary",
+        "log": 9005,
+        "type": "skill",
+        "options": {
+            "height": 480,
+            "backgroundColor": "rgba(255,255,255,0.01)",
+            "animation": {
+                "startup": true
+            },
+            "title": "Burglary Skill"
+        }
+    },
+    {
+        "name": "Forgery Skill",
+        "header": [
+            "Date",
+            "Skill"
+        ],
+        "crime": "forgery",
+        "log": 9005,
+        "type": "skill",
+        "options": {
+            "height": 480,
+            "backgroundColor": "rgba(255,255,255,0.01)",
+            "animation": {
+                "startup": true
+            },
+            "title": "Forgery Skill"
+        }
+    },
+    {
+        "name": "Gym Data",
+        "header": [
+            "Date",
+            "Speed",
+            "Defense",
+            "Dexterity",
+            "Strength",
+            "EnergyUsed"
+        ],
+        "category": "Gym",
+        "options": {
+            "height": 480,
+            "animation": {
+                "startup": true
+            },
+            "title": "Gym Data",
+            "series": {
+                "0": {
+                    "axis": "stat",
+                    "targetAxisIndex": 1,
+                    "label": "Speed",
+                    "type": "line",
+                    "color": "green"
+                },
+                "1": {
+                    "axis": "stat",
+                    "targetAxisIndex": 1,
+                    "label": "Defense",
+                    "type": "line",
+                    "color": "red"
+                },
+                "2": {
+                    "axis": "stat",
+                    "type": "line",
+                    "targetAxisIndex": 1,
+                    "label": "Dexterity",
+                    "color": "blue"
+                },
+                "3": {
+                    "axis": "stat",
+                    "type": "line",
+                    "targetAxisIndex": 1,
+                    "label": "Strength",
+                    "color": "pink"
+                },
+                "4": {
+                    "axis": "energy",
+                    "type": "bars",
+                    "targetAxisIndex": 0,
+                    "color": "black"
+                }
+            },
+            "axes": {
+                "y": {
+                    "stat": {
+                        "label": "Stats"
+                    },
+                    "energy": {
+                        "side": "right",
+                        "label": "Energy Used"
+                    }
+                }
+            }
+        }
+    },
+    {
+        "name": "Attack Data",
+        "header": [
+            "Date",
+            "Attacks",
+            "Defends",
+            "Wins",
+            "Losses"
+        ],
+        "type": "Attack",
+        "options": {
+            "height": 480,
+            "animation": {
+                "startup": true
+            },
+            "title": "Attack Data",
+            "series": {
+                "0": {
+                    "type": "bars",
+                    "color": "blue"
+                },
+                "1": {
+                    "type": "bars",
+                    "color": "orange"
+                },
+                "2": {
+                    "type": "bars",
+                    "color": "green"
+                },
+                "3": {
+                    "type": "bars",
+                    "color": "red"
+                }
+            }
+        }
+    },
+    {
+        "name": "Working Stat Data",
+        "header": [
+            "Date",
+            "Manual",
+            "Intelligence",
+            "Endurance",
+            "Trains"
+        ],
+        "type": "Trains",
+        "options": {
+            "height": 480,
+            "animation": {
+                "startup": true
+            },
+            "title": "Working Stat Data",
+            "series": {
+                "0": {
+                    "axis" : "stat",
+                    "targetAxisIndex": 1,
+                    "type": "line",
+                    "color": "blue"
+                },
+                "1": {
+                    "axis" : "stat",
+                    "targetAxisIndex": 1,
+                    "type": "line",
+                    "color": "red"
+                },
+                "2": {
+                    "axis" : "stat",
+                    "targetAxisIndex": 1,
+                    "type": "line",
+                    "color": "green"
+                },
+                "3":{
+                    "axis": "trains",
+                    "type": "bars",
+                    "targetAxisIndex": 0,
+                    "color":"black"
+                }
+            },
+            "axes": {
+                "y": {
+                    "stat": {
+                        "label": "Working Stats"
+                    },
+                    "trains": {
+                        "side": "right",
+                        "label": "Train #"
+                    }
+                }
+            }
+        }
+    },
+    {
+        "name": "Slots money",
+        "log": 8300,
+        "type": "Casino",
+        "category": "Slots",
+        "header": [
+            "Date",
+            "Win/Loss"
+        ],
+        "options": {
+            "height": 480,
+            "animation": {
+                "startup": true
+            },
+            "title": "Slots results",
+            "vAxis": {
+                "title": "Money"
+            },
+            "seriesType": "bars",
+            "series": {
+                "0": {
+                    "axis": "counts",
+                    "type": "bars",
+                    "color": "black"
+                }
+            }
+        }
+    }
+]

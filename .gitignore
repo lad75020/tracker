@@ -1,0 +1,7 @@
+
+.codegpt
+.vscode
+vendor/*
+js/jquery.js
+openai.php
+english-words/*

@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <script>
+        fetch('https://tracker.dubertrand.fr/getConfig.php')
+        .then(response=> response.text())
+        .then(data => { document.getElementById("container").innerText =  data;
+                        localStorage.setItem("Config", data);})
+        .catch(error => {document.getElementById("container").innerText = error});
+        
+        </script>
+    </head>
+    <body>
+        <div id="container"></div>
+    </body>
+</html>

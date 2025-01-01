@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copy TORN DB items store</title>
+
+    <script src="js/copyDB.js"></script>
+    <script>
+    copyIndexedDB('TORN', 'TORNItems')
+    .then(message => {
+        console.log(message);
+    })
+    .catch(error => {
+        console.error(error);
+    });
+    </script>
+</head>
+<body">
+    <div id="item"></div>
+</body>
+</html>

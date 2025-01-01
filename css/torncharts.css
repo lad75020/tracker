@@ -1,0 +1,28 @@
+body {background-color: rgb(236, 243, 247);height: 100%;  }
+#debug {border-width:1px;border-color:black;font-family: 'Lucida Console';color:rgb(53, 53, 53)}
+#wait {position:absolute;z-index:500;height:120px;top:240px;left:240px;display:none;background-color:white;color:rgb(66, 66, 66);width: 400px;border-width:5px;border-style:solid;border-color:black}
+#waitimg {position:absolute;height:120px;width:80px;top:35px;left:20px}
+#progress {position:absolute;height:120px;left:90px;width:240px;top:50px}
+#stop {position:absolute;height:120px;left:320px;top:40px;}
+#controls {background-color: #474747;color:white;position:absolute;height: 35px; width: 100%;top:2px; left:2px;font-family: 'Lucida Console';}
+#btnStop {font-size:24px;background-color: white;border-width:2px;border-style:solid;border-color:rgb(88, 88, 88);font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif}
+#chartContainer {position:absolute;width:100%;height:480px;top:30px;left:2px;border: 5px solid #ccc;display:none;}
+#date {font-family:'Lucida Console';font-size: 22px;}
+#percent {font-family:'Lucida Console';font-size: 22px}
+#debug2 {background-color:white;font-family: 'Lucida Console';position:absolute;top:520px; height:480px;overflow-y: auto; border: 5px solid #ccc;display:none;}
+.autocomplete-suggestions {
+    border: 1px solid #ccc;
+    max-height: 150px;
+    overflow-y: auto;
+    position: absolute;
+    background-color: white;
+    color:#474747;
+    z-index: 1000;
+}
+.autocomplete-suggestion {
+    padding: 8px;
+    cursor: pointer;
+}
+.autocomplete-suggestion:hover {
+    background-color: #e9e9e9;
+}

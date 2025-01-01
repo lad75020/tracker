@@ -1,0 +1,6260 @@
+[
+  {
+    "name": "Hammer",
+    "price": 32,
+    "type": "Melee",
+    "id": 1
+  },
+  {
+    "name": "Baseball Bat",
+    "price": 134,
+    "type": "Melee",
+    "id": 2
+  },
+  {
+    "name": "Crowbar",
+    "price": 162,
+    "type": "Melee",
+    "id": 3
+  },
+  {
+    "name": "Knuckle Dusters",
+    "price": 393,
+    "type": "Melee",
+    "id": 4
+  },
+  {
+    "name": "Pen Knife",
+    "price": 640,
+    "type": "Melee",
+    "id": 5
+  },
+  {
+    "name": "Kitchen Knife",
+    "price": 960,
+    "type": "Melee",
+    "id": 6
+  },
+  {
+    "name": "Dagger",
+    "price": 1380,
+    "type": "Melee",
+    "id": 7
+  },
+  {
+    "name": "Axe",
+    "price": 2711,
+    "type": "Melee",
+    "id": 8
+  },
+  {
+    "name": "Scimitar",
+    "price": 5211,
+    "type": "Melee",
+    "id": 9
+  },
+  {
+    "name": "Chainsaw",
+    "price": 11202,
+    "type": "Melee",
+    "id": 10
+  },
+  {
+    "name": "Samurai Sword",
+    "price": 52848,
+    "type": "Melee",
+    "id": 11
+  },
+  {
+    "name": "Glock 17",
+    "price": 177,
+    "type": "Secondary",
+    "id": 12
+  },
+  {
+    "name": "Raven MP25",
+    "price": 297,
+    "type": "Secondary",
+    "id": 13
+  },
+  {
+    "name": "Ruger 57",
+    "price": 536,
+    "type": "Secondary",
+    "id": 14
+  },
+  {
+    "name": "Beretta M9",
+    "price": 1096,
+    "type": "Secondary",
+    "id": 15
+  },
+  {
+    "name": "USP",
+    "price": 1668,
+    "type": "Secondary",
+    "id": 16
+  },
+  {
+    "name": "Beretta 92FS",
+    "price": 696870,
+    "type": "Secondary",
+    "id": 17
+  },
+  {
+    "name": "Fiveseven",
+    "price": 7106,
+    "type": "Secondary",
+    "id": 18
+  },
+  {
+    "name": "Magnum",
+    "price": 15301,
+    "type": "Secondary",
+    "id": 19
+  },
+  {
+    "name": "Desert Eagle",
+    "price": 36266,
+    "type": "Secondary",
+    "id": 20
+  },
+  {
+    "name": "Dual 92G Berettas",
+    "price": 6770835,
+    "type": "Secondary",
+    "id": 21
+  },
+  {
+    "name": "Sawed-Off Shotgun",
+    "price": 1269,
+    "type": "Primary",
+    "id": 22
+  },
+  {
+    "name": "Benelli M1 Tactical",
+    "price": 3099,
+    "type": "Primary",
+    "id": 23
+  },
+  {
+    "name": "MP5 Navy",
+    "price": 3626,
+    "type": "Primary",
+    "id": 24
+  },
+  {
+    "name": "P90",
+    "price": 6236,
+    "type": "Primary",
+    "id": 25
+  },
+  {
+    "name": "AK-47",
+    "price": 9710,
+    "type": "Primary",
+    "id": 26
+  },
+  {
+    "name": "M4A1 Colt Carbine",
+    "price": 12131,
+    "type": "Primary",
+    "id": 27
+  },
+  {
+    "name": "Benelli M4 Super",
+    "price": 20692,
+    "type": "Primary",
+    "id": 28
+  },
+  {
+    "name": "M16 A2 Rifle",
+    "price": 35555,
+    "type": "Primary",
+    "id": 29
+  },
+  {
+    "name": "Steyr AUG",
+    "price": 74625,
+    "type": "Primary",
+    "id": 30
+  },
+  {
+    "name": "M249 SAW",
+    "price": 670660,
+    "type": "Primary",
+    "id": 31
+  },
+  {
+    "name": "Leather Vest",
+    "price": 1445,
+    "type": "Defensive",
+    "id": 32
+  },
+  {
+    "name": "Police Vest",
+    "price": 7300,
+    "type": "Defensive",
+    "id": 33
+  },
+  {
+    "name": "Bulletproof Vest",
+    "price": 32125,
+    "type": "Defensive",
+    "id": 34
+  },
+  {
+    "name": "Box of Chocolate Bars",
+    "price": 378,
+    "type": "Candy",
+    "id": 35
+  },
+  {
+    "name": "Big Box of Chocolate Bars",
+    "price": 28810,
+    "type": "Candy",
+    "id": 36
+  },
+  {
+    "name": "Bag of Bon Bons",
+    "price": 364,
+    "type": "Candy",
+    "id": 37
+  },
+  {
+    "name": "Box of Bon Bons",
+    "price": 383,
+    "type": "Candy",
+    "id": 38
+  },
+  {
+    "name": "Box of Extra Strong Mints",
+    "price": 389,
+    "type": "Candy",
+    "id": 39
+  },
+  {
+    "name": "Pack of Music CDs",
+    "price": 242,
+    "type": "Other",
+    "id": 40
+  },
+  {
+    "name": "DVD Player",
+    "price": 31,
+    "type": "Other",
+    "id": 41
+  },
+  {
+    "name": "MP3 Player",
+    "price": 22,
+    "type": "Special",
+    "id": 42
+  },
+  {
+    "name": "CD Player",
+    "price": 26,
+    "type": "Special",
+    "id": 43
+  },
+  {
+    "name": "Blank DVDs : 100",
+    "price": null,
+    "type": "Material",
+    "id": 44
+  },
+  {
+    "name": "Hard Drive",
+    "price": 162,
+    "type": "Other",
+    "id": 45
+  },
+  {
+    "name": "Tank Top",
+    "price": 31,
+    "type": "Clothing",
+    "id": 46
+  },
+  {
+    "name": "Trainers",
+    "price": 37,
+    "type": "Clothing",
+    "id": 47
+  },
+  {
+    "name": "Jacket",
+    "price": 51,
+    "type": "Clothing",
+    "id": 48
+  },
+  {
+    "name": "Full Body Armor",
+    "price": 59716,
+    "type": "Defensive",
+    "id": 49
+  },
+  {
+    "name": "Outer Tactical Vest",
+    "price": 750401,
+    "type": "Defensive",
+    "id": 50
+  },
+  {
+    "name": "Plain Silver Ring",
+    "price": 61,
+    "type": "Jewelry",
+    "id": 51
+  },
+  {
+    "name": "Sapphire Ring",
+    "price": 519,
+    "type": "Jewelry",
+    "id": 52
+  },
+  {
+    "name": "Gold Ring",
+    "price": 260,
+    "type": "Jewelry",
+    "id": 53
+  },
+  {
+    "name": "Diamond Ring",
+    "price": 2635,
+    "type": "Jewelry",
+    "id": 54
+  },
+  {
+    "name": "Pearl Necklace",
+    "price": 96,
+    "type": "Jewelry",
+    "id": 55
+  },
+  {
+    "name": "Silver Necklace",
+    "price": 87,
+    "type": "Jewelry",
+    "id": 56
+  },
+  {
+    "name": "Gold Necklace",
+    "price": 176,
+    "type": "Jewelry",
+    "id": 57
+  },
+  {
+    "name": "Plastic Watch",
+    "price": 45,
+    "type": "Jewelry",
+    "id": 58
+  },
+  {
+    "name": "Stainless Steel Watch",
+    "price": 57,
+    "type": "Jewelry",
+    "id": 59
+  },
+  {
+    "name": "Gold Watch",
+    "price": 262,
+    "type": "Jewelry",
+    "id": 60
+  },
+  {
+    "name": "Personal Computer",
+    "price": 403,
+    "type": "Tool",
+    "id": 61
+  },
+  {
+    "name": "Microwave",
+    "price": 123,
+    "type": "Other",
+    "id": 62
+  },
+  {
+    "name": "Minigun",
+    "price": 1303420,
+    "type": "Primary",
+    "id": 63
+  },
+  {
+    "name": "Pack of Cuban Cigars",
+    "price": 267,
+    "type": "Other",
+    "id": 64
+  },
+  {
+    "name": "Television",
+    "price": 191,
+    "type": "Special",
+    "id": 65
+  },
+  {
+    "name": "Morphine",
+    "price": 10120,
+    "type": "Medical",
+    "id": 66
+  },
+  {
+    "name": "First Aid Kit",
+    "price": 7512,
+    "type": "Medical",
+    "id": 67
+  },
+  {
+    "name": "Small First Aid Kit",
+    "price": 3731,
+    "type": "Medical",
+    "id": 68
+  },
+  {
+    "name": "Simple Virus",
+    "price": 1281,
+    "type": "Tool",
+    "id": 69
+  },
+  {
+    "name": "Polymorphic Virus",
+    "price": 63248,
+    "type": "Tool",
+    "id": 70
+  },
+  {
+    "name": "Tunneling Virus",
+    "price": 47350,
+    "type": "Tool",
+    "id": 71
+  },
+  {
+    "name": "Armored Virus",
+    "price": 194503,
+    "type": "Tool",
+    "id": 72
+  },
+  {
+    "name": "Stealth Virus",
+    "price": 212689,
+    "type": "Tool",
+    "id": 73
+  },
+  {
+    "name": "Santa Hat '04",
+    "price": null,
+    "type": "Collectible",
+    "id": 74
+  },
+  {
+    "name": "Christmas Cracker '04",
+    "price": null,
+    "type": "Collectible",
+    "id": 75
+  },
+  {
+    "name": "Snow Cannon",
+    "price": 900000000,
+    "type": "Primary",
+    "id": 76
+  },
+  {
+    "name": "Tabata RM2",
+    "price": 28821,
+    "type": "Car",
+    "id": 77
+  },
+  {
+    "name": "Edomondo NSX",
+    "price": 37384,
+    "type": "Car",
+    "id": 78
+  },
+  {
+    "name": "Echo Quadrato",
+    "price": 54439,
+    "type": "Car",
+    "id": 79
+  },
+  {
+    "name": "Bavaria M5",
+    "price": 42507,
+    "type": "Car",
+    "id": 80
+  },
+  {
+    "name": "Bavaria Z8",
+    "price": 79803,
+    "type": "Car",
+    "id": 81
+  },
+  {
+    "name": "Chevalier CZ06",
+    "price": 50143,
+    "type": "Car",
+    "id": 82
+  },
+  {
+    "name": "Dart Rampager",
+    "price": 68581,
+    "type": "Car",
+    "id": 83
+  },
+  {
+    "name": "Knight Firebrand",
+    "price": 59042,
+    "type": "Car",
+    "id": 84
+  },
+  {
+    "name": "Volt GT",
+    "price": 143160,
+    "type": "Car",
+    "id": 85
+  },
+  {
+    "name": "Invader H3",
+    "price": 21458,
+    "type": "Car",
+    "id": 86
+  },
+  {
+    "name": "Echo S4",
+    "price": 13070,
+    "type": "Car",
+    "id": 87
+  },
+  {
+    "name": "Edomondo IR",
+    "price": 15010,
+    "type": "Car",
+    "id": 88
+  },
+  {
+    "name": "Edomondo ACD",
+    "price": 22706,
+    "type": "Car",
+    "id": 89
+  },
+  {
+    "name": "Edomondo Localé",
+    "price": 9431,
+    "type": "Car",
+    "id": 90
+  },
+  {
+    "name": "Verpestung Insecta",
+    "price": 9987,
+    "type": "Car",
+    "id": 91
+  },
+  {
+    "name": "Chevalier CVR",
+    "price": 5579,
+    "type": "Car",
+    "id": 92
+  },
+  {
+    "name": "Volt MNG",
+    "price": 17105,
+    "type": "Car",
+    "id": 93
+  },
+  {
+    "name": "Trident",
+    "price": 10428,
+    "type": "Car",
+    "id": 94
+  },
+  {
+    "name": "Oceania SS",
+    "price": 24839,
+    "type": "Car",
+    "id": 95
+  },
+  {
+    "name": "Coat Hanger",
+    "price": 35036,
+    "type": "Tool",
+    "id": 96
+  },
+  {
+    "name": "Bunch of Flowers",
+    "price": 40,
+    "type": "Flower",
+    "id": 97
+  },
+  {
+    "name": "Neutrilux 2000",
+    "price": null,
+    "type": "Primary",
+    "id": 98
+  },
+  {
+    "name": "Springfield 1911",
+    "price": 390,
+    "type": "Secondary",
+    "id": 99
+  },
+  {
+    "name": "Egg Propelled Launcher",
+    "price": null,
+    "type": "Primary",
+    "id": 100
+  },
+  {
+    "name": "Bunny Suit",
+    "price": null,
+    "type": "Clothing",
+    "id": 101
+  },
+  {
+    "name": "Chocolate Egg '05",
+    "price": 927657024,
+    "type": "Collectible",
+    "id": 102
+  },
+  {
+    "name": "Firewalk Virus",
+    "price": 134716,
+    "type": "Tool",
+    "id": 103
+  },
+  {
+    "name": "Game Console",
+    "price": 178,
+    "type": "Special",
+    "id": 104
+  },
+  {
+    "name": "Xbox",
+    "price": null,
+    "type": "Special",
+    "id": 105
+  },
+  {
+    "name": "Parachute",
+    "price": 448455488,
+    "type": "Booster",
+    "id": 106
+  },
+  {
+    "name": "Trench Coat",
+    "price": 325505,
+    "type": "Clothing",
+    "id": 107
+  },
+  {
+    "name": "9mm Uzi",
+    "price": 600846,
+    "type": "Primary",
+    "id": 108
+  },
+  {
+    "name": "RPG Launcher",
+    "price": 103500000,
+    "type": "Secondary",
+    "id": 109
+  },
+  {
+    "name": "Leather Bullwhip",
+    "price": 663,
+    "type": "Melee",
+    "id": 110
+  },
+  {
+    "name": "Ninja Claws",
+    "price": 4894,
+    "type": "Melee",
+    "id": 111
+  },
+  {
+    "name": "Test Trophy",
+    "price": null,
+    "type": "Collectible",
+    "id": 112
+  },
+  {
+    "name": "Pet Rock",
+    "price": null,
+    "type": "Collectible",
+    "id": 113
+  },
+  {
+    "name": "Non-Anon Doll",
+    "price": null,
+    "type": "Collectible",
+    "id": 114
+  },
+  {
+    "name": "Poker Doll",
+    "price": 1800000000,
+    "type": "Collectible",
+    "id": 115
+  },
+  {
+    "name": "Yoda Figurine",
+    "price": null,
+    "type": "Collectible",
+    "id": 116
+  },
+  {
+    "name": "Trojan Horse",
+    "price": null,
+    "type": "Collectible",
+    "id": 117
+  },
+  {
+    "name": "Doll's Head",
+    "price": null,
+    "type": "Collectible",
+    "id": 118
+  },
+  {
+    "name": "Rubber Ducky of Doom",
+    "price": null,
+    "type": "Collectible",
+    "id": 119
+  },
+  {
+    "name": "Teppic Bear",
+    "price": null,
+    "type": "Collectible",
+    "id": 120
+  },
+  {
+    "name": "RockerHead Doll",
+    "price": null,
+    "type": "Collectible",
+    "id": 121
+  },
+  {
+    "name": "Mouser Doll",
+    "price": null,
+    "type": "Collectible",
+    "id": 122
+  },
+  {
+    "name": "Elite Action Man",
+    "price": null,
+    "type": "Collectible",
+    "id": 123
+  },
+  {
+    "name": "Toy Reactor",
+    "price": null,
+    "type": "Collectible",
+    "id": 124
+  },
+  {
+    "name": "Royal Doll",
+    "price": null,
+    "type": "Collectible",
+    "id": 125
+  },
+  {
+    "name": "Blue Dragon",
+    "price": null,
+    "type": "Collectible",
+    "id": 126
+  },
+  {
+    "name": "China Tea Set",
+    "price": null,
+    "type": "Collectible",
+    "id": 127
+  },
+  {
+    "name": "Mufasa Toy",
+    "price": null,
+    "type": "Collectible",
+    "id": 128
+  },
+  {
+    "name": "Dozen Roses",
+    "price": 224,
+    "type": "Flower",
+    "id": 129
+  },
+  {
+    "name": "Skanky Doll",
+    "price": null,
+    "type": "Collectible",
+    "id": 130
+  },
+  {
+    "name": "Lego Hurin",
+    "price": null,
+    "type": "Collectible",
+    "id": 131
+  },
+  {
+    "name": "Mystical Sphere",
+    "price": null,
+    "type": "Collectible",
+    "id": 132
+  },
+  {
+    "name": "10 Ton Pacifier",
+    "price": null,
+    "type": "Collectible",
+    "id": 133
+  },
+  {
+    "name": "Horse Toy",
+    "price": null,
+    "type": "Collectible",
+    "id": 134
+  },
+  {
+    "name": "Uriel's Speakers",
+    "price": null,
+    "type": "Collectible",
+    "id": 135
+  },
+  {
+    "name": "Strife Clown",
+    "price": null,
+    "type": "Collectible",
+    "id": 136
+  },
+  {
+    "name": "Locked Teddy",
+    "price": 2500000000,
+    "type": "Collectible",
+    "id": 137
+  },
+  {
+    "name": "Riddle's Bat",
+    "price": null,
+    "type": "Collectible",
+    "id": 138
+  },
+  {
+    "name": "Soup Nazi Doll",
+    "price": null,
+    "type": "Collectible",
+    "id": 139
+  },
+  {
+    "name": "Pouncer Doll",
+    "price": null,
+    "type": "Collectible",
+    "id": 140
+  },
+  {
+    "name": "Spammer Doll",
+    "price": null,
+    "type": "Collectible",
+    "id": 141
+  },
+  {
+    "name": "Cookie Jar",
+    "price": null,
+    "type": "Collectible",
+    "id": 142
+  },
+  {
+    "name": "Vanity Mirror",
+    "price": null,
+    "type": "Collectible",
+    "id": 143
+  },
+  {
+    "name": "Banana Phone",
+    "price": null,
+    "type": "Collectible",
+    "id": 144
+  },
+  {
+    "name": "Xbox 360",
+    "price": null,
+    "type": "Special",
+    "id": 145
+  },
+  {
+    "name": "Yasukuni Sword",
+    "price": 1156285,
+    "type": "Melee",
+    "id": 146
+  },
+  {
+    "name": "Rusty Sword",
+    "price": 78165,
+    "type": "Melee",
+    "id": 147
+  },
+  {
+    "name": "Dance Toy",
+    "price": null,
+    "type": "Collectible",
+    "id": 148
+  },
+  {
+    "name": "Lucky Dime",
+    "price": null,
+    "type": "Collectible",
+    "id": 149
+  },
+  {
+    "name": "Crystal Carousel",
+    "price": null,
+    "type": "Collectible",
+    "id": 150
+  },
+  {
+    "name": "Pixie Sticks",
+    "price": 256897,
+    "type": "Candy",
+    "id": 151
+  },
+  {
+    "name": "Ice Sculpture",
+    "price": null,
+    "type": "Collectible",
+    "id": 152
+  },
+  {
+    "name": "Case of Whiskey",
+    "price": null,
+    "type": "Collectible",
+    "id": 153
+  },
+  {
+    "name": "Laptop",
+    "price": 400,
+    "type": "Tool",
+    "id": 154
+  },
+  {
+    "name": "Purple Frog",
+    "price": null,
+    "type": "Collectible",
+    "id": 155
+  },
+  {
+    "name": "Hooorang's Key",
+    "price": null,
+    "type": "Collectible",
+    "id": 156
+  },
+  {
+    "name": "Patriot Whip",
+    "price": null,
+    "type": "Collectible",
+    "id": 157
+  },
+  {
+    "name": "Statue Of Aeolus",
+    "price": null,
+    "type": "Collectible",
+    "id": 158
+  },
+  {
+    "name": "Bolt Cutters",
+    "price": 58,
+    "type": "Other",
+    "id": 159
+  },
+  {
+    "name": "Photographs",
+    "price": 5495000,
+    "type": "Other",
+    "id": 160
+  },
+  {
+    "name": "Black Unicorn",
+    "price": null,
+    "type": "Collectible",
+    "id": 161
+  },
+  {
+    "name": "WarPaint Kit",
+    "price": null,
+    "type": "Collectible",
+    "id": 162
+  },
+  {
+    "name": "Official Ninja Kit",
+    "price": 2500000000,
+    "type": "Collectible",
+    "id": 163
+  },
+  {
+    "name": "Leukaemia Teddy Bear",
+    "price": null,
+    "type": "Collectible",
+    "id": 164
+  },
+  {
+    "name": "Chocobo Flute",
+    "price": null,
+    "type": "Collectible",
+    "id": 165
+  },
+  {
+    "name": "Annoying Man",
+    "price": null,
+    "type": "Collectible",
+    "id": 166
+  },
+  {
+    "name": "Article on Crime",
+    "price": 40000000,
+    "type": "Other",
+    "id": 167
+  },
+  {
+    "name": "Unknown",
+    "price": null,
+    "type": "Unused",
+    "id": 168
+  },
+  {
+    "name": "Barbie Doll",
+    "price": null,
+    "type": "Collectible",
+    "id": 169
+  },
+  {
+    "name": "Wand of Destruction",
+    "price": null,
+    "type": "Melee",
+    "id": 170
+  },
+  {
+    "name": "Jack-O-Lantern '05",
+    "price": 500000000,
+    "type": "Collectible",
+    "id": 171
+  },
+  {
+    "name": "Gasoline",
+    "price": 523,
+    "type": "Material",
+    "id": 172
+  },
+  {
+    "name": "Butterfly Knife",
+    "price": 1014,
+    "type": "Melee",
+    "id": 173
+  },
+  {
+    "name": "XM8 Rifle",
+    "price": 8644,
+    "type": "Primary",
+    "id": 174
+  },
+  {
+    "name": "Taser",
+    "price": 3979,
+    "type": "Secondary",
+    "id": 175
+  },
+  {
+    "name": "Chain Mail",
+    "price": 3087,
+    "type": "Defensive",
+    "id": 176
+  },
+  {
+    "name": "Cobra Derringer",
+    "price": 54424,
+    "type": "Secondary",
+    "id": 177
+  },
+  {
+    "name": "Flak Jacket",
+    "price": 4528,
+    "type": "Defensive",
+    "id": 178
+  },
+  {
+    "name": "Birthday Cake '05",
+    "price": 849000000,
+    "type": "Collectible",
+    "id": 179
+  },
+  {
+    "name": "Bottle of Beer",
+    "price": 686,
+    "type": "Alcohol",
+    "id": 180
+  },
+  {
+    "name": "Bottle of Champagne",
+    "price": 2944,
+    "type": "Alcohol",
+    "id": 181
+  },
+  {
+    "name": "Soap on a Rope",
+    "price": 51,
+    "type": "Other",
+    "id": 182
+  },
+  {
+    "name": "Single Red Rose",
+    "price": 188,
+    "type": "Flower",
+    "id": 183
+  },
+  {
+    "name": "Bunch of Black Roses",
+    "price": 307,
+    "type": "Flower",
+    "id": 184
+  },
+  {
+    "name": "Bunch of Balloons '05",
+    "price": 465000000,
+    "type": "Collectible",
+    "id": 185
+  },
+  {
+    "name": "Sheep Plushie",
+    "price": 699,
+    "type": "Plushie",
+    "id": 186
+  },
+  {
+    "name": "Teddy Bear Plushie",
+    "price": 720,
+    "type": "Plushie",
+    "id": 187
+  },
+  {
+    "name": "Cracked Crystal Ball",
+    "price": null,
+    "type": "Collectible",
+    "id": 188
+  },
+  {
+    "name": "S&W Revolver",
+    "price": 923,
+    "type": "Secondary",
+    "id": 189
+  },
+  {
+    "name": "C4 Explosive",
+    "price": 25141,
+    "type": "Other",
+    "id": 190
+  },
+  {
+    "name": "Memory Locket",
+    "price": 950000,
+    "type": "Other",
+    "id": 191
+  },
+  {
+    "name": "Rainbow Stud Earring",
+    "price": null,
+    "type": "Collectible",
+    "id": 192
+  },
+  {
+    "name": "Hamster Toy",
+    "price": null,
+    "type": "Collectible",
+    "id": 193
+  },
+  {
+    "name": "Snowflake '05",
+    "price": 1250000000,
+    "type": "Collectible",
+    "id": 194
+  },
+  {
+    "name": "Christmas Tree '05",
+    "price": 1200000000,
+    "type": "Collectible",
+    "id": 195
+  },
+  {
+    "name": "Cannabis",
+    "price": 6014,
+    "type": "Drug",
+    "id": 196
+  },
+  {
+    "name": "Ecstasy",
+    "price": 25636,
+    "type": "Drug",
+    "id": 197
+  },
+  {
+    "name": "Ketamine",
+    "price": 2890,
+    "type": "Drug",
+    "id": 198
+  },
+  {
+    "name": "LSD",
+    "price": 33625,
+    "type": "Drug",
+    "id": 199
+  },
+  {
+    "name": "Opium",
+    "price": 31096,
+    "type": "Drug",
+    "id": 200
+  },
+  {
+    "name": "PCP",
+    "price": 10132,
+    "type": "Drug",
+    "id": 201
+  },
+  {
+    "name": "Mr Torn Crown '07",
+    "price": null,
+    "type": "Collectible",
+    "id": 202
+  },
+  {
+    "name": "Shrooms",
+    "price": 2249,
+    "type": "Drug",
+    "id": 203
+  },
+  {
+    "name": "Speed",
+    "price": 5787,
+    "type": "Drug",
+    "id": 204
+  },
+  {
+    "name": "Vicodin",
+    "price": 1145,
+    "type": "Drug",
+    "id": 205
+  },
+  {
+    "name": "Xanax",
+    "price": 836472,
+    "type": "Drug",
+    "id": 206
+  },
+  {
+    "name": "Ms Torn Crown '07",
+    "price": null,
+    "type": "Collectible",
+    "id": 207
+  },
+  {
+    "name": "Unknown",
+    "price": null,
+    "type": "Unused",
+    "id": 208
+  },
+  {
+    "name": "Box of Sweet Hearts",
+    "price": 397,
+    "type": "Candy",
+    "id": 209
+  },
+  {
+    "name": "Bag of Chocolate Kisses",
+    "price": 390,
+    "type": "Candy",
+    "id": 210
+  },
+  {
+    "name": "Crazy Cow",
+    "price": null,
+    "type": "Collectible",
+    "id": 211
+  },
+  {
+    "name": "Legend's Urn",
+    "price": null,
+    "type": "Collectible",
+    "id": 212
+  },
+  {
+    "name": "Dreamcatcher",
+    "price": null,
+    "type": "Collectible",
+    "id": 213
+  },
+  {
+    "name": "Brutus Keychain",
+    "price": null,
+    "type": "Collectible",
+    "id": 214
+  },
+  {
+    "name": "Kitten Plushie",
+    "price": 721,
+    "type": "Plushie",
+    "id": 215
+  },
+  {
+    "name": "Single White Rose",
+    "price": 1500105024,
+    "type": "Collectible",
+    "id": 216
+  },
+  {
+    "name": "Claymore Sword",
+    "price": 74410,
+    "type": "Melee",
+    "id": 217
+  },
+  {
+    "name": "Crossbow",
+    "price": 711,
+    "type": "Secondary",
+    "id": 218
+  },
+  {
+    "name": "Enfield SA-80",
+    "price": 205608,
+    "type": "Primary",
+    "id": 219
+  },
+  {
+    "name": "Grenade",
+    "price": 6968,
+    "type": "Temporary",
+    "id": 220
+  },
+  {
+    "name": "Stick Grenade",
+    "price": 8884,
+    "type": "Temporary",
+    "id": 221
+  },
+  {
+    "name": "Flash Grenade",
+    "price": 20212,
+    "type": "Temporary",
+    "id": 222
+  },
+  {
+    "name": "Jackhammer",
+    "price": 4031415,
+    "type": "Primary",
+    "id": 223
+  },
+  {
+    "name": "Swiss Army Knife",
+    "price": 1872,
+    "type": "Melee",
+    "id": 224
+  },
+  {
+    "name": "Mag 7",
+    "price": 49704,
+    "type": "Primary",
+    "id": 225
+  },
+  {
+    "name": "Smoke Grenade",
+    "price": 90054,
+    "type": "Temporary",
+    "id": 226
+  },
+  {
+    "name": "Spear",
+    "price": 327,
+    "type": "Melee",
+    "id": 227
+  },
+  {
+    "name": "Vektor CR-21",
+    "price": 6430,
+    "type": "Primary",
+    "id": 228
+  },
+  {
+    "name": "Claymore Mine",
+    "price": 12376,
+    "type": "Temporary",
+    "id": 229
+  },
+  {
+    "name": "Flare Gun",
+    "price": 143,
+    "type": "Secondary",
+    "id": 230
+  },
+  {
+    "name": "Heckler & Koch SL8",
+    "price": 34514,
+    "type": "Primary",
+    "id": 231
+  },
+  {
+    "name": "SIG 550",
+    "price": 54683,
+    "type": "Primary",
+    "id": 232
+  },
+  {
+    "name": "BT MP9",
+    "price": 39948,
+    "type": "Secondary",
+    "id": 233
+  },
+  {
+    "name": "Chain Whip",
+    "price": 2350,
+    "type": "Melee",
+    "id": 234
+  },
+  {
+    "name": "Wooden Nunchaku",
+    "price": 4397,
+    "type": "Melee",
+    "id": 235
+  },
+  {
+    "name": "Kama",
+    "price": 39552,
+    "type": "Melee",
+    "id": 236
+  },
+  {
+    "name": "Kodachi",
+    "price": 92792,
+    "type": "Melee",
+    "id": 237
+  },
+  {
+    "name": "Sai",
+    "price": 786,
+    "type": "Melee",
+    "id": 238
+  },
+  {
+    "name": "Ninja Star",
+    "price": 466,
+    "type": "Temporary",
+    "id": 239
+  },
+  {
+    "name": "Type 98 Anti Tank",
+    "price": 16958400,
+    "type": "Secondary",
+    "id": 240
+  },
+  {
+    "name": "Bushmaster Carbon 15",
+    "price": 9840,
+    "type": "Primary",
+    "id": 241
+  },
+  {
+    "name": "HEG",
+    "price": 15011,
+    "type": "Temporary",
+    "id": 242
+  },
+  {
+    "name": "Taurus",
+    "price": 364,
+    "type": "Secondary",
+    "id": 243
+  },
+  {
+    "name": "Blowgun",
+    "price": 2084,
+    "type": "Secondary",
+    "id": 244
+  },
+  {
+    "name": "Bo Staff",
+    "price": 274,
+    "type": "Melee",
+    "id": 245
+  },
+  {
+    "name": "Fireworks",
+    "price": 299,
+    "type": "Temporary",
+    "id": 246
+  },
+  {
+    "name": "Katana",
+    "price": 12924,
+    "type": "Melee",
+    "id": 247
+  },
+  {
+    "name": "Qsz-92",
+    "price": 69710,
+    "type": "Secondary",
+    "id": 248
+  },
+  {
+    "name": "SKS Carbine",
+    "price": 4960,
+    "type": "Primary",
+    "id": 249
+  },
+  {
+    "name": "Twin Tiger Hooks",
+    "price": 46619,
+    "type": "Melee",
+    "id": 250
+  },
+  {
+    "name": "Wushu Double Axes",
+    "price": 70787,
+    "type": "Melee",
+    "id": 251
+  },
+  {
+    "name": "Ithaca 37",
+    "price": 6881,
+    "type": "Primary",
+    "id": 252
+  },
+  {
+    "name": "Lorcin 380",
+    "price": 191,
+    "type": "Secondary",
+    "id": 253
+  },
+  {
+    "name": "S&W M29",
+    "price": 199997,
+    "type": "Secondary",
+    "id": 254
+  },
+  {
+    "name": "Flamethrower",
+    "price": 2501680,
+    "type": "Secondary",
+    "id": 255
+  },
+  {
+    "name": "Tear Gas",
+    "price": 56010,
+    "type": "Temporary",
+    "id": 256
+  },
+  {
+    "name": "Throwing Knife",
+    "price": 29627,
+    "type": "Temporary",
+    "id": 257
+  },
+  {
+    "name": "Jaguar Plushie",
+    "price": 16355,
+    "type": "Plushie",
+    "id": 258
+  },
+  {
+    "name": "Mayan Statue",
+    "price": 2788,
+    "type": "Other",
+    "id": 259
+  },
+  {
+    "name": "Dahlia",
+    "price": 2029,
+    "type": "Flower",
+    "id": 260
+  },
+  {
+    "name": "Wolverine Plushie",
+    "price": 8978,
+    "type": "Plushie",
+    "id": 261
+  },
+  {
+    "name": "Hockey Stick",
+    "price": 541,
+    "type": "Other",
+    "id": 262
+  },
+  {
+    "name": "Crocus",
+    "price": 7758,
+    "type": "Flower",
+    "id": 263
+  },
+  {
+    "name": "Orchid",
+    "price": 26437,
+    "type": "Flower",
+    "id": 264
+  },
+  {
+    "name": "Pele Charm",
+    "price": 4051,
+    "type": "Other",
+    "id": 265
+  },
+  {
+    "name": "Nessie Plushie",
+    "price": 37691,
+    "type": "Plushie",
+    "id": 266
+  },
+  {
+    "name": "Heather",
+    "price": 41563,
+    "type": "Flower",
+    "id": 267
+  },
+  {
+    "name": "Red Fox Plushie",
+    "price": 38936,
+    "type": "Plushie",
+    "id": 268
+  },
+  {
+    "name": "Monkey Plushie",
+    "price": 40960,
+    "type": "Plushie",
+    "id": 269
+  },
+  {
+    "name": "Soccer Ball",
+    "price": 147,
+    "type": "Other",
+    "id": 270
+  },
+  {
+    "name": "Ceibo Flower",
+    "price": 36236,
+    "type": "Flower",
+    "id": 271
+  },
+  {
+    "name": "Edelweiss",
+    "price": 2320,
+    "type": "Flower",
+    "id": 272
+  },
+  {
+    "name": "Chamois Plushie",
+    "price": 9089,
+    "type": "Plushie",
+    "id": 273
+  },
+  {
+    "name": "Panda Plushie",
+    "price": 67007,
+    "type": "Plushie",
+    "id": 274
+  },
+  {
+    "name": "Jade Buddha",
+    "price": 17084,
+    "type": "Other",
+    "id": 275
+  },
+  {
+    "name": "Peony",
+    "price": 68078,
+    "type": "Flower",
+    "id": 276
+  },
+  {
+    "name": "Cherry Blossom",
+    "price": 54998,
+    "type": "Flower",
+    "id": 277
+  },
+  {
+    "name": "Kabuki Mask",
+    "price": 6997,
+    "type": "Clothing",
+    "id": 278
+  },
+  {
+    "name": "Maneki Neko",
+    "price": 55783,
+    "type": "Other",
+    "id": 279
+  },
+  {
+    "name": "Elephant Statue",
+    "price": 3538,
+    "type": "Other",
+    "id": 280
+  },
+  {
+    "name": "Lion Plushie",
+    "price": 68350,
+    "type": "Plushie",
+    "id": 281
+  },
+  {
+    "name": "African Violet",
+    "price": 61660,
+    "type": "Flower",
+    "id": 282
+  },
+  {
+    "name": "Donator Pack",
+    "price": 23699500,
+    "type": "Supply Pack",
+    "id": 283
+  },
+  {
+    "name": "Bronze Paint Brush",
+    "price": 500000000,
+    "type": "Collectible",
+    "id": 284
+  },
+  {
+    "name": "Silver Paint Brush",
+    "price": null,
+    "type": "Collectible",
+    "id": 285
+  },
+  {
+    "name": "Gold Paint Brush",
+    "price": 2300000000,
+    "type": "Collectible",
+    "id": 286
+  },
+  {
+    "name": "Pand0ra's Box",
+    "price": null,
+    "type": "Collectible",
+    "id": 287
+  },
+  {
+    "name": "Mr Brownstone Doll",
+    "price": 2500000000,
+    "type": "Collectible",
+    "id": 288
+  },
+  {
+    "name": "Dual Axes",
+    "price": 649999008,
+    "type": "Melee",
+    "id": 289
+  },
+  {
+    "name": "Dual Hammers",
+    "price": 350000000,
+    "type": "Melee",
+    "id": 290
+  },
+  {
+    "name": "Dual Scimitars",
+    "price": 549998016,
+    "type": "Melee",
+    "id": 291
+  },
+  {
+    "name": "Dual Samurai Swords",
+    "price": 800000000,
+    "type": "Melee",
+    "id": 292
+  },
+  {
+    "name": "Japanese/English Dictionary",
+    "price": 3999910,
+    "type": "Other",
+    "id": 293
+  },
+  {
+    "name": "Bottle of Sake",
+    "price": 720,
+    "type": "Alcohol",
+    "id": 294
+  },
+  {
+    "name": "Oriental Log",
+    "price": 3200000,
+    "type": "Other",
+    "id": 295
+  },
+  {
+    "name": "Oriental Log Translation",
+    "price": 18250000,
+    "type": "Other",
+    "id": 296
+  },
+  {
+    "name": "YouYou Yo Yo",
+    "price": null,
+    "type": "Collectible",
+    "id": 297
+  },
+  {
+    "name": "Monkey Cuffs",
+    "price": null,
+    "type": "Collectible",
+    "id": 298
+  },
+  {
+    "name": "Jester's Cap",
+    "price": 1500000000,
+    "type": "Collectible",
+    "id": 299
+  },
+  {
+    "name": "Gibal's Dragonfly",
+    "price": null,
+    "type": "Collectible",
+    "id": 300
+  },
+  {
+    "name": "Green Ornament",
+    "price": null,
+    "type": "Collectible",
+    "id": 301
+  },
+  {
+    "name": "Purple Ornament",
+    "price": null,
+    "type": "Collectible",
+    "id": 302
+  },
+  {
+    "name": "Blue Ornament",
+    "price": null,
+    "type": "Collectible",
+    "id": 303
+  },
+  {
+    "name": "Purple Bell",
+    "price": null,
+    "type": "Collectible",
+    "id": 304
+  },
+  {
+    "name": "Mistletoe",
+    "price": 441626,
+    "type": "Other",
+    "id": 305
+  },
+  {
+    "name": "Mini Sleigh",
+    "price": 78833,
+    "type": "Other",
+    "id": 306
+  },
+  {
+    "name": "Snowman",
+    "price": 95250,
+    "type": "Other",
+    "id": 307
+  },
+  {
+    "name": "Christmas Gnome",
+    "price": 246327,
+    "type": "Other",
+    "id": 308
+  },
+  {
+    "name": "Gingerbread House",
+    "price": 114596,
+    "type": "Other",
+    "id": 309
+  },
+  {
+    "name": "Lollipop",
+    "price": 435,
+    "type": "Candy",
+    "id": 310
+  },
+  {
+    "name": "Mardi Gras Beads",
+    "price": null,
+    "type": "Collectible",
+    "id": 311
+  },
+  {
+    "name": "Devil Toy",
+    "price": null,
+    "type": "Collectible",
+    "id": 312
+  },
+  {
+    "name": "Cookie Launcher",
+    "price": null,
+    "type": "Collectible",
+    "id": 313
+  },
+  {
+    "name": "Cursed Moon Pendant",
+    "price": null,
+    "type": "Collectible",
+    "id": 314
+  },
+  {
+    "name": "Apartment Blueprint",
+    "price": null,
+    "type": "Unused",
+    "id": 315
+  },
+  {
+    "name": "Semi-Detached House Blueprint",
+    "price": null,
+    "type": "Unused",
+    "id": 316
+  },
+  {
+    "name": "Detached House Blueprint",
+    "price": null,
+    "type": "Unused",
+    "id": 317
+  },
+  {
+    "name": "Beach House Blueprint",
+    "price": null,
+    "type": "Unused",
+    "id": 318
+  },
+  {
+    "name": "Chalet Blueprint",
+    "price": null,
+    "type": "Unused",
+    "id": 319
+  },
+  {
+    "name": "Villa Blueprint",
+    "price": null,
+    "type": "Unused",
+    "id": 320
+  },
+  {
+    "name": "Penthouse Blueprint",
+    "price": null,
+    "type": "Unused",
+    "id": 321
+  },
+  {
+    "name": "Mansion Blueprint",
+    "price": null,
+    "type": "Unused",
+    "id": 322
+  },
+  {
+    "name": "Ranch Blueprint",
+    "price": null,
+    "type": "Unused",
+    "id": 323
+  },
+  {
+    "name": "Palace Blueprint",
+    "price": null,
+    "type": "Unused",
+    "id": 324
+  },
+  {
+    "name": "Castle Blueprint",
+    "price": null,
+    "type": "Unused",
+    "id": 325
+  },
+  {
+    "name": "Printing Paper",
+    "price": 84554,
+    "type": "Material",
+    "id": 326
+  },
+  {
+    "name": "Blank Tokens",
+    "price": 70361,
+    "type": "Material",
+    "id": 327
+  },
+  {
+    "name": "PVC Cards",
+    "price": 19042,
+    "type": "Material",
+    "id": 328
+  },
+  {
+    "name": "Skateboard",
+    "price": 437857984,
+    "type": "Booster",
+    "id": 329
+  },
+  {
+    "name": "Boxing Gloves",
+    "price": 448441504,
+    "type": "Booster",
+    "id": 330
+  },
+  {
+    "name": "Dumbbells",
+    "price": 448386000,
+    "type": "Booster",
+    "id": 331
+  },
+  {
+    "name": "Combat Vest",
+    "price": 3535165,
+    "type": "Defensive",
+    "id": 332
+  },
+  {
+    "name": "Liquid Body Armor",
+    "price": 6344945,
+    "type": "Defensive",
+    "id": 333
+  },
+  {
+    "name": "Flexible Body Armor",
+    "price": 14535150,
+    "type": "Defensive",
+    "id": 334
+  },
+  {
+    "name": "Stick of Dynamite",
+    "price": 35376,
+    "type": "Other",
+    "id": 335
+  },
+  {
+    "name": "Cesium-137",
+    "price": 620500000,
+    "type": "Special",
+    "id": 336
+  },
+  {
+    "name": "Dirty Bomb",
+    "price": null,
+    "type": "Special",
+    "id": 337
+  },
+  {
+    "name": "Sh0rty's Surfboard",
+    "price": null,
+    "type": "Collectible",
+    "id": 338
+  },
+  {
+    "name": "Puzzle Piece",
+    "price": null,
+    "type": "Collectible",
+    "id": 339
+  },
+  {
+    "name": "Hunny Pot",
+    "price": null,
+    "type": "Collectible",
+    "id": 340
+  },
+  {
+    "name": "Seductive Stethoscope",
+    "price": null,
+    "type": "Collectible",
+    "id": 341
+  },
+  {
+    "name": "Dollar Bill Collectible",
+    "price": 1130555008,
+    "type": "Collectible",
+    "id": 342
+  },
+  {
+    "name": "Backstage Pass",
+    "price": 2500000000,
+    "type": "Collectible",
+    "id": 343
+  },
+  {
+    "name": "Chemi's Magic Potion",
+    "price": null,
+    "type": "Collectible",
+    "id": 344
+  },
+  {
+    "name": "Pack of Trojans",
+    "price": 19070050,
+    "type": "Other",
+    "id": 345
+  },
+  {
+    "name": "Pair of High Heels",
+    "price": 6135,
+    "type": "Melee",
+    "id": 346
+  },
+  {
+    "name": "Thong",
+    "price": 9012,
+    "type": "Clothing",
+    "id": 347
+  },
+  {
+    "name": "Hazmat Suit",
+    "price": 10500000256,
+    "type": "Defensive",
+    "id": 348
+  },
+  {
+    "name": "Flea Collar",
+    "price": 1600000000,
+    "type": "Collectible",
+    "id": 349
+  },
+  {
+    "name": "Dunkin's Donut",
+    "price": null,
+    "type": "Collectible",
+    "id": 350
+  },
+  {
+    "name": "Amazon Doll",
+    "price": null,
+    "type": "Collectible",
+    "id": 351
+  },
+  {
+    "name": "BBQ Smoker",
+    "price": null,
+    "type": "Collectible",
+    "id": 352
+  },
+  {
+    "name": "Bag of Cheetos",
+    "price": null,
+    "type": "Collectible",
+    "id": 353
+  },
+  {
+    "name": "Motorbike",
+    "price": null,
+    "type": "Collectible",
+    "id": 354
+  },
+  {
+    "name": "Citrus Squeezer",
+    "price": null,
+    "type": "Collectible",
+    "id": 355
+  },
+  {
+    "name": "Superman Shades",
+    "price": null,
+    "type": "Collectible",
+    "id": 356
+  },
+  {
+    "name": "Kevlar Helmet",
+    "price": 2500000000,
+    "type": "Collectible",
+    "id": 357
+  },
+  {
+    "name": "Raw Ivory",
+    "price": 71849,
+    "type": "Other",
+    "id": 358
+  },
+  {
+    "name": "Fine Chisel",
+    "price": 34,
+    "type": "Melee",
+    "id": 359
+  },
+  {
+    "name": "Ivory Walking Cane",
+    "price": 11250000,
+    "type": "Melee",
+    "id": 360
+  },
+  {
+    "name": "Neumune Tablet",
+    "price": 735172,
+    "type": "Medical",
+    "id": 361
+  },
+  {
+    "name": "Mr Torn Crown '08",
+    "price": null,
+    "type": "Collectible",
+    "id": 362
+  },
+  {
+    "name": "Ms Torn Crown '08",
+    "price": null,
+    "type": "Collectible",
+    "id": 363
+  },
+  {
+    "name": "Box of Grenades",
+    "price": 1073795,
+    "type": "Supply Pack",
+    "id": 364
+  },
+  {
+    "name": "Box of Medical Supplies",
+    "price": 220902,
+    "type": "Supply Pack",
+    "id": 365
+  },
+  {
+    "name": "Erotic DVD",
+    "price": 3529900,
+    "type": "Booster",
+    "id": 366
+  },
+  {
+    "name": "Feathery Hotel Coupon",
+    "price": 12516850,
+    "type": "Booster",
+    "id": 367
+  },
+  {
+    "name": "Lawyer's Business Card",
+    "price": 277054,
+    "type": "Booster",
+    "id": 368
+  },
+  {
+    "name": "Lottery Voucher",
+    "price": 853962,
+    "type": "Supply Pack",
+    "id": 369
+  },
+  {
+    "name": "Drug Pack",
+    "price": 4203370,
+    "type": "Supply Pack",
+    "id": 370
+  },
+  {
+    "name": "Dark Doll",
+    "price": null,
+    "type": "Collectible",
+    "id": 371
+  },
+  {
+    "name": "Empty Box",
+    "price": 26,
+    "type": "Special",
+    "id": 372
+  },
+  {
+    "name": "Parcel",
+    "price": 0,
+    "type": "Supply Pack",
+    "id": 373
+  },
+  {
+    "name": "Birthday Present",
+    "price": null,
+    "type": "Supply Pack",
+    "id": 374
+  },
+  {
+    "name": "Present",
+    "price": null,
+    "type": "Supply Pack",
+    "id": 375
+  },
+  {
+    "name": "Christmas Present",
+    "price": null,
+    "type": "Supply Pack",
+    "id": 376
+  },
+  {
+    "name": "Birthday Wrapping Paper",
+    "price": 323,
+    "type": "Material",
+    "id": 377
+  },
+  {
+    "name": "Generic Wrapping Paper",
+    "price": 300,
+    "type": "Material",
+    "id": 378
+  },
+  {
+    "name": "Christmas Wrapping Paper",
+    "price": 208,
+    "type": "Material",
+    "id": 379
+  },
+  {
+    "name": "Small Explosive Device",
+    "price": 4942165,
+    "type": "Special",
+    "id": 380
+  },
+  {
+    "name": "Gold Laptop",
+    "price": null,
+    "type": "Tool",
+    "id": 381
+  },
+  {
+    "name": "Gold Plated AK-47",
+    "price": 25000000000,
+    "type": "Primary",
+    "id": 382
+  },
+  {
+    "name": "Digital Organizer",
+    "price": null,
+    "type": "Other",
+    "id": 383
+  },
+  {
+    "name": "Camel Plushie",
+    "price": 86260,
+    "type": "Plushie",
+    "id": 384
+  },
+  {
+    "name": "Tribulus Omanense",
+    "price": 70074,
+    "type": "Flower",
+    "id": 385
+  },
+  {
+    "name": "Sports Sneakers",
+    "price": null,
+    "type": "Enhancer",
+    "id": 386
+  },
+  {
+    "name": "Handbag",
+    "price": 16000000000,
+    "type": "Melee",
+    "id": 387
+  },
+  {
+    "name": "Pink Mac-10",
+    "price": null,
+    "type": "Secondary",
+    "id": 388
+  },
+  {
+    "name": "Mr Torn Crown '09",
+    "price": null,
+    "type": "Collectible",
+    "id": 389
+  },
+  {
+    "name": "Ms Torn Crown '09",
+    "price": null,
+    "type": "Collectible",
+    "id": 390
+  },
+  {
+    "name": "Macana",
+    "price": 84849,
+    "type": "Melee",
+    "id": 391
+  },
+  {
+    "name": "Pepper Spray",
+    "price": 1352,
+    "type": "Temporary",
+    "id": 392
+  },
+  {
+    "name": "Slingshot",
+    "price": 12,
+    "type": "Secondary",
+    "id": 393
+  },
+  {
+    "name": "Brick",
+    "price": 457,
+    "type": "Temporary",
+    "id": 394
+  },
+  {
+    "name": "Metal Nunchaku",
+    "price": 416830,
+    "type": "Melee",
+    "id": 395
+  },
+  {
+    "name": "Business Class Ticket",
+    "price": 6319925,
+    "type": "Special",
+    "id": 396
+  },
+  {
+    "name": "Flail",
+    "price": 7749500,
+    "type": "Melee",
+    "id": 397
+  },
+  {
+    "name": "SIG 552",
+    "price": 6471250,
+    "type": "Primary",
+    "id": 398
+  },
+  {
+    "name": "ArmaLite M-15A4",
+    "price": 19091450,
+    "type": "Primary",
+    "id": 399
+  },
+  {
+    "name": "Guandao",
+    "price": 149995,
+    "type": "Melee",
+    "id": 400
+  },
+  {
+    "name": "Lead Pipe",
+    "price": 60,
+    "type": "Melee",
+    "id": 401
+  },
+  {
+    "name": "Ice Pick",
+    "price": 14766,
+    "type": "Melee",
+    "id": 402
+  },
+  {
+    "name": "Box of Tissues",
+    "price": 78,
+    "type": "Special",
+    "id": 403
+  },
+  {
+    "name": "Bandana",
+    "price": 232,
+    "type": "Clothing",
+    "id": 404
+  },
+  {
+    "name": "Loaf of Bread",
+    "price": 4000000,
+    "type": "Other",
+    "id": 405
+  },
+  {
+    "name": "Afro Comb",
+    "price": 29675,
+    "type": "Other",
+    "id": 406
+  },
+  {
+    "name": "Compass",
+    "price": 7017,
+    "type": "Other",
+    "id": 407
+  },
+  {
+    "name": "Sextant",
+    "price": 15868,
+    "type": "Other",
+    "id": 408
+  },
+  {
+    "name": "Yucca Plant",
+    "price": 7222,
+    "type": "Other",
+    "id": 409
+  },
+  {
+    "name": "Fire Hydrant",
+    "price": 14772,
+    "type": "Other",
+    "id": 410
+  },
+  {
+    "name": "Model Space Ship",
+    "price": 13402,
+    "type": "Other",
+    "id": 411
+  },
+  {
+    "name": "Sports Shades",
+    "price": 2835,
+    "type": "Clothing",
+    "id": 412
+  },
+  {
+    "name": "Mountie Hat",
+    "price": 21637,
+    "type": "Clothing",
+    "id": 413
+  },
+  {
+    "name": "Proda Sunglasses",
+    "price": 1883,
+    "type": "Clothing",
+    "id": 414
+  },
+  {
+    "name": "Ship in a Bottle",
+    "price": 24854,
+    "type": "Other",
+    "id": 415
+  },
+  {
+    "name": "Paper Weight",
+    "price": 1585,
+    "type": "Other",
+    "id": 416
+  },
+  {
+    "name": "RS232 Cable",
+    "price": 27,
+    "type": "Other",
+    "id": 417
+  },
+  {
+    "name": "Tailor's Dummy",
+    "price": 7338,
+    "type": "Other",
+    "id": 418
+  },
+  {
+    "name": "Small Suitcase",
+    "price": 1025930,
+    "type": "Enhancer",
+    "id": 419
+  },
+  {
+    "name": "Medium Suitcase",
+    "price": 3849330,
+    "type": "Enhancer",
+    "id": 420
+  },
+  {
+    "name": "Large Suitcase",
+    "price": 10064350,
+    "type": "Enhancer",
+    "id": 421
+  },
+  {
+    "name": "Vanity Hand Mirror",
+    "price": 14238,
+    "type": "Special",
+    "id": 422
+  },
+  {
+    "name": "Poker Chip",
+    "price": 555555968,
+    "type": "Collectible",
+    "id": 423
+  },
+  {
+    "name": "Rabbit Foot",
+    "price": 640000000,
+    "type": "Collectible",
+    "id": 424
+  },
+  {
+    "name": "Voodoo Doll",
+    "price": 600000000,
+    "type": "Collectible",
+    "id": 425
+  },
+  {
+    "name": "Bottle of Tequila",
+    "price": 622,
+    "type": "Alcohol",
+    "id": 426
+  },
+  {
+    "name": "Sumo Doll",
+    "price": 4503,
+    "type": "Other",
+    "id": 427
+  },
+  {
+    "name": "Casino Pass",
+    "price": 19194000,
+    "type": "Special",
+    "id": 428
+  },
+  {
+    "name": "Chopsticks",
+    "price": 2122,
+    "type": "Other",
+    "id": 429
+  },
+  {
+    "name": "Coconut Bra",
+    "price": 298845,
+    "type": "Clothing",
+    "id": 430
+  },
+  {
+    "name": "Dart Board",
+    "price": 1469,
+    "type": "Other",
+    "id": 431
+  },
+  {
+    "name": "Crazy Straw",
+    "price": 301,
+    "type": "Other",
+    "id": 432
+  },
+  {
+    "name": "Sensu",
+    "price": 2149,
+    "type": "Other",
+    "id": 433
+  },
+  {
+    "name": "Yakitori Lantern",
+    "price": 3000,
+    "type": "Other",
+    "id": 434
+  },
+  {
+    "name": "Dozen White Roses",
+    "price": null,
+    "type": "Flower",
+    "id": 435
+  },
+  {
+    "name": "Snowboard",
+    "price": 4105,
+    "type": "Other",
+    "id": 436
+  },
+  {
+    "name": "Glow Stick",
+    "price": 37125,
+    "type": "Material",
+    "id": 437
+  },
+  {
+    "name": "Cricket Bat",
+    "price": 9780,
+    "type": "Melee",
+    "id": 438
+  },
+  {
+    "name": "Frying Pan",
+    "price": 227,
+    "type": "Melee",
+    "id": 439
+  },
+  {
+    "name": "Pillow",
+    "price": 6670,
+    "type": "Melee",
+    "id": 440
+  },
+  {
+    "name": "Khinkeh P0rnStar Doll",
+    "price": null,
+    "type": "Collectible",
+    "id": 441
+  },
+  {
+    "name": "Blow-Up Doll",
+    "price": null,
+    "type": "Collectible",
+    "id": 442
+  },
+  {
+    "name": "Strawberry Milkshake",
+    "price": null,
+    "type": "Collectible",
+    "id": 443
+  },
+  {
+    "name": "Breadfan Doll",
+    "price": null,
+    "type": "Collectible",
+    "id": 444
+  },
+  {
+    "name": "Chaos Man",
+    "price": null,
+    "type": "Collectible",
+    "id": 445
+  },
+  {
+    "name": "Karate Man",
+    "price": null,
+    "type": "Collectible",
+    "id": 446
+  },
+  {
+    "name": "Burmese Flag",
+    "price": 2500000000,
+    "type": "Collectible",
+    "id": 447
+  },
+  {
+    "name": "Bl0ndie's Dictionary",
+    "price": null,
+    "type": "Collectible",
+    "id": 448
+  },
+  {
+    "name": "Hydroponic Grow Tent",
+    "price": null,
+    "type": "Collectible",
+    "id": 449
+  },
+  {
+    "name": "Leopard Coin",
+    "price": 1402500,
+    "type": "Artifact",
+    "id": 450
+  },
+  {
+    "name": "Florin Coin",
+    "price": 1399990,
+    "type": "Artifact",
+    "id": 451
+  },
+  {
+    "name": "Gold Noble Coin",
+    "price": 1474750,
+    "type": "Artifact",
+    "id": 452
+  },
+  {
+    "name": "Ganesha Sculpture",
+    "price": 11500000,
+    "type": "Artifact",
+    "id": 453
+  },
+  {
+    "name": "Vairocana Buddha Sculpture",
+    "price": 4902610,
+    "type": "Artifact",
+    "id": 454
+  },
+  {
+    "name": "Quran Script : Ibn Masud",
+    "price": 13795000,
+    "type": "Artifact",
+    "id": 455
+  },
+  {
+    "name": "Quran Script : Ubay Ibn Ka'b",
+    "price": 14783300,
+    "type": "Artifact",
+    "id": 456
+  },
+  {
+    "name": "Quran Script : Ali",
+    "price": 14025000,
+    "type": "Artifact",
+    "id": 457
+  },
+  {
+    "name": "Shabti Sculpture",
+    "price": 20000000,
+    "type": "Artifact",
+    "id": 458
+  },
+  {
+    "name": "Egyptian Amulet",
+    "price": 525000000,
+    "type": "Artifact",
+    "id": 459
+  },
+  {
+    "name": "White Senet Pawn",
+    "price": 8260000,
+    "type": "Artifact",
+    "id": 460
+  },
+  {
+    "name": "Black Senet Pawn",
+    "price": 7645260,
+    "type": "Artifact",
+    "id": 461
+  },
+  {
+    "name": "Senet Board",
+    "price": 502916,
+    "type": "Artifact",
+    "id": 462
+  },
+  {
+    "name": "Epinephrine",
+    "price": 897722,
+    "type": "Temporary",
+    "id": 463
+  },
+  {
+    "name": "Melatonin",
+    "price": 298523,
+    "type": "Temporary",
+    "id": 464
+  },
+  {
+    "name": "Serotonin",
+    "price": 1302145,
+    "type": "Temporary",
+    "id": 465
+  },
+  {
+    "name": "Snow Globe '09",
+    "price": 100000000,
+    "type": "Collectible",
+    "id": 466
+  },
+  {
+    "name": "Dancing Santa Claus '09",
+    "price": 28999600,
+    "type": "Collectible",
+    "id": 467
+  },
+  {
+    "name": "Christmas Stocking '09",
+    "price": null,
+    "type": "Collectible",
+    "id": 468
+  },
+  {
+    "name": "Santa's Elf '09",
+    "price": 573650528,
+    "type": "Collectible",
+    "id": 469
+  },
+  {
+    "name": "Christmas Card '09",
+    "price": null,
+    "type": "Collectible",
+    "id": 470
+  },
+  {
+    "name": "Admin Portrait '09",
+    "price": null,
+    "type": "Collectible",
+    "id": 471
+  },
+  {
+    "name": "Blue Easter Egg",
+    "price": null,
+    "type": "Booster",
+    "id": 472
+  },
+  {
+    "name": "Green Easter Egg",
+    "price": null,
+    "type": "Booster",
+    "id": 473
+  },
+  {
+    "name": "Red Easter Egg",
+    "price": null,
+    "type": "Booster",
+    "id": 474
+  },
+  {
+    "name": "Yellow Easter Egg",
+    "price": null,
+    "type": "Booster",
+    "id": 475
+  },
+  {
+    "name": "White Easter Egg",
+    "price": null,
+    "type": "Booster",
+    "id": 476
+  },
+  {
+    "name": "Black Easter Egg",
+    "price": null,
+    "type": "Booster",
+    "id": 477
+  },
+  {
+    "name": "Gold Easter Egg",
+    "price": null,
+    "type": "Booster",
+    "id": 478
+  },
+  {
+    "name": "Metal Dog Tag",
+    "price": null,
+    "type": "Collectible",
+    "id": 479
+  },
+  {
+    "name": "Bronze Dog Tag",
+    "price": null,
+    "type": "Collectible",
+    "id": 480
+  },
+  {
+    "name": "Silver Dog Tag",
+    "price": null,
+    "type": "Collectible",
+    "id": 481
+  },
+  {
+    "name": "Gold Dog Tag",
+    "price": null,
+    "type": "Collectible",
+    "id": 482
+  },
+  {
+    "name": "MP5k",
+    "price": 441,
+    "type": "Secondary",
+    "id": 483
+  },
+  {
+    "name": "AK74U",
+    "price": 8305,
+    "type": "Primary",
+    "id": 484
+  },
+  {
+    "name": "Skorpion",
+    "price": 381,
+    "type": "Secondary",
+    "id": 485
+  },
+  {
+    "name": "TMP",
+    "price": 412,
+    "type": "Secondary",
+    "id": 486
+  },
+  {
+    "name": "Thompson",
+    "price": 480,
+    "type": "Primary",
+    "id": 487
+  },
+  {
+    "name": "MP 40",
+    "price": 7581,
+    "type": "Primary",
+    "id": 488
+  },
+  {
+    "name": "Luger",
+    "price": 357,
+    "type": "Secondary",
+    "id": 489
+  },
+  {
+    "name": "Blunderbuss",
+    "price": 7243,
+    "type": "Secondary",
+    "id": 490
+  },
+  {
+    "name": "Zombie Brain",
+    "price": 89000000,
+    "type": "Collectible",
+    "id": 491
+  },
+  {
+    "name": "Human Head",
+    "price": 100000000,
+    "type": "Collectible",
+    "id": 492
+  },
+  {
+    "name": "Medal of Honor",
+    "price": 69750000,
+    "type": "Collectible",
+    "id": 493
+  },
+  {
+    "name": "Limoen Saxon",
+    "price": 72717,
+    "type": "Car",
+    "id": 494
+  },
+  {
+    "name": "Nano Pioneer",
+    "price": 10000,
+    "type": "Car",
+    "id": 495
+  },
+  {
+    "name": "Vita Bravo",
+    "price": 484644,
+    "type": "Car",
+    "id": 496
+  },
+  {
+    "name": "Zaibatsu Macro",
+    "price": 30602,
+    "type": "Car",
+    "id": 497
+  },
+  {
+    "name": "Çagoutte 10-6",
+    "price": 7000,
+    "type": "Car",
+    "id": 498
+  },
+  {
+    "name": "Papani Colé",
+    "price": 11037,
+    "type": "Car",
+    "id": 499
+  },
+  {
+    "name": "Bedford Racer",
+    "price": 9061,
+    "type": "Car",
+    "id": 500
+  },
+  {
+    "name": "Stålhög 860",
+    "price": 480362,
+    "type": "Car",
+    "id": 501
+  },
+  {
+    "name": "Alpha Milano 156",
+    "price": 13476,
+    "type": "Car",
+    "id": 502
+  },
+  {
+    "name": "Bavaria X5",
+    "price": 34833,
+    "type": "Car",
+    "id": 503
+  },
+  {
+    "name": "Coche Basurero",
+    "price": 15388,
+    "type": "Car",
+    "id": 504
+  },
+  {
+    "name": "Bedford Nova",
+    "price": 10792,
+    "type": "Car",
+    "id": 505
+  },
+  {
+    "name": "Verpestung Sport",
+    "price": 11182,
+    "type": "Car",
+    "id": 506
+  },
+  {
+    "name": "Echo S3",
+    "price": 2000000000,
+    "type": "Car",
+    "id": 507
+  },
+  {
+    "name": "Volt RS",
+    "price": 54667,
+    "type": "Car",
+    "id": 508
+  },
+  {
+    "name": "Edomondo S2",
+    "price": 27734,
+    "type": "Car",
+    "id": 509
+  },
+  {
+    "name": "Nano Cavalier",
+    "price": 124463,
+    "type": "Car",
+    "id": 510
+  },
+  {
+    "name": "Colina Tanprice",
+    "price": 33000000,
+    "type": "Car",
+    "id": 511
+  },
+  {
+    "name": "Cosmos EX",
+    "price": 19824,
+    "type": "Car",
+    "id": 512
+  },
+  {
+    "name": "Yotsuhada EVX",
+    "price": 116708,
+    "type": "Car",
+    "id": 513
+  },
+  {
+    "name": "Sturmfahrt 111",
+    "price": 87500,
+    "type": "Car",
+    "id": 514
+  },
+  {
+    "name": "Tsubasa Impressor",
+    "price": 52997,
+    "type": "Car",
+    "id": 515
+  },
+  {
+    "name": "Wington GGU ",
+    "price": 57198,
+    "type": "Car",
+    "id": 516
+  },
+  {
+    "name": "Weston Marlin 177",
+    "price": 1258330,
+    "type": "Car",
+    "id": 517
+  },
+  {
+    "name": "Echo R8",
+    "price": 175487,
+    "type": "Car",
+    "id": 518
+  },
+  {
+    "name": "Stormatti Casteon",
+    "price": null,
+    "type": "Car",
+    "id": 519
+  },
+  {
+    "name": "Lolo 458",
+    "price": 1701305,
+    "type": "Car",
+    "id": 520
+  },
+  {
+    "name": "Lambrini Torobravo",
+    "price": 1036300,
+    "type": "Car",
+    "id": 521
+  },
+  {
+    "name": "Veloria LFA",
+    "price": 1663375,
+    "type": "Car",
+    "id": 522
+  },
+  {
+    "name": "Mercia SLR",
+    "price": 1188750,
+    "type": "Car",
+    "id": 523
+  },
+  {
+    "name": "Zaibatsu GT-R",
+    "price": 189935,
+    "type": "Car",
+    "id": 524
+  },
+  {
+    "name": "Mr Torn Crown '10",
+    "price": null,
+    "type": "Collectible",
+    "id": 525
+  },
+  {
+    "name": "Ms Torn Crown '10",
+    "price": null,
+    "type": "Collectible",
+    "id": 526
+  },
+  {
+    "name": "Bag of Candy Kisses",
+    "price": 31352,
+    "type": "Candy",
+    "id": 527
+  },
+  {
+    "name": "Bag of Tootsie Rolls",
+    "price": 50496,
+    "type": "Candy",
+    "id": 528
+  },
+  {
+    "name": "Bag of Chocolate Truffles",
+    "price": 98875,
+    "type": "Candy",
+    "id": 529
+  },
+  {
+    "name": "Can of Munster",
+    "price": 1755560,
+    "type": "Energy Drink",
+    "id": 530
+  },
+  {
+    "name": "Bottle of Pumpkin Brew",
+    "price": 78574,
+    "type": "Alcohol",
+    "id": 531
+  },
+  {
+    "name": "Can of Red Cow",
+    "price": 2238730,
+    "type": "Energy Drink",
+    "id": 532
+  },
+  {
+    "name": "Can of Taurine Elite",
+    "price": 3740950,
+    "type": "Energy Drink",
+    "id": 533
+  },
+  {
+    "name": "Witch's Cauldron",
+    "price": 2462500,
+    "type": "Other",
+    "id": 534
+  },
+  {
+    "name": "Electronic Pumpkin",
+    "price": 14591,
+    "type": "Other",
+    "id": 535
+  },
+  {
+    "name": "Jack O'Lantern Lamp",
+    "price": 600000,
+    "type": "Other",
+    "id": 536
+  },
+  {
+    "name": "Spooky Paper Weight",
+    "price": 279000,
+    "type": "Other",
+    "id": 537
+  },
+  {
+    "name": "Medieval Helmet",
+    "price": 10000000,
+    "type": "Defensive",
+    "id": 538
+  },
+  {
+    "name": "Blood Spattered Sickle",
+    "price": 37687500,
+    "type": "Melee",
+    "id": 539
+  },
+  {
+    "name": "Cauldron",
+    "price": 1225000,
+    "type": "Other",
+    "id": 540
+  },
+  {
+    "name": "Bottle of Stinky Swamp Punch",
+    "price": 381752,
+    "type": "Alcohol",
+    "id": 541
+  },
+  {
+    "name": "Bottle of Wicked Witch",
+    "price": 199150,
+    "type": "Alcohol",
+    "id": 542
+  },
+  {
+    "name": "Deputy Star",
+    "price": 50275000,
+    "type": "Collectible",
+    "id": 543
+  },
+  {
+    "name": "Windproof Lighter",
+    "price": 2700760,
+    "type": "Enhancer",
+    "id": 544
+  },
+  {
+    "name": "Dual TMPs",
+    "price": null,
+    "type": "Primary",
+    "id": 545
+  },
+  {
+    "name": "Dual Bushmasters",
+    "price": null,
+    "type": "Primary",
+    "id": 546
+  },
+  {
+    "name": "Dual MP5s",
+    "price": null,
+    "type": "Primary",
+    "id": 547
+  },
+  {
+    "name": "Dual P90s",
+    "price": null,
+    "type": "Primary",
+    "id": 548
+  },
+  {
+    "name": "Dual Uzis",
+    "price": null,
+    "type": "Primary",
+    "id": 549
+  },
+  {
+    "name": "Bottle of Kandy Kane",
+    "price": 78613,
+    "type": "Alcohol",
+    "id": 550
+  },
+  {
+    "name": "Bottle of Minty Mayhem",
+    "price": 197013,
+    "type": "Alcohol",
+    "id": 551
+  },
+  {
+    "name": "Bottle of Mistletoe Madness",
+    "price": 373101,
+    "type": "Alcohol",
+    "id": 552
+  },
+  {
+    "name": "Can of Santa Shooters",
+    "price": 1758760,
+    "type": "Energy Drink",
+    "id": 553
+  },
+  {
+    "name": "Can of Rockstar Rudolph",
+    "price": 2240170,
+    "type": "Energy Drink",
+    "id": 554
+  },
+  {
+    "name": "Can of X-MASS",
+    "price": 3740215,
+    "type": "Energy Drink",
+    "id": 555
+  },
+  {
+    "name": "Bag of Reindeer Droppings",
+    "price": 100500,
+    "type": "Candy",
+    "id": 556
+  },
+  {
+    "name": "Advent Calendar",
+    "price": 15508,
+    "type": "Other",
+    "id": 557
+  },
+  {
+    "name": "Santa's Snot",
+    "price": 19999,
+    "type": "Other",
+    "id": 558
+  },
+  {
+    "name": "Polar Bear Toy",
+    "price": 51196,
+    "type": "Other",
+    "id": 559
+  },
+  {
+    "name": "Fruitcake",
+    "price": 277,
+    "type": "Material",
+    "id": 560
+  },
+  {
+    "name": "Book of Carols",
+    "price": 14221100,
+    "type": "Booster",
+    "id": 561
+  },
+  {
+    "name": "Sweater",
+    "price": 33,
+    "type": "Clothing",
+    "id": 562
+  },
+  {
+    "name": "Gift Card",
+    "price": 2766060,
+    "type": "Booster",
+    "id": 563
+  },
+  {
+    "name": "Glasses",
+    "price": 5193,
+    "type": "Enhancer",
+    "id": 564
+  },
+  {
+    "name": "High-Speed Drive",
+    "price": 95131,
+    "type": "Enhancer",
+    "id": 565
+  },
+  {
+    "name": "Mountain Bike",
+    "price": 128010,
+    "type": "Enhancer",
+    "id": 566
+  },
+  {
+    "name": "Cut-Throat Razor",
+    "price": 5889,
+    "type": "Enhancer",
+    "id": 567
+  },
+  {
+    "name": "Jemmy",
+    "price": 1053,
+    "type": "Tool",
+    "id": 568
+  },
+  {
+    "name": "Balaclava",
+    "price": 566073,
+    "type": "Enhancer",
+    "id": 569
+  },
+  {
+    "name": "Advanced Driving Manual",
+    "price": 55777,
+    "type": "Enhancer",
+    "id": 570
+  },
+  {
+    "name": "Ergonomic Keyboard",
+    "price": 274079,
+    "type": "Enhancer",
+    "id": 571
+  },
+  {
+    "name": "Tracking Device",
+    "price": 68033,
+    "type": "Enhancer",
+    "id": 572
+  },
+  {
+    "name": "Screwdriver",
+    "price": 361905,
+    "type": "Enhancer",
+    "id": 573
+  },
+  {
+    "name": "Fanny Pack",
+    "price": 52321,
+    "type": "Enhancer",
+    "id": 574
+  },
+  {
+    "name": "Tumble Dryer",
+    "price": 60274,
+    "type": "Enhancer",
+    "id": 575
+  },
+  {
+    "name": "Chloroform",
+    "price": 50198,
+    "type": "Enhancer",
+    "id": 576
+  },
+  {
+    "name": "Heavy Duty Padlock",
+    "price": 156696,
+    "type": "Enhancer",
+    "id": 577
+  },
+  {
+    "name": "Duct Tape",
+    "price": 190893,
+    "type": "Enhancer",
+    "id": 578
+  },
+  {
+    "name": "Wireless Dongle",
+    "price": 81544,
+    "type": "Enhancer",
+    "id": 579
+  },
+  {
+    "name": "Horse's Head",
+    "price": 874045,
+    "type": "Special",
+    "id": 580
+  },
+  {
+    "name": "Book",
+    "price": 16500000,
+    "type": "Temporary",
+    "id": 581
+  },
+  {
+    "name": "Tin Foil Hat",
+    "price": null,
+    "type": "Clothing",
+    "id": 582
+  },
+  {
+    "name": "Brown Easter Egg",
+    "price": null,
+    "type": "Booster",
+    "id": 583
+  },
+  {
+    "name": "Orange Easter Egg",
+    "price": null,
+    "type": "Booster",
+    "id": 584
+  },
+  {
+    "name": "Pink Easter Egg",
+    "price": null,
+    "type": "Booster",
+    "id": 585
+  },
+  {
+    "name": "Jawbreaker",
+    "price": 258866,
+    "type": "Candy",
+    "id": 586
+  },
+  {
+    "name": "Bag of Sherbet",
+    "price": 260394,
+    "type": "Candy",
+    "id": 587
+  },
+  {
+    "name": "Goodie Bag",
+    "price": 32866250,
+    "type": "Supply Pack",
+    "id": 588
+  },
+  {
+    "name": "Undefined",
+    "price": null,
+    "type": "Unused",
+    "id": 589
+  },
+  {
+    "name": "Undefined 2",
+    "price": null,
+    "type": "Unused",
+    "id": 590
+  },
+  {
+    "name": "Undefined 3",
+    "price": null,
+    "type": "Unused",
+    "id": 591
+  },
+  {
+    "name": "Undefined 4",
+    "price": null,
+    "type": "Unused",
+    "id": 592
+  },
+  {
+    "name": "Mr Torn Crown '11",
+    "price": null,
+    "type": "Collectible",
+    "id": 593
+  },
+  {
+    "name": "Ms Torn Crown '11",
+    "price": null,
+    "type": "Collectible",
+    "id": 594
+  },
+  {
+    "name": "Pile of Vomit",
+    "price": 3666660,
+    "type": "Other",
+    "id": 595
+  },
+  {
+    "name": "Rusty Dog Tag",
+    "price": 91333296,
+    "type": "Collectible",
+    "id": 596
+  },
+  {
+    "name": "Gold Nugget",
+    "price": 77500000,
+    "type": "Collectible",
+    "id": 597
+  },
+  {
+    "name": "Witch's Hat",
+    "price": 250000000,
+    "type": "Clothing",
+    "id": 598
+  },
+  {
+    "name": "Golden Broomstick",
+    "price": 175000000,
+    "type": "Melee",
+    "id": 599
+  },
+  {
+    "name": "Devil's Pitchfork",
+    "price": 352388992,
+    "type": "Melee",
+    "id": 600
+  },
+  {
+    "name": "Christmas Lights",
+    "price": 9085,
+    "type": "Other",
+    "id": 601
+  },
+  {
+    "name": "Gingerbread Man",
+    "price": 64388,
+    "type": "Other",
+    "id": 602
+  },
+  {
+    "name": "Golden Wreath",
+    "price": 46467,
+    "type": "Other",
+    "id": 603
+  },
+  {
+    "name": "Pair of Ice Skates",
+    "price": 509,
+    "type": "Melee",
+    "id": 604
+  },
+  {
+    "name": "Diamond Icicle",
+    "price": 149685,
+    "type": "Melee",
+    "id": 605
+  },
+  {
+    "name": "Santa Boots",
+    "price": 375000,
+    "type": "Clothing",
+    "id": 606
+  },
+  {
+    "name": "Santa Gloves",
+    "price": 274999,
+    "type": "Clothing",
+    "id": 607
+  },
+  {
+    "name": "Santa Hat",
+    "price": 950000,
+    "type": "Clothing",
+    "id": 608
+  },
+  {
+    "name": "Santa Jacket",
+    "price": 390246,
+    "type": "Clothing",
+    "id": 609
+  },
+  {
+    "name": "Santa Trousers",
+    "price": 276332,
+    "type": "Clothing",
+    "id": 610
+  },
+  {
+    "name": "Snowball",
+    "price": 10019,
+    "type": "Temporary",
+    "id": 611
+  },
+  {
+    "name": "Tavor TAR-21",
+    "price": 352558,
+    "type": "Primary",
+    "id": 612
+  },
+  {
+    "name": "Harpoon",
+    "price": 199998,
+    "type": "Secondary",
+    "id": 613
+  },
+  {
+    "name": "Diamond Bladed Knife",
+    "price": 844446,
+    "type": "Melee",
+    "id": 614
+  },
+  {
+    "name": "Naval Cutlass",
+    "price": 45850000,
+    "type": "Melee",
+    "id": 615
+  },
+  {
+    "name": "Trout",
+    "price": 15629,
+    "type": "Temporary",
+    "id": 616
+  },
+  {
+    "name": "Banana Orchid",
+    "price": 10662,
+    "type": "Flower",
+    "id": 617
+  },
+  {
+    "name": "Stingray Plushie",
+    "price": 8515,
+    "type": "Plushie",
+    "id": 618
+  },
+  {
+    "name": "Steel Drum",
+    "price": 2328,
+    "type": "Other",
+    "id": 619
+  },
+  {
+    "name": "Nodding Turtle",
+    "price": 3603,
+    "type": "Other",
+    "id": 620
+  },
+  {
+    "name": "Snorkel",
+    "price": 14581,
+    "type": "Clothing",
+    "id": 621
+  },
+  {
+    "name": "Flippers",
+    "price": 7318,
+    "type": "Clothing",
+    "id": 622
+  },
+  {
+    "name": "Speedo",
+    "price": 3813,
+    "type": "Clothing",
+    "id": 623
+  },
+  {
+    "name": "Bikini",
+    "price": 5551,
+    "type": "Clothing",
+    "id": 624
+  },
+  {
+    "name": "Wetsuit",
+    "price": 19676,
+    "type": "Clothing",
+    "id": 625
+  },
+  {
+    "name": "Diving Gloves",
+    "price": 2958,
+    "type": "Clothing",
+    "id": 626
+  },
+  {
+    "name": "Dog Poop",
+    "price": 941470,
+    "type": "Special",
+    "id": 627
+  },
+  {
+    "name": "Stink Bombs",
+    "price": 926890,
+    "type": "Special",
+    "id": 628
+  },
+  {
+    "name": "Toilet Paper",
+    "price": 912066,
+    "type": "Special",
+    "id": 629
+  },
+  {
+    "name": "Mr Torn Crown '12",
+    "price": null,
+    "type": "Collectible",
+    "id": 630
+  },
+  {
+    "name": "Ms Torn Crown '12",
+    "price": null,
+    "type": "Collectible",
+    "id": 631
+  },
+  {
+    "name": "Petrified Humerus",
+    "price": 58000000,
+    "type": "Melee",
+    "id": 632
+  },
+  {
+    "name": "Latex Gloves",
+    "price": 302266,
+    "type": "Enhancer",
+    "id": 633
+  },
+  {
+    "name": "Bag of Bloody Eyeballs",
+    "price": 52542,
+    "type": "Candy",
+    "id": 634
+  },
+  {
+    "name": "Straitjacket",
+    "price": 185000000,
+    "type": "Clothing",
+    "id": 635
+  },
+  {
+    "name": "Cinnamon Decoration",
+    "price": 54686,
+    "type": "Other",
+    "id": 636
+  },
+  {
+    "name": "Christmas Express",
+    "price": 124891,
+    "type": "Other",
+    "id": 637
+  },
+  {
+    "name": "Bottle of Christmas Cocktail",
+    "price": 216021,
+    "type": "Alcohol",
+    "id": 638
+  },
+  {
+    "name": "Golden Candy Cane",
+    "price": 100000,
+    "type": "Other",
+    "id": 639
+  },
+  {
+    "name": "Kevlar Gloves",
+    "price": 320069,
+    "type": "Defensive",
+    "id": 640
+  },
+  {
+    "name": "WWII Helmet",
+    "price": 74824,
+    "type": "Defensive",
+    "id": 641
+  },
+  {
+    "name": "Motorcycle Helmet",
+    "price": 41100000,
+    "type": "Defensive",
+    "id": 642
+  },
+  {
+    "name": "Construction Helmet",
+    "price": 11089,
+    "type": "Defensive",
+    "id": 643
+  },
+  {
+    "name": "Welding Helmet",
+    "price": 949999008,
+    "type": "Defensive",
+    "id": 644
+  },
+  {
+    "name": "Safety Boots",
+    "price": 57535,
+    "type": "Defensive",
+    "id": 645
+  },
+  {
+    "name": "Hiking Boots",
+    "price": 4158,
+    "type": "Defensive",
+    "id": 646
+  },
+  {
+    "name": "Leather Helmet",
+    "price": 738,
+    "type": "Defensive",
+    "id": 647
+  },
+  {
+    "name": "Leather Pants",
+    "price": 890,
+    "type": "Defensive",
+    "id": 648
+  },
+  {
+    "name": "Leather Boots",
+    "price": 579,
+    "type": "Defensive",
+    "id": 649
+  },
+  {
+    "name": "Leather Gloves",
+    "price": 428,
+    "type": "Defensive",
+    "id": 650
+  },
+  {
+    "name": "Combat Helmet",
+    "price": 3169305,
+    "type": "Defensive",
+    "id": 651
+  },
+  {
+    "name": "Combat Pants",
+    "price": 3025430,
+    "type": "Defensive",
+    "id": 652
+  },
+  {
+    "name": "Combat Boots",
+    "price": 2448740,
+    "type": "Defensive",
+    "id": 653
+  },
+  {
+    "name": "Combat Gloves",
+    "price": 2023045,
+    "type": "Defensive",
+    "id": 654
+  },
+  {
+    "name": "Riot Helmet",
+    "price": 158476000,
+    "type": "Defensive",
+    "id": 655
+  },
+  {
+    "name": "Riot Body",
+    "price": 152293000,
+    "type": "Defensive",
+    "id": 656
+  },
+  {
+    "name": "Riot Pants",
+    "price": 115345000,
+    "type": "Defensive",
+    "id": 657
+  },
+  {
+    "name": "Riot Boots",
+    "price": 105294000,
+    "type": "Defensive",
+    "id": 658
+  },
+  {
+    "name": "Riot Gloves",
+    "price": 105336000,
+    "type": "Defensive",
+    "id": 659
+  },
+  {
+    "name": "Dune Helmet",
+    "price": 99030800,
+    "type": "Defensive",
+    "id": 660
+  },
+  {
+    "name": "Dune Vest",
+    "price": 105975000,
+    "type": "Defensive",
+    "id": 661
+  },
+  {
+    "name": "Dune Pants",
+    "price": 99000000,
+    "type": "Defensive",
+    "id": 662
+  },
+  {
+    "name": "Dune Boots",
+    "price": 98300000,
+    "type": "Defensive",
+    "id": 663
+  },
+  {
+    "name": "Dune Gloves",
+    "price": 99349904,
+    "type": "Defensive",
+    "id": 664
+  },
+  {
+    "name": "Assault Helmet",
+    "price": 117801000,
+    "type": "Defensive",
+    "id": 665
+  },
+  {
+    "name": "Assault Body",
+    "price": 367475008,
+    "type": "Defensive",
+    "id": 666
+  },
+  {
+    "name": "Assault Pants",
+    "price": 272753984,
+    "type": "Defensive",
+    "id": 667
+  },
+  {
+    "name": "Assault Boots",
+    "price": 190562496,
+    "type": "Defensive",
+    "id": 668
+  },
+  {
+    "name": "Assault Gloves",
+    "price": 155145504,
+    "type": "Defensive",
+    "id": 669
+  },
+  {
+    "name": "Delta Gas Mask",
+    "price": 2249999872,
+    "type": "Defensive",
+    "id": 670
+  },
+  {
+    "name": "Delta Body",
+    "price": 1000000000,
+    "type": "Defensive",
+    "id": 671
+  },
+  {
+    "name": "Delta Pants",
+    "price": 580008000,
+    "type": "Defensive",
+    "id": 672
+  },
+  {
+    "name": "Delta Boots",
+    "price": 600000000,
+    "type": "Defensive",
+    "id": 673
+  },
+  {
+    "name": "Delta Gloves",
+    "price": 530321504,
+    "type": "Defensive",
+    "id": 674
+  },
+  {
+    "name": "Marauder Face Mask",
+    "price": 1475000064,
+    "type": "Defensive",
+    "id": 675
+  },
+  {
+    "name": "Marauder Body",
+    "price": 1687500032,
+    "type": "Defensive",
+    "id": 676
+  },
+  {
+    "name": "Marauder Pants",
+    "price": 733388992,
+    "type": "Defensive",
+    "id": 677
+  },
+  {
+    "name": "Marauder Boots",
+    "price": 750500000,
+    "type": "Defensive",
+    "id": 678
+  },
+  {
+    "name": "Marauder Gloves",
+    "price": 450078016,
+    "type": "Defensive",
+    "id": 679
+  },
+  {
+    "name": "EOD Helmet",
+    "price": 7500000256,
+    "type": "Defensive",
+    "id": 680
+  },
+  {
+    "name": "EOD Apron",
+    "price": 9855240192,
+    "type": "Defensive",
+    "id": 681
+  },
+  {
+    "name": "EOD Pants",
+    "price": 8163944960,
+    "type": "Defensive",
+    "id": 682
+  },
+  {
+    "name": "EOD Boots",
+    "price": null,
+    "type": "Defensive",
+    "id": 683
+  },
+  {
+    "name": "EOD Gloves",
+    "price": 4950470144,
+    "type": "Defensive",
+    "id": 684
+  },
+  {
+    "name": "Torn Bible",
+    "price": null,
+    "type": "Collectible",
+    "id": 685
+  },
+  {
+    "name": "Friendly Bot Guide",
+    "price": null,
+    "type": "Collectible",
+    "id": 686
+  },
+  {
+    "name": "Egotistical Bear",
+    "price": null,
+    "type": "Collectible",
+    "id": 687
+  },
+  {
+    "name": "Brewery Key",
+    "price": null,
+    "type": "Collectible",
+    "id": 688
+  },
+  {
+    "name": "Signed Jersey",
+    "price": null,
+    "type": "Collectible",
+    "id": 689
+  },
+  {
+    "name": "Mafia Kit",
+    "price": null,
+    "type": "Collectible",
+    "id": 690
+  },
+  {
+    "name": "Octopus Toy",
+    "price": 2500000000,
+    "type": "Collectible",
+    "id": 691
+  },
+  {
+    "name": "Bear Skin Rug",
+    "price": null,
+    "type": "Collectible",
+    "id": 692
+  },
+  {
+    "name": "Tractor Toy",
+    "price": null,
+    "type": "Collectible",
+    "id": 693
+  },
+  {
+    "name": "Mr Torn Crown '13",
+    "price": null,
+    "type": "Collectible",
+    "id": 694
+  },
+  {
+    "name": "Ms Torn Crown '13",
+    "price": null,
+    "type": "Collectible",
+    "id": 695
+  },
+  {
+    "name": "Piece of Cake '13",
+    "price": 113555500,
+    "type": "Collectible",
+    "id": 696
+  },
+  {
+    "name": "Rotten Eggs",
+    "price": 50000000,
+    "type": "Other",
+    "id": 697
+  },
+  {
+    "name": "Peg Leg",
+    "price": 35000000,
+    "type": "Clothing",
+    "id": 698
+  },
+  {
+    "name": "Antidote",
+    "price": 172000000,
+    "type": "Medical",
+    "id": 699
+  },
+  {
+    "name": "Christmas Angel",
+    "price": 44232,
+    "type": "Other",
+    "id": 700
+  },
+  {
+    "name": "Eggnog",
+    "price": 912500,
+    "type": "Other",
+    "id": 701
+  },
+  {
+    "name": "Sprig of Holly",
+    "price": 59876,
+    "type": "Other",
+    "id": 702
+  },
+  {
+    "name": "Festive Socks",
+    "price": 72,
+    "type": "Clothing",
+    "id": 703
+  },
+  {
+    "name": "Respo Hoodie",
+    "price": 1100000000,
+    "type": "Clothing",
+    "id": 704
+  },
+  {
+    "name": "Staff Haxx Button",
+    "price": null,
+    "type": "Collectible",
+    "id": 705
+  },
+  {
+    "name": "Birthday Cake '14",
+    "price": 75000000,
+    "type": "Collectible",
+    "id": 706
+  },
+  {
+    "name": "Lump of Coal",
+    "price": 10132,
+    "type": "Tool",
+    "id": 707
+  },
+  {
+    "name": "Gold Rosette",
+    "price": 460000000,
+    "type": "Collectible",
+    "id": 708
+  },
+  {
+    "name": "Silver Rosette",
+    "price": 370000000,
+    "type": "Collectible",
+    "id": 709
+  },
+  {
+    "name": "Bronze Rosette",
+    "price": null,
+    "type": "Collectible",
+    "id": 710
+  },
+  {
+    "name": "Coin : Factions",
+    "price": 503767504,
+    "type": "Collectible",
+    "id": 711
+  },
+  {
+    "name": "Coin : Casino",
+    "price": 517750000,
+    "type": "Collectible",
+    "id": 712
+  },
+  {
+    "name": "Coin : Education",
+    "price": 450000000,
+    "type": "Collectible",
+    "id": 713
+  },
+  {
+    "name": "Coin : Hospital",
+    "price": 467225984,
+    "type": "Collectible",
+    "id": 714
+  },
+  {
+    "name": "Coin : Jail",
+    "price": 440000000,
+    "type": "Collectible",
+    "id": 715
+  },
+  {
+    "name": "Coin : Travel Agency",
+    "price": 452500000,
+    "type": "Collectible",
+    "id": 716
+  },
+  {
+    "name": "Coin : Companies",
+    "price": 512000000,
+    "type": "Collectible",
+    "id": 717
+  },
+  {
+    "name": "Coin : Stock Exchange",
+    "price": 474950000,
+    "type": "Collectible",
+    "id": 718
+  },
+  {
+    "name": "Coin : Church",
+    "price": 503944496,
+    "type": "Collectible",
+    "id": 719
+  },
+  {
+    "name": "Coin : Auction House",
+    "price": 425500000,
+    "type": "Collectible",
+    "id": 720
+  },
+  {
+    "name": "Coin : Race Track",
+    "price": 769000000,
+    "type": "Collectible",
+    "id": 721
+  },
+  {
+    "name": "Coin : Museum",
+    "price": 450000000,
+    "type": "Collectible",
+    "id": 722
+  },
+  {
+    "name": "Coin : Drugs",
+    "price": 524039008,
+    "type": "Collectible",
+    "id": 723
+  },
+  {
+    "name": "Coin : Dump",
+    "price": 400000000,
+    "type": "Collectible",
+    "id": 724
+  },
+  {
+    "name": "Coin : Estate Agents",
+    "price": 450000000,
+    "type": "Collectible",
+    "id": 725
+  },
+  {
+    "name": "Scrooge's Top Hat",
+    "price": 77499000,
+    "type": "Clothing",
+    "id": 726
+  },
+  {
+    "name": "Scrooge's Topcoat",
+    "price": 105000000,
+    "type": "Clothing",
+    "id": 727
+  },
+  {
+    "name": "Scrooge's Trousers",
+    "price": 38900000,
+    "type": "Clothing",
+    "id": 728
+  },
+  {
+    "name": "Scrooge's Boots",
+    "price": 30000000,
+    "type": "Clothing",
+    "id": 729
+  },
+  {
+    "name": "Scrooge's Gloves",
+    "price": 22500000,
+    "type": "Clothing",
+    "id": 730
+  },
+  {
+    "name": "Empty Blood Bag",
+    "price": 15167,
+    "type": "Medical",
+    "id": 731
+  },
+  {
+    "name": "Blood Bag : A+",
+    "price": 15720,
+    "type": "Medical",
+    "id": 732
+  },
+  {
+    "name": "Blood Bag : A-",
+    "price": 17990,
+    "type": "Medical",
+    "id": 733
+  },
+  {
+    "name": "Blood Bag : B+",
+    "price": 17145,
+    "type": "Medical",
+    "id": 734
+  },
+  {
+    "name": "Blood Bag : B-",
+    "price": 23220,
+    "type": "Medical",
+    "id": 735
+  },
+  {
+    "name": "Blood Bag : AB+",
+    "price": 17568,
+    "type": "Medical",
+    "id": 736
+  },
+  {
+    "name": "Blood Bag : AB-",
+    "price": 32889,
+    "type": "Medical",
+    "id": 737
+  },
+  {
+    "name": "Blood Bag : O+",
+    "price": 15752,
+    "type": "Medical",
+    "id": 738
+  },
+  {
+    "name": "Blood Bag : O-",
+    "price": 20783,
+    "type": "Medical",
+    "id": 739
+  },
+  {
+    "name": "Mr Torn Crown",
+    "price": null,
+    "type": "Collectible",
+    "id": 740
+  },
+  {
+    "name": "Ms Torn Crown",
+    "price": null,
+    "type": "Collectible",
+    "id": 741
+  },
+  {
+    "name": "Molotov Cocktail",
+    "price": 50642,
+    "type": "Temporary",
+    "id": 742
+  },
+  {
+    "name": "Christmas Sweater '15",
+    "price": 120069000,
+    "type": "Clothing",
+    "id": 743
+  },
+  {
+    "name": "Book : Brawn Over Brains",
+    "price": null,
+    "type": "Book",
+    "id": 744
+  },
+  {
+    "name": "Book : Time Is In The Mind",
+    "price": null,
+    "type": "Book",
+    "id": 745
+  },
+  {
+    "name": "Book : Keeping Your Face Handsome",
+    "price": null,
+    "type": "Book",
+    "id": 746
+  },
+  {
+    "name": "Book : A Job For Your Hands",
+    "price": null,
+    "type": "Book",
+    "id": 747
+  },
+  {
+    "name": "Book : Working 9 Til 5",
+    "price": null,
+    "type": "Book",
+    "id": 748
+  },
+  {
+    "name": "Book : Making Friends, Enemies, And Cakes",
+    "price": null,
+    "type": "Book",
+    "id": 749
+  },
+  {
+    "name": "Book : High School For Adults",
+    "price": null,
+    "type": "Book",
+    "id": 750
+  },
+  {
+    "name": "Book : Milk Yourself Sober",
+    "price": null,
+    "type": "Book",
+    "id": 751
+  },
+  {
+    "name": "Book : Fight Like An Asshole",
+    "price": null,
+    "type": "Book",
+    "id": 752
+  },
+  {
+    "name": "Book : Mind Over Matter",
+    "price": null,
+    "type": "Book",
+    "id": 753
+  },
+  {
+    "name": "Book : No Shame No Pain",
+    "price": null,
+    "type": "Book",
+    "id": 754
+  },
+  {
+    "name": "Book : Run Like The Wind",
+    "price": null,
+    "type": "Book",
+    "id": 755
+  },
+  {
+    "name": "Book : Weaseling Out Of Trouble",
+    "price": null,
+    "type": "Book",
+    "id": 756
+  },
+  {
+    "name": "Book : Get Hard Or Go Home",
+    "price": null,
+    "type": "Book",
+    "id": 757
+  },
+  {
+    "name": "Book : Gym Grunting - Shouting To Success",
+    "price": null,
+    "type": "Book",
+    "id": 758
+  },
+  {
+    "name": "Book : Self Defense In The Workplace",
+    "price": null,
+    "type": "Book",
+    "id": 759
+  },
+  {
+    "name": "Book : Speed 3 - The Rejected Script",
+    "price": null,
+    "type": "Book",
+    "id": 760
+  },
+  {
+    "name": "Book : Limbo Lovers 101",
+    "price": null,
+    "type": "Book",
+    "id": 761
+  },
+  {
+    "name": "Book : The Hamburglar's Guide To Crime",
+    "price": null,
+    "type": "Book",
+    "id": 762
+  },
+  {
+    "name": "Book : What Are Old Folk Good For Anyway?",
+    "price": null,
+    "type": "Book",
+    "id": 763
+  },
+  {
+    "name": "Book : Medical Degree Schmedical Degree",
+    "price": null,
+    "type": "Book",
+    "id": 764
+  },
+  {
+    "name": "Book : No More Soap On A Rope",
+    "price": null,
+    "type": "Book",
+    "id": 765
+  },
+  {
+    "name": "Book : Mailing Yourself Abroad",
+    "price": null,
+    "type": "Book",
+    "id": 766
+  },
+  {
+    "name": "Book : Smuggling For Beginners",
+    "price": null,
+    "type": "Book",
+    "id": 767
+  },
+  {
+    "name": "Book : Stealthy Stealing of Underwear",
+    "price": null,
+    "type": "Book",
+    "id": 768
+  },
+  {
+    "name": "Book : Shawshank Sure Ain't For Me!",
+    "price": null,
+    "type": "Book",
+    "id": 769
+  },
+  {
+    "name": "Book : Ignorance Is Bliss",
+    "price": null,
+    "type": "Book",
+    "id": 770
+  },
+  {
+    "name": "Book : Winking To Win",
+    "price": null,
+    "type": "Book",
+    "id": 771
+  },
+  {
+    "name": "Book : Finders Keepers",
+    "price": null,
+    "type": "Book",
+    "id": 772
+  },
+  {
+    "name": "Book : Hot Turkey",
+    "price": null,
+    "type": "Book",
+    "id": 773
+  },
+  {
+    "name": "Book : Higher Daddy, Higher!",
+    "price": null,
+    "type": "Book",
+    "id": 774
+  },
+  {
+    "name": "Book : The Real Dutch Courage",
+    "price": null,
+    "type": "Book",
+    "id": 775
+  },
+  {
+    "name": "Book : Because I'm Happy - The Pharrell Story",
+    "price": null,
+    "type": "Book",
+    "id": 776
+  },
+  {
+    "name": "Book : No More Sick Days",
+    "price": null,
+    "type": "Book",
+    "id": 777
+  },
+  {
+    "name": "Book : Duke - My Story",
+    "price": null,
+    "type": "Book",
+    "id": 778
+  },
+  {
+    "name": "Book : Self Control Is For Losers",
+    "price": null,
+    "type": "Book",
+    "id": 779
+  },
+  {
+    "name": "Book : Going Back For More",
+    "price": null,
+    "type": "Book",
+    "id": 780
+  },
+  {
+    "name": "Book : Get Drunk And Lose Dignity",
+    "price": null,
+    "type": "Book",
+    "id": 781
+  },
+  {
+    "name": "Book : Fuelling Your Way To Failure",
+    "price": null,
+    "type": "Book",
+    "id": 782
+  },
+  {
+    "name": "Book : Yes Please Diabetes",
+    "price": null,
+    "type": "Book",
+    "id": 783
+  },
+  {
+    "name": "Book : Ugly Energy",
+    "price": null,
+    "type": "Book",
+    "id": 784
+  },
+  {
+    "name": "Book : Memories And Mammaries",
+    "price": null,
+    "type": "Book",
+    "id": 785
+  },
+  {
+    "name": "Book : Brown-nosing The Boss",
+    "price": null,
+    "type": "Book",
+    "id": 786
+  },
+  {
+    "name": "Book : Running Away From Trouble",
+    "price": null,
+    "type": "Book",
+    "id": 787
+  },
+  {
+    "name": "Certificate of Awesome",
+    "price": 7628,
+    "type": "Other",
+    "id": 788
+  },
+  {
+    "name": "Certificate of Lame",
+    "price": 7252,
+    "type": "Other",
+    "id": 789
+  },
+  {
+    "name": "Plastic Sword",
+    "price": 7471,
+    "type": "Melee",
+    "id": 790
+  },
+  {
+    "name": "Mediocre T-Shirt",
+    "price": 101,
+    "type": "Clothing",
+    "id": 791
+  },
+  {
+    "name": "Penelope",
+    "price": null,
+    "type": "Melee",
+    "id": 792
+  },
+  {
+    "name": "Cake Frosting",
+    "price": null,
+    "type": "Material",
+    "id": 793
+  },
+  {
+    "name": "Lock Picking Kit",
+    "price": null,
+    "type": "Tool",
+    "id": 794
+  },
+  {
+    "name": "Special Fruitcake",
+    "price": null,
+    "type": "Tool",
+    "id": 795
+  },
+  {
+    "name": "Felovax",
+    "price": null,
+    "type": "Medical",
+    "id": 796
+  },
+  {
+    "name": "Zylkene",
+    "price": null,
+    "type": "Medical",
+    "id": 797
+  },
+  {
+    "name": "Duke's Safe",
+    "price": null,
+    "type": "Other",
+    "id": 798
+  },
+  {
+    "name": "Duke's Selfies",
+    "price": null,
+    "type": "Other",
+    "id": 799
+  },
+  {
+    "name": "Duke's Poetry",
+    "price": null,
+    "type": "Other",
+    "id": 800
+  },
+  {
+    "name": "Duke's Dog's Ashes",
+    "price": null,
+    "type": "Other",
+    "id": 801
+  },
+  {
+    "name": "Duke's Will",
+    "price": null,
+    "type": "Other",
+    "id": 802
+  },
+  {
+    "name": "Duke's Gimp Mask",
+    "price": null,
+    "type": "Clothing",
+    "id": 803
+  },
+  {
+    "name": "Duke's Herpes Medication",
+    "price": null,
+    "type": "Medical",
+    "id": 804
+  },
+  {
+    "name": "Duke's Hammer",
+    "price": null,
+    "type": "Melee",
+    "id": 805
+  },
+  {
+    "name": "Old Lady Mask",
+    "price": 14996,
+    "type": "Clothing",
+    "id": 806
+  },
+  {
+    "name": "Exotic Gentleman Mask",
+    "price": 16014,
+    "type": "Clothing",
+    "id": 807
+  },
+  {
+    "name": "Ginger Kid Mask",
+    "price": 24193,
+    "type": "Clothing",
+    "id": 808
+  },
+  {
+    "name": "Young Lady Mask",
+    "price": 18208,
+    "type": "Clothing",
+    "id": 809
+  },
+  {
+    "name": "Moustache Man Mask",
+    "price": 15601,
+    "type": "Clothing",
+    "id": 810
+  },
+  {
+    "name": "Scarred Man Mask",
+    "price": 16254,
+    "type": "Clothing",
+    "id": 811
+  },
+  {
+    "name": "Psycho Clown Mask",
+    "price": 106775,
+    "type": "Clothing",
+    "id": 812
+  },
+  {
+    "name": "Nun Mask",
+    "price": 16070,
+    "type": "Clothing",
+    "id": 813
+  },
+  {
+    "name": "Tyrosine",
+    "price": 599851,
+    "type": "Temporary",
+    "id": 814
+  },
+  {
+    "name": "Keg of Beer",
+    "price": 11282400,
+    "type": "Supply Pack",
+    "id": 815
+  },
+  {
+    "name": "Glass of Beer",
+    "price": null,
+    "type": "Alcohol",
+    "id": 816
+  },
+  {
+    "name": "Six-Pack of Alcohol",
+    "price": 1301075,
+    "type": "Supply Pack",
+    "id": 817
+  },
+  {
+    "name": "Six-Pack of Energy Drink",
+    "price": 15227200,
+    "type": "Supply Pack",
+    "id": 818
+  },
+  {
+    "name": "Rosary Beads",
+    "price": 777781,
+    "type": "Enhancer",
+    "id": 819
+  },
+  {
+    "name": "Piggy Bank",
+    "price": null,
+    "type": "Special",
+    "id": 820
+  },
+  {
+    "name": "Empty Vial",
+    "price": null,
+    "type": "Other",
+    "id": 821
+  },
+  {
+    "name": "Vial of Blood",
+    "price": null,
+    "type": "Other",
+    "id": 822
+  },
+  {
+    "name": "Vial of Urine",
+    "price": null,
+    "type": "Other",
+    "id": 823
+  },
+  {
+    "name": "Vial of Saliva",
+    "price": null,
+    "type": "Other",
+    "id": 824
+  },
+  {
+    "name": "Questionnaire",
+    "price": null,
+    "type": "Other",
+    "id": 825
+  },
+  {
+    "name": "Agreement",
+    "price": null,
+    "type": "Other",
+    "id": 826
+  },
+  {
+    "name": "Perceptron : Calibrator",
+    "price": null,
+    "type": "Other",
+    "id": 827
+  },
+  {
+    "name": "Donald Trump Mask '16",
+    "price": 2059680000,
+    "type": "Clothing",
+    "id": 828
+  },
+  {
+    "name": "Yellow Snowman '16",
+    "price": null,
+    "type": "Collectible",
+    "id": 829
+  },
+  {
+    "name": "Nock Gun",
+    "price": 601110976,
+    "type": "Primary",
+    "id": 830
+  },
+  {
+    "name": "Beretta Pico",
+    "price": 16360100,
+    "type": "Secondary",
+    "id": 831
+  },
+  {
+    "name": "Riding Crop",
+    "price": 120000000,
+    "type": "Melee",
+    "id": 832
+  },
+  {
+    "name": "Sand",
+    "price": 33900000,
+    "type": "Temporary",
+    "id": 833
+  },
+  {
+    "name": "Sweatpants",
+    "price": 449749,
+    "type": "Clothing",
+    "id": 834
+  },
+  {
+    "name": "String Vest",
+    "price": 72994,
+    "type": "Clothing",
+    "id": 835
+  },
+  {
+    "name": "Black Oxfords",
+    "price": 6250000,
+    "type": "Clothing",
+    "id": 836
+  },
+  {
+    "name": "Rheinmetall MG 3",
+    "price": 1037665024,
+    "type": "Primary",
+    "id": 837
+  },
+  {
+    "name": "Homemade Pocket Shotgun",
+    "price": 33291650,
+    "type": "Secondary",
+    "id": 838
+  },
+  {
+    "name": "Madball",
+    "price": 6000000,
+    "type": "Melee",
+    "id": 839
+  },
+  {
+    "name": "Nail Bomb",
+    "price": 1869000,
+    "type": "Temporary",
+    "id": 840
+  },
+  {
+    "name": "Classic Fedora",
+    "price": 405000,
+    "type": "Clothing",
+    "id": 841
+  },
+  {
+    "name": "Pinstripe Suit Trousers",
+    "price": 647359,
+    "type": "Clothing",
+    "id": 842
+  },
+  {
+    "name": "Duster",
+    "price": 100000000,
+    "type": "Clothing",
+    "id": 843
+  },
+  {
+    "name": "Tranquilizer Gun",
+    "price": null,
+    "type": "Secondary",
+    "id": 844
+  },
+  {
+    "name": "Bolt Gun",
+    "price": null,
+    "type": "Melee",
+    "id": 845
+  },
+  {
+    "name": "Scalpel",
+    "price": 0,
+    "type": "Melee",
+    "id": 846
+  },
+  {
+    "name": "Nerve Gas",
+    "price": null,
+    "type": "Temporary",
+    "id": 847
+  },
+  {
+    "name": "Kevlar Lab Coat",
+    "price": null,
+    "type": "Defensive",
+    "id": 848
+  },
+  {
+    "name": "Loupes",
+    "price": null,
+    "type": "Clothing",
+    "id": 849
+  },
+  {
+    "name": "Sledgehammer",
+    "price": 349998016,
+    "type": "Melee",
+    "id": 850
+  },
+  {
+    "name": "Wifebeater",
+    "price": null,
+    "type": "Clothing",
+    "id": 851
+  },
+  {
+    "name": "Metal Detector",
+    "price": 2586715,
+    "type": "Tool",
+    "id": 852
+  },
+  {
+    "name": "Cemetery Key",
+    "price": 4000000,
+    "type": "Tool",
+    "id": 853
+  },
+  {
+    "name": "Questionnaire : Completed",
+    "price": null,
+    "type": "Other",
+    "id": 854
+  },
+  {
+    "name": "Agreement : Signed",
+    "price": null,
+    "type": "Other",
+    "id": 855
+  },
+  {
+    "name": "Spray Paint : Black",
+    "price": 391,
+    "type": "Material",
+    "id": 856
+  },
+  {
+    "name": "Spray Paint : Red",
+    "price": 370,
+    "type": "Material",
+    "id": 857
+  },
+  {
+    "name": "Spray Paint : Pink",
+    "price": 346,
+    "type": "Material",
+    "id": 858
+  },
+  {
+    "name": "Spray Paint : Purple",
+    "price": 345,
+    "type": "Material",
+    "id": 859
+  },
+  {
+    "name": "Spray Paint : Blue",
+    "price": 333,
+    "type": "Material",
+    "id": 860
+  },
+  {
+    "name": "Spray Paint : Green",
+    "price": 352,
+    "type": "Material",
+    "id": 861
+  },
+  {
+    "name": "Spray Paint : White",
+    "price": 349,
+    "type": "Material",
+    "id": 862
+  },
+  {
+    "name": "Spray Paint : Orange",
+    "price": 380,
+    "type": "Material",
+    "id": 863
+  },
+  {
+    "name": "Salt Shaker",
+    "price": 8846,
+    "type": "Other",
+    "id": 864
+  },
+  {
+    "name": "Poison Mistletoe",
+    "price": 31127000,
+    "type": "Special",
+    "id": 865
+  },
+  {
+    "name": "Santa's List '17",
+    "price": 689000000,
+    "type": "Collectible",
+    "id": 866
+  },
+  {
+    "name": "Soapbox",
+    "price": 625000000,
+    "type": "Collectible",
+    "id": 867
+  },
+  {
+    "name": "Turkey Baster",
+    "price": 11179,
+    "type": "Other",
+    "id": 868
+  },
+  {
+    "name": "Elon Musk Mask '17",
+    "price": 494467504,
+    "type": "Clothing",
+    "id": 869
+  },
+  {
+    "name": "Love Juice",
+    "price": 4362715,
+    "type": "Drug",
+    "id": 870
+  },
+  {
+    "name": "Bug Swatter",
+    "price": null,
+    "type": "Melee",
+    "id": 871
+  },
+  {
+    "name": "Nothing",
+    "price": null,
+    "type": "Collectible",
+    "id": 872
+  },
+  {
+    "name": "Bottle of Green Stout",
+    "price": 1202835,
+    "type": "Alcohol",
+    "id": 873
+  },
+  {
+    "name": "Prototype",
+    "price": null,
+    "type": "Secondary",
+    "id": 874
+  },
+  {
+    "name": "Rotten Apple",
+    "price": 149,
+    "type": "Other",
+    "id": 875
+  },
+  {
+    "name": "Festering Chicken",
+    "price": 353,
+    "type": "Other",
+    "id": 876
+  },
+  {
+    "name": "Moldy Pizza",
+    "price": 261,
+    "type": "Other",
+    "id": 877
+  },
+  {
+    "name": "Smelly Cheese",
+    "price": 2370,
+    "type": "Other",
+    "id": 878
+  },
+  {
+    "name": "Sour Milk",
+    "price": 490,
+    "type": "Other",
+    "id": 879
+  },
+  {
+    "name": "Stale Bread",
+    "price": 692,
+    "type": "Other",
+    "id": 880
+  },
+  {
+    "name": "Spoiled Fish",
+    "price": 568,
+    "type": "Other",
+    "id": 881
+  },
+  {
+    "name": "Insurance Policy",
+    "price": 14899,
+    "type": "Material",
+    "id": 882
+  },
+  {
+    "name": "Bank Statement",
+    "price": 71779,
+    "type": "Material",
+    "id": 883
+  },
+  {
+    "name": "Car Battery",
+    "price": 411,
+    "type": "Other",
+    "id": 884
+  },
+  {
+    "name": "Scrap Metal",
+    "price": 91,
+    "type": "Other",
+    "id": 885
+  },
+  {
+    "name": "Torn City Times",
+    "price": 1673,
+    "type": "Tool",
+    "id": 886
+  },
+  {
+    "name": "Magazine",
+    "price": 491,
+    "type": "Other",
+    "id": 887
+  },
+  {
+    "name": "Umbrella",
+    "price": 65,
+    "type": "Other",
+    "id": 888
+  },
+  {
+    "name": "Travel Mug",
+    "price": 36,
+    "type": "Other",
+    "id": 889
+  },
+  {
+    "name": "Headphones",
+    "price": 179,
+    "type": "Other",
+    "id": 890
+  },
+  {
+    "name": "Undefined",
+    "price": null,
+    "type": "Unused",
+    "id": 891
+  },
+  {
+    "name": "Mix CD",
+    "price": 43,
+    "type": "Other",
+    "id": 892
+  },
+  {
+    "name": "Lost and Found Office Key",
+    "price": 433331,
+    "type": "Tool",
+    "id": 893
+  },
+  {
+    "name": "Cosmetics Case",
+    "price": 135,
+    "type": "Other",
+    "id": 894
+  },
+  {
+    "name": "Phone Card",
+    "price": 101,
+    "type": "Other",
+    "id": 895
+  },
+  {
+    "name": "Subway Pass",
+    "price": 1925,
+    "type": "Other",
+    "id": 896
+  },
+  {
+    "name": "Bottle Cap",
+    "price": 1044,
+    "type": "Other",
+    "id": 897
+  },
+  {
+    "name": "Silver Coin",
+    "price": 24377,
+    "type": "Other",
+    "id": 898
+  },
+  {
+    "name": "Silver Bead",
+    "price": 362817,
+    "type": "Other",
+    "id": 899
+  },
+  {
+    "name": "Lucky Quarter",
+    "price": 306925,
+    "type": "Other",
+    "id": 900
+  },
+  {
+    "name": "Daffodil",
+    "price": 84,
+    "type": "Flower",
+    "id": 901
+  },
+  {
+    "name": "Bunch of Carnations",
+    "price": 133,
+    "type": "Flower",
+    "id": 902
+  },
+  {
+    "name": "White Lily",
+    "price": 5831,
+    "type": "Flower",
+    "id": 903
+  },
+  {
+    "name": "Funeral Wreath",
+    "price": 64,
+    "type": "Flower",
+    "id": 904
+  },
+  {
+    "name": "Car Keys",
+    "price": 1708,
+    "type": "Other",
+    "id": 905
+  },
+  {
+    "name": "Handkerchief",
+    "price": 33,
+    "type": "Tool",
+    "id": 906
+  },
+  {
+    "name": "Candle",
+    "price": 17599,
+    "type": "Material",
+    "id": 907
+  },
+  {
+    "name": "Paper Bag",
+    "price": 600000000,
+    "type": "Collectible",
+    "id": 908
+  },
+  {
+    "name": "Tin Can",
+    "price": 57,
+    "type": "Other",
+    "id": 909
+  },
+  {
+    "name": "Betting Slip",
+    "price": null,
+    "type": "Collectible",
+    "id": 910
+  },
+  {
+    "name": "Fidget Spinner",
+    "price": null,
+    "type": "Collectible",
+    "id": 911
+  },
+  {
+    "name": "Majestic Moose",
+    "price": null,
+    "type": "Collectible",
+    "id": 912
+  },
+  {
+    "name": "Lego Wonder Woman",
+    "price": null,
+    "type": "Collectible",
+    "id": 913
+  },
+  {
+    "name": "CR7 Doll",
+    "price": null,
+    "type": "Collectible",
+    "id": 914
+  },
+  {
+    "name": "Stretch Armstrong Doll",
+    "price": null,
+    "type": "Collectible",
+    "id": 915
+  },
+  {
+    "name": "Beef Femur",
+    "price": null,
+    "type": "Collectible",
+    "id": 916
+  },
+  {
+    "name": "Snake's Fang",
+    "price": null,
+    "type": "Collectible",
+    "id": 917
+  },
+  {
+    "name": "Icey Igloo",
+    "price": null,
+    "type": "Collectible",
+    "id": 918
+  },
+  {
+    "name": "Federal Jail Key",
+    "price": null,
+    "type": "Collectible",
+    "id": 919
+  },
+  {
+    "name": "Halloween Basket : Spooky",
+    "price": null,
+    "type": "Special",
+    "id": 920
+  },
+  {
+    "name": "Michael Myers Mask '18",
+    "price": 1147929984,
+    "type": "Clothing",
+    "id": 921
+  },
+  {
+    "name": "Toast Jesus '18",
+    "price": 999000000,
+    "type": "Collectible",
+    "id": 922
+  },
+  {
+    "name": "Cheesus '18",
+    "price": 849500000,
+    "type": "Collectible",
+    "id": 923
+  },
+  {
+    "name": "Bottle of Christmas Spirit",
+    "price": 1547500,
+    "type": "Alcohol",
+    "id": 924
+  },
+  {
+    "name": "Scammer in the Slammer '18",
+    "price": 1200000000,
+    "type": "Collectible",
+    "id": 925
+  },
+  {
+    "name": "Gronch Mask '18",
+    "price": 2030000000,
+    "type": "Clothing",
+    "id": 926
+  },
+  {
+    "name": "Baseball Cap",
+    "price": 37,
+    "type": "Clothing",
+    "id": 927
+  },
+  {
+    "name": "Bermudas",
+    "price": 29,
+    "type": "Clothing",
+    "id": 928
+  },
+  {
+    "name": "Blouse",
+    "price": 31,
+    "type": "Clothing",
+    "id": 929
+  },
+  {
+    "name": "Boob Tube",
+    "price": 76,
+    "type": "Clothing",
+    "id": 930
+  },
+  {
+    "name": "Bush Hat",
+    "price": 35626,
+    "type": "Clothing",
+    "id": 931
+  },
+  {
+    "name": "Camisole",
+    "price": 28,
+    "type": "Clothing",
+    "id": 932
+  },
+  {
+    "name": "Capri Pants",
+    "price": 33,
+    "type": "Clothing",
+    "id": 933
+  },
+  {
+    "name": "Cardigan",
+    "price": 41,
+    "type": "Clothing",
+    "id": 934
+  },
+  {
+    "name": "Cork Hat",
+    "price": 152,
+    "type": "Clothing",
+    "id": 935
+  },
+  {
+    "name": "Crop Top",
+    "price": 3993,
+    "type": "Clothing",
+    "id": 936
+  },
+  {
+    "name": "Fisherman Hat",
+    "price": 8394,
+    "type": "Clothing",
+    "id": 937
+  },
+  {
+    "name": "Gym Shorts",
+    "price": 30,
+    "type": "Clothing",
+    "id": 938
+  },
+  {
+    "name": "Halterneck",
+    "price": 34,
+    "type": "Clothing",
+    "id": 939
+  },
+  {
+    "name": "Raincoat",
+    "price": 13235,
+    "type": "Clothing",
+    "id": 940
+  },
+  {
+    "name": "Pantyhose",
+    "price": 23,
+    "type": "Clothing",
+    "id": 941
+  },
+  {
+    "name": "Pencil Skirt",
+    "price": 31,
+    "type": "Clothing",
+    "id": 942
+  },
+  {
+    "name": "Peplum Top",
+    "price": 29,
+    "type": "Clothing",
+    "id": 943
+  },
+  {
+    "name": "Polo Shirt",
+    "price": 33,
+    "type": "Clothing",
+    "id": 944
+  },
+  {
+    "name": "Poncho",
+    "price": 159735,
+    "type": "Clothing",
+    "id": 945
+  },
+  {
+    "name": "Puffer Vest",
+    "price": 49,
+    "type": "Clothing",
+    "id": 946
+  },
+  {
+    "name": "Mackintosh",
+    "price": 15722,
+    "type": "Clothing",
+    "id": 947
+  },
+  {
+    "name": "Shorts",
+    "price": 32,
+    "type": "Clothing",
+    "id": 948
+  },
+  {
+    "name": "Skirt",
+    "price": 35,
+    "type": "Clothing",
+    "id": 949
+  },
+  {
+    "name": "Travel Socks",
+    "price": 28,
+    "type": "Clothing",
+    "id": 950
+  },
+  {
+    "name": "Turtleneck",
+    "price": 34,
+    "type": "Clothing",
+    "id": 951
+  },
+  {
+    "name": "Yoga Pants",
+    "price": 32,
+    "type": "Clothing",
+    "id": 952
+  },
+  {
+    "name": "Bronze Racing Trophy",
+    "price": null,
+    "type": "Collectible",
+    "id": 953
+  },
+  {
+    "name": "Silver Racing Trophy",
+    "price": null,
+    "type": "Collectible",
+    "id": 954
+  },
+  {
+    "name": "Gold Racing Trophy",
+    "price": null,
+    "type": "Collectible",
+    "id": 955
+  },
+  {
+    "name": "Blank DVDs",
+    "price": 565,
+    "type": "Material",
+    "id": 956
+  },
+  {
+    "name": "Blank DVDs : 50",
+    "price": null,
+    "type": "Material",
+    "id": 957
+  },
+  {
+    "name": "Chest Harness",
+    "price": 1095000,
+    "type": "Clothing",
+    "id": 958
+  },
+  {
+    "name": "Choker",
+    "price": 1300000,
+    "type": "Clothing",
+    "id": 959
+  },
+  {
+    "name": "Fishnet Stockings",
+    "price": 1000000,
+    "type": "Clothing",
+    "id": 960
+  },
+  {
+    "name": "Knee-high Boots",
+    "price": 1997250,
+    "type": "Clothing",
+    "id": 961
+  },
+  {
+    "name": "Lingerie",
+    "price": 4496285,
+    "type": "Clothing",
+    "id": 962
+  },
+  {
+    "name": "Mankini",
+    "price": 25000000,
+    "type": "Clothing",
+    "id": 963
+  },
+  {
+    "name": "Mini Skirt",
+    "price": 1424990,
+    "type": "Clothing",
+    "id": 964
+  },
+  {
+    "name": "Nipple Tassels",
+    "price": 13710200,
+    "type": "Clothing",
+    "id": 965
+  },
+  {
+    "name": "Bowler Hat",
+    "price": 900000,
+    "type": "Clothing",
+    "id": 966
+  },
+  {
+    "name": "Fitted Shirt",
+    "price": 4000000,
+    "type": "Clothing",
+    "id": 967
+  },
+  {
+    "name": "Bow Tie",
+    "price": 700000,
+    "type": "Clothing",
+    "id": 968
+  },
+  {
+    "name": "Neck Tie",
+    "price": 1414855,
+    "type": "Clothing",
+    "id": 969
+  },
+  {
+    "name": "Waistcoat",
+    "price": 2400000,
+    "type": "Clothing",
+    "id": 970
+  },
+  {
+    "name": "Blazer",
+    "price": 2065000,
+    "type": "Clothing",
+    "id": 971
+  },
+  {
+    "name": "Suit Trousers",
+    "price": 4250000,
+    "type": "Clothing",
+    "id": 972
+  },
+  {
+    "name": "Derby Shoes",
+    "price": 3596320,
+    "type": "Clothing",
+    "id": 973
+  },
+  {
+    "name": "Smoking Jacket",
+    "price": 16700000,
+    "type": "Clothing",
+    "id": 974
+  },
+  {
+    "name": "Monocle",
+    "price": 22361100,
+    "type": "Clothing",
+    "id": 975
+  },
+  {
+    "name": "Bronze Microphone",
+    "price": 587384992,
+    "type": "Collectible",
+    "id": 976
+  },
+  {
+    "name": "Silver Microphone",
+    "price": null,
+    "type": "Collectible",
+    "id": 977
+  },
+  {
+    "name": "Gold Microphone",
+    "price": null,
+    "type": "Collectible",
+    "id": 978
+  },
+  {
+    "name": "Paint Mask",
+    "price": 352790,
+    "type": "Enhancer",
+    "id": 979
+  },
+  {
+    "name": "Ladder",
+    "price": 1390,
+    "type": "Tool",
+    "id": 980
+  },
+  {
+    "name": "Wire Cutters",
+    "price": 4114,
+    "type": "Tool",
+    "id": 981
+  },
+  {
+    "name": "Ripped Jeans",
+    "price": 6545000,
+    "type": "Clothing",
+    "id": 982
+  },
+  {
+    "name": "Bandit Mask",
+    "price": 600000,
+    "type": "Clothing",
+    "id": 983
+  },
+  {
+    "name": "Bottle of Moonshine",
+    "price": 1261580,
+    "type": "Alcohol",
+    "id": 984
+  },
+  {
+    "name": "Can of Goose Juice",
+    "price": 368717,
+    "type": "Energy Drink",
+    "id": 985
+  },
+  {
+    "name": "Can of Damp Valley",
+    "price": 795464,
+    "type": "Energy Drink",
+    "id": 986
+  },
+  {
+    "name": "Can of Crocozade",
+    "price": 1206665,
+    "type": "Energy Drink",
+    "id": 987
+  },
+  {
+    "name": "Fur Coat",
+    "price": 3201700,
+    "type": "Clothing",
+    "id": 988
+  },
+  {
+    "name": "Fur Scarf",
+    "price": 999999,
+    "type": "Clothing",
+    "id": 989
+  },
+  {
+    "name": "Fur Hat",
+    "price": 871244,
+    "type": "Clothing",
+    "id": 990
+  },
+  {
+    "name": "Platform Shoes",
+    "price": 991167,
+    "type": "Clothing",
+    "id": 991
+  },
+  {
+    "name": "Silver Flats",
+    "price": 334070,
+    "type": "Clothing",
+    "id": 992
+  },
+  {
+    "name": "Crystal Bracelet",
+    "price": 9850000,
+    "type": "Jewelry",
+    "id": 993
+  },
+  {
+    "name": "Cocktail Ring",
+    "price": 4598995,
+    "type": "Jewelry",
+    "id": 994
+  },
+  {
+    "name": "Sun Hat",
+    "price": 596250,
+    "type": "Clothing",
+    "id": 995
+  },
+  {
+    "name": "Square Sunglasses",
+    "price": 2000000,
+    "type": "Clothing",
+    "id": 996
+  },
+  {
+    "name": "Statement Necklace",
+    "price": 14350000,
+    "type": "Jewelry",
+    "id": 997
+  },
+  {
+    "name": "Floral Dress",
+    "price": 444997,
+    "type": "Clothing",
+    "id": 998
+  },
+  {
+    "name": "Shrug",
+    "price": 399999,
+    "type": "Clothing",
+    "id": 1001
+  },
+  {
+    "name": "Eye Patch",
+    "price": null,
+    "type": "Clothing",
+    "id": 1002
+  },
+  {
+    "name": "Halloween Basket : Creepy",
+    "price": null,
+    "type": "Special",
+    "id": 1003
+  },
+  {
+    "name": "Halloween Basket : Freaky",
+    "price": null,
+    "type": "Special",
+    "id": 1004
+  },
+  {
+    "name": "Halloween Basket : Frightful",
+    "price": null,
+    "type": "Special",
+    "id": 1005
+  },
+  {
+    "name": "Halloween Basket : Haunting",
+    "price": null,
+    "type": "Special",
+    "id": 1006
+  },
+  {
+    "name": "Halloween Basket : Shocking",
+    "price": null,
+    "type": "Special",
+    "id": 1007
+  },
+  {
+    "name": "Halloween Basket : Terrifying",
+    "price": null,
+    "type": "Special",
+    "id": 1008
+  },
+  {
+    "name": "Halloween Basket : Horrifying",
+    "price": null,
+    "type": "Special",
+    "id": 1009
+  },
+  {
+    "name": "Halloween Basket : Petrifying",
+    "price": null,
+    "type": "Special",
+    "id": 1010
+  },
+  {
+    "name": "Halloween Basket : Nightmarish",
+    "price": null,
+    "type": "Special",
+    "id": 1011
+  },
+  {
+    "name": "Blood Bag : Irradiated",
+    "price": 34664,
+    "type": "Medical",
+    "id": 1012
+  },
+  {
+    "name": "Jigsaw Mask '19",
+    "price": 600000000,
+    "type": "Clothing",
+    "id": 1013
+  },
+  {
+    "name": "Reading Glasses",
+    "price": 344998,
+    "type": "Clothing",
+    "id": 1014
+  },
+  {
+    "name": "Chinos",
+    "price": 688888,
+    "type": "Clothing",
+    "id": 1015
+  },
+  {
+    "name": "Collared Shawl",
+    "price": 322159,
+    "type": "Clothing",
+    "id": 1016
+  },
+  {
+    "name": "Pleated Skirt",
+    "price": 199000,
+    "type": "Clothing",
+    "id": 1017
+  },
+  {
+    "name": "Flip Flops",
+    "price": 725000,
+    "type": "Clothing",
+    "id": 1018
+  },
+  {
+    "name": "Bingo Visor",
+    "price": 4832835,
+    "type": "Clothing",
+    "id": 1019
+  },
+  {
+    "name": "Cover-ups",
+    "price": 5000000,
+    "type": "Clothing",
+    "id": 1020
+  },
+  {
+    "name": "Sandals",
+    "price": 283332,
+    "type": "Clothing",
+    "id": 1021
+  },
+  {
+    "name": "Golf Socks",
+    "price": 24063,
+    "type": "Clothing",
+    "id": 1022
+  },
+  {
+    "name": "Flat Cap",
+    "price": null,
+    "type": "Clothing",
+    "id": 1023
+  },
+  {
+    "name": "Slippers",
+    "price": 12541650,
+    "type": "Clothing",
+    "id": 1024
+  },
+  {
+    "name": "Bathrobe",
+    "price": 17898900,
+    "type": "Clothing",
+    "id": 1025
+  },
+  {
+    "name": "Party Hat '19",
+    "price": 1300000,
+    "type": "Clothing",
+    "id": 1026
+  },
+  {
+    "name": "Badge : 15th Anniversary",
+    "price": 1250000,
+    "type": "Clothing",
+    "id": 1027
+  },
+  {
+    "name": "Birthday Cupcake",
+    "price": 2087530,
+    "type": "Candy",
+    "id": 1028
+  },
+  {
+    "name": "Strippogram Voucher",
+    "price": 18265300,
+    "type": "Special",
+    "id": 1029
+  },
+  {
+    "name": "Dong : Thomas",
+    "price": 48000000,
+    "type": "Collectible",
+    "id": 1030
+  },
+  {
+    "name": "Dong : Greg",
+    "price": 45999000,
+    "type": "Collectible",
+    "id": 1031
+  },
+  {
+    "name": "Dong : Effy",
+    "price": 45169750,
+    "type": "Collectible",
+    "id": 1032
+  },
+  {
+    "name": "Dong : Holly",
+    "price": 48949900,
+    "type": "Collectible",
+    "id": 1033
+  },
+  {
+    "name": "Dong : Jeremy",
+    "price": 47025000,
+    "type": "Collectible",
+    "id": 1034
+  },
+  {
+    "name": "Anniversary Present",
+    "price": 179088000,
+    "type": "Supply Pack",
+    "id": 1035
+  },
+  {
+    "name": "Greta Mask '19",
+    "price": 300000000,
+    "type": "Clothing",
+    "id": 1036
+  },
+  {
+    "name": "Anatoly Mask '19",
+    "price": 569696000,
+    "type": "Clothing",
+    "id": 1037
+  },
+  {
+    "name": "Santa Beard",
+    "price": 182500000,
+    "type": "Clothing",
+    "id": 1038
+  },
+  {
+    "name": "Bag of Humbugs",
+    "price": 383708,
+    "type": "Candy",
+    "id": 1039
+  },
+  {
+    "name": "Christmas Cracker",
+    "price": 381510,
+    "type": "Special",
+    "id": 1040
+  },
+  {
+    "name": "Special Snowflake",
+    "price": null,
+    "type": "Collectible",
+    "id": 1041
+  },
+  {
+    "name": "Concussion Grenade",
+    "price": 4700000,
+    "type": "Temporary",
+    "id": 1042
+  },
+  {
+    "name": "Paper Crown : Green",
+    "price": 141665,
+    "type": "Clothing",
+    "id": 1043
+  },
+  {
+    "name": "Paper Crown : Yellow",
+    "price": 165373,
+    "type": "Clothing",
+    "id": 1044
+  },
+  {
+    "name": "Paper Crown : Red",
+    "price": 149998,
+    "type": "Clothing",
+    "id": 1045
+  }
+]
