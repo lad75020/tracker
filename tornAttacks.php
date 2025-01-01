@@ -3,7 +3,7 @@ require_once __DIR__ . '/vendor/autoload.php';
 
 $collection = (new MongoDB\Client)->TORN->attacks;
 
-$TORN_API_KEY = "PWKdfZPUazfb2GYs";
+$TORN_API_KEY = $_GET['key'];
 $INTERVAL = 86400;
 $aFirstDateTime = [];
 $firstTimestamp = 0;
