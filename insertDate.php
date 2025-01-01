@@ -7,6 +7,7 @@ $options['projection'] = ['_id'=>1,"timestamp"=>1];
 
 foreach ($collection->find(["date"=>['$exists' => false]], $options) as $doc) {
     $bsonDate =  new MongoDB\BSON\UTCDateTime($doc->timestamp * 1000);
+    echo date('Y-m-d H:i:s', $doc->timestamp) . "<BR/>";
     $result = $collection->updateOne(
         ['_id' => $doc->_id],
         ['$set' => ['date' => $bsonDate]]

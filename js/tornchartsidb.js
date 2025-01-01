@@ -105,7 +105,6 @@
         async function fetchLogs(){
             document.getElementById('wait').style.display = 'block';
             document.getElementById('chartContainer').style.display = 'none';
-            document.getElementById('percent').innerText = "Fetching logs...";
             document.getElementById('date').innerText = "";
             await fetch(`${HOME_URL}tornAttacks.php?key=${localStorage.getItem('TornAPIKey')}`)
             .then(response=> response.text())
