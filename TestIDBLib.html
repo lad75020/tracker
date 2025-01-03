@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test IDB Library</title>
+    <script src="https://cdn.jsdelivr.net/npm/idb@8/build/umd.js"></script>
+    <script>
+        function getCommonObjectsById(array1, array2) { 
+            const map = new Map();
+            array1.forEach(item => { map.set(item._id, item); });
+            const commonObjects = array2.filter(item => map.has(item._id));
+            return commonObjects;
+        }
+        async function retrieveLogsByLog(log, from, to) {
+          const db = await idb.openDB("TORN",1);
+          const value1 = await db.getAllFromIndex('logs', 'logIndex', log);
+          const value2 = await db.getAllFromIndex('logs', 'timestampIndex', IDBKeyRange.bound(from, to));
+          const result = getCommonObjectsById(value1, value2);
+          return result;
+        }
+    </script>
+</head>
+<body onload="await retrieveLogsByLog(2290, 1727210881, 1727947420).then(objects => {objects.forEach(object => {document.getElementById('result').innerText = JSON.stringify(object);})});">
+<div id="result"></div>  
+</body>
+</html>

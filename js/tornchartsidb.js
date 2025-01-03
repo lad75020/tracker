@@ -27,6 +27,19 @@
         let firstSelectedDate = "";
         let secondSelectedDate = "";
         let jsonCharts;
+        function getCommonObjectsById(array1, array2) { 
+            const map = new Map();
+            array1.forEach(item => { map.set(item._id, item); });
+            const commonObjects = array2.filter(item => map.has(item._id));
+            return commonObjects;
+        }
+        async function retrieveLogsByLog(log, from, to) {
+          const db = await idb.openDB("TORN",1);
+          const value1 = await db.getAllFromIndex('logs', 'logIndex', log);
+          const value2 = await db.getAllFromIndex('logs', 'timestampIndex', IDBKeyRange.bound(from, to));
+          const result = getCommonObjectsById(value1, value2);
+          return result;
+        }
         function loadChartSelect(){
             const select = document.getElementById("chartSelect");
             select.innerHTML = ""; // Clear existing options
@@ -85,8 +98,6 @@
                                 }
                             }
                         }
-                        
-                        
                     })
                     .catch(error => {
                         console.error('Mongo Logs Fetch error:', error);
@@ -128,6 +139,7 @@
             document.getElementById('wait').style.display = 'block';
             document.getElementById('chartContainer').style.display = 'none';
             document.getElementById('date').innerText = "";
+            document.getElementById('percent').innerText = "";
             await fetch(`${HOME_URL}tornAttacks.php?key=${localStorage.getItem('TornAPIKey')}`)
             .then(response=> response.text())
             .then(data => { document.getElementById("date").innerText= data });
@@ -142,7 +154,19 @@
                 document.getElementById('wait').style.display = 'none';
             });
 
-
+            function getCommonObjectsById(array1, array2) { 
+                const map = new Map();
+                array1.forEach(item => { map.set(item._id, item); });
+                const commonObjects = array2.filter(item => map.has(item._id));
+                return commonObjects;
+            }
+            async function retrieveLogsByLog(log, from, to) {
+              const db = await idb.openDB("TORN",1);
+              const value1 = await db.getAllFromIndex('logs', 'logIndex', log);
+              const value2 = await db.getAllFromIndex('logs', 'timestampIndex', IDBKeyRange.bound(from, to));
+              const result = getCommonObjectsById(value1, value2);
+              return result;
+            }
         }
         async function getObjectsByProperties(idb,oStore,properties,startTimestamp,endTimestamp,crime) {
             return new Promise((resolve, reject) => {
@@ -321,22 +345,8 @@
                 }
                 if (type == "Casino" && category =="Slots"){
                     let money = 0;
-                    await getObjectsByProperties('TORN','logs',{log:8300},t,t+DAY_TO_SEC)
-                    .then(objects => {
-                        objects.forEach(object => {
-                            money += object.data.won_amount - object.data.bet_amount;
-                        })
-                    })
-                    .catch(error => {
-                        console.error('Error retrieving objects:', error);
-                    });
-                    await getObjectsByProperties('TORN','logs',{log:8301},t,t+DAY_TO_SEC)
-                    .then(objects => {
-                        objects.forEach(object => {
-                        money -= object.data.bet_amount;
-                        })
-                    })
-                    .catch(error => {console.error('Error retrieving objects:', error);}); 
+                    await retrieveLogsByLog(8300, t, t+DAY_TO_SEC).then(objects => {objects.forEach(object => {money += object.data.won_amount - object.data.bet_amount;})});
+                    await retrieveLogsByLog(8301, t, t+DAY_TO_SEC).then(objects => {objects.forEach(object => {money -= object.data.bet_amount;})});
                     i.push(money);
                     if (money > 0)
                         i.push('color:rgb(12, 124, 59)');
@@ -384,34 +394,14 @@
                     data1.push(i);
                 }
                 if(log == 2290){
-                    await getObjectsByProperties('TORN','logs',{log:2290},t,t+DAY_TO_SEC)
-                    .then(objects => {
-                        i[1] = objects.length;
-                    })
-                    .catch(error => {
-                        console.error('Error retrieving objects:', error);
-                    });
-                    await getObjectsByProperties('TORN','logs',{log:2291},t,t+DAY_TO_SEC)
-                    .then(objects => {
-                        i[2] = objects.length;
-                    })
-                    .catch(error => {console.error('Error retrieving objects:', error);});
+                    await retrieveLogsByLog(2290, t, t+DAY_TO_SEC).then(objects => {i[1] = objects.length;});
+                    await retrieveLogsByLog(2291, t, t+DAY_TO_SEC).then(objects => {i[2] = objects.length;});
                     i.push('color: red');
                     data1.push(i);
                 }
                 if (log == 5410){
-                    await getObjectsByProperties('TORN','logs',{log:5410},t,t+DAY_TO_SEC)
-                    .then(objects => {
-                        i[1] = objects.length;
-                    })
-                    .catch(error => {
-                        console.error('Error retrieving objects:', error);
-                    });
-                    await getObjectsByProperties('TORN','logs',{log:5415},t,t+DAY_TO_SEC)
-                    .then(objects => {
-                        i[2] = objects.length;
-                    })
-                    .catch(error => {console.error('Error retrieving objects:', error);});
+                    await retrieveLogsByLog(5410, t, t+DAY_TO_SEC).then(objects => {i[1] = objects.length;});
+                    await retrieveLogsByLog(5415, t, t+DAY_TO_SEC).then(objects => {i[2] = objects.length;});
                     i.push('color: red');
                     data1.push(i);
                 }

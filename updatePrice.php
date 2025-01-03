@@ -5,8 +5,7 @@ use MongoDB\Client;
     try {
         $id = $_GET['id'];
         $key = $_GET['key'];
-        $json = file_get_contents("https://api.torn.com/v2/market/$id/itemmarket?key=$key&offset=0");
-        $data = json_decode($json);
+        $data = json_decode(file_get_contents("https://api.torn.com/v2/market/$id/itemmarket?key=$key&offset=0"));
 
         $price = $data->itemmarket->item->average_price;
 
