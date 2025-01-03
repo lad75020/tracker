@@ -25,7 +25,7 @@ if ($aFirstDateTime[4] >= 45 && $aFirstDateTime[4] <= 59){
 }
 $endFirstLoopTimestamp = mktime($endFirstLoopHour, $endFirstLoopMinute,0,$aFirstDateTime[1],$aFirstDateTime[2],$aFirstDateTime[0]);
 
-echo 'data: '. implode("-", $aFirstDateTime);
+echo 'data: '. implode("-", $aFirstDateTime)."\n";
 ob_flush(); flush();
 $today = getdate();
 $todayTimestamp = $today["0"];
@@ -37,12 +37,13 @@ foreach ($jsonLogs->log as $property => $value)
 usleep(500000);
 for ($t = $endFirstLoopTimestamp; $t <= $todayTimestamp; $t += $INTERVAL){
     $jsonLogs = json_decode(file_get_contents("https://api.torn.com/v2/user?selections=log&key=". $TORN_API_KEY ."&from=". $t . "&to=" . $t + $INTERVAL), false);
-    echo 'data: ' . date("Y-m-d H:i:s", $t);
+    echo 'data: ' . date("Y-m-d H:i:s", $t)."\n";
     ob_flush(); flush();
     foreach ($jsonLogs->log as $property => $value)
         $collection->insertOne($value);
     usleep(500000);
 }
 echo "event: end\n";
+ob_flush(); flush();
 echo "data: End of stream\n\n";
 ?>

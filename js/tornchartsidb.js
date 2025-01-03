@@ -59,38 +59,34 @@
                 catch (error) {
                     console.error('There was a problem with the config fetch operation:', error);
                 }
-        }   
-        async function fetchAndStoreData(url, divName) {
-            let db;
-            indexedDB.deleteDatabase('TORN');
-            const request = indexedDB.open('TORN', 1);
-        
-            request.onupgradeneeded = (event) => {
-                db = event.target.result;
-                const objectStore = db.createObjectStore('logs', { keyPath: '_id' });
-                objectStore.createIndex('logIndex', 'log', { unique: false });
-                objectStore.createIndex('timestampIndex', 'timestamp', { unique: false });
-            }
+        }  
+        function insertLogs(url, highestTimestamp){
+            const request = indexedDB.open('TORN',1);
             request.onsuccess = (event) => {
                 db = event.target.result;
-                count = 0;
-                fetch(url)
+                
+                let count = 0;
+
+                fetch(url+"?from="+highestTimestamp)
                     .then(response => response.json())
-                    .then(data => {
-                        const transaction = db.transaction(['logs'], 'readwrite');
-                        const objectStore = transaction.objectStore('logs');
-                        data.forEach(item => {
-                            count++;
-                            objectStore.put(item);
-                        });
+                    .then(async data => {
+                        for(const item of data) {
+                            const transaction = db.transaction(['logs'], 'readwrite');
+                            const objectStore = transaction.objectStore('logs');
+                            const count_id = await objectStore.count(item._id);
+                            count_id.onsuccess = (event) => {
+                                if (event.target.result == 0) {
+                                    count++;
+                                    console.log("inserting "+item._id);
+                                    objectStore.put(item);
+                                }
+                                else{
+                                    console.log("skipping "+item._id);
+                                }
+                            }
+                        }
                         
-                        transaction.oncomplete = () => {
-                            document.getElementById(divName).innerText = `All data has been added to the IndexedDB: ${count} Items`;
-                            
-                        };
-                        transaction.onerror = (event) => {
-                            console.error('Write logs to IndexedDB Transaction error:', event.target.error);
-                        };
+                        
                     })
                     .catch(error => {
                         console.error('Mongo Logs Fetch error:', error);
@@ -100,6 +96,32 @@
             request.onerror = (event) => {
                 console.error('Creation of IndexedDB error:', event.target.error);
             };
+        }
+
+        async function fetchAndStoreData(url) {
+            const request = indexedDB.open('TORN',1);
+            request.onsuccess = async (event) => { 
+                const db = event.target.result;
+                const transaction = db.transaction(['logs'], 'readonly');
+                const objectStore = transaction.objectStore('logs');
+                const index = objectStore.index('timestampIndex');
+                const cursorRequest = await index.openCursor(null, 'prev');
+                cursorRequest.onsuccess = (event) => {
+                    const cursor = event.target.result;
+                    if (cursor) {
+                        const record = cursor.value;
+                        insertLogs(url, record.timestamp);
+                    }
+                };
+                cursorRequest.onerror = (event) => { reject('Error retrieving data: ' + event.target.error); };
+            };
+        
+            request.onupgradeneeded = (event) => {
+                const db = event.target.result;
+                const objectStore = db.createObjectStore('logs', { keyPath: '_id' });
+                objectStore.createIndex('logIndex', 'log', { unique: false });
+                objectStore.createIndex('timestampIndex', 'timestamp', { unique: false });
+            }
         }
                
         async function fetchLogs(){
@@ -114,7 +136,7 @@
                 document.getElementById("date").innerText = event.data;
              }
             eventSource.addEventListener('end', function(event) { 
-                fetchAndStoreData(`${HOME_URL}getAllTornLogs.php`, 'debug');
+                fetchAndStoreData(`${HOME_URL}getAllTornLogs.php`);
                 fetchDateRange();
                 eventSource.close();
                 document.getElementById('wait').style.display = 'none';
@@ -398,12 +420,10 @@
                             await fetch(`${HOME_URL}getTornLogCount.php?from=${t}&to=${t+DAY_TO_SEC}&log=${log}&position=${result}`)
                             .then(response=> response.text())
                             .then(data => { i.push((parseInt(data)) ? parseInt(data) : 0);});
-                            if(result == 'win')
-                                i.push('color: green');
-                            else
-                                i.push('color: red');
-                            data1.push(i);
+            
                     };
+                    i.push('color: black');
+                    data1.push(i);
                 }
                 if (crime != undefined && crime !="" && type != "AllSkills"){
                     await getObjectsByProperties('TORN','logs',{log:9005},t,t+DAY_TO_SEC, crime)
@@ -452,12 +472,12 @@
                 chartData = google.visualization.arrayToDataTable(data2);
                 if(currentChart.type == "AllSkills" || currentChart.type == "skill")                    
                     chart = new google.charts.Line(document.getElementById('chartContainer'));
-                else if (currentChart.log == 2290 )
+                else if (currentChart.log == 2290 || currentChart.log == 8731)
                     chart = new google.charts.Bar(document.getElementById('chartContainer'));
                 else
                     chart = new google.visualization.ComboChart(document.getElementById('chartContainer'));
                 google.visualization.events.addListener(chart, 'select', selectHandler);
-                chart.draw(chartData, (currentChart.type=="AllSkills" || currentChart.type == "skill" || currentChart.log == 2290) ? google.charts.Line.convertOptions(options) : options);
+                chart.draw(chartData, (currentChart.type=="AllSkills" || currentChart.type == "skill" || currentChart.log == 2290 || currentChart.log == 8731) ? google.charts.Line.convertOptions(options) : options);
                 
             }
             else{

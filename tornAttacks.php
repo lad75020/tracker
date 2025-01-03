@@ -30,7 +30,7 @@ foreach ($jsonLogs->attacks as $property => $value)
 usleep(500000);
 for ($t = $nextDayTimestamp; $t <= $todayTimestamp; $t += $INTERVAL){
     $jsonLogs = json_decode(file_get_contents("https://api.torn.com/v2/user?selections=attacks&key=". $TORN_API_KEY ."&from=". $t . "&to=" . $t + $INTERVAL), false);
-    echo date("Y-m-d H:i:s", $t) . "<BR/>";
+    echo date("Y-m-d H:i:s", $t) ;
     foreach ($jsonLogs->attacks as $property => $value)
         $collection->insertOne($value);
     usleep(500000);

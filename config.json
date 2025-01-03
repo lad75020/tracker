@@ -106,7 +106,7 @@
         "header": [
             "Date",
             "Winner",
-            "Loser"
+            "Lose"
         ],
         "type": "Race",
         "options": {
