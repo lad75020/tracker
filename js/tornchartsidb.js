@@ -33,12 +33,47 @@
             const commonObjects = array2.filter(item => map.has(item._id));
             return commonObjects;
         }
+        function hasNestedProperty(obj, propertyPath) {
+            const properties = propertyPath.split('.');
+            let currentObj = obj;
+            for (const property of properties) {
+                if (!currentObj || !currentObj.hasOwnProperty(property)) {
+                    return false;
+                }
+                currentObj = currentObj[property];
+            }
+            return true;
+        }
         async function retrieveLogsByLog(log, from, to) {
           const db = await idb.openDB("TORN",1);
           const value1 = await db.getAllFromIndex('logs', 'logIndex', log);
           const value2 = await db.getAllFromIndex('logs', 'timestampIndex', IDBKeyRange.bound(from, to));
           const result = getCommonObjectsById(value1, value2);
           return result;
+        }
+        async function retrieveLogsByCrimeAction(crime_action){
+            const db = await idb.openDB("TORN",1);
+            let cursor = await db.transaction('logs').store.openCursor();
+            const aLogs = new Array();
+            while(cursor) {
+                if(hasNestedProperty(cursor.value,'data.crime_action') && cursor.value.data.crime_action.match(crime_action)) {
+                    aLogs.push(cursor.value);
+                }
+                cursor = await cursor.continue();
+            };
+            return aLogs;
+        }
+        async function retrieveLogsByCrime(crime){
+            const db = await idb.openDB("TORN",1);
+            let cursor = await db.transaction('logs').store.openCursor();
+            const aLogs = new Array();
+            while(cursor) {
+                if(hasNestedProperty(cursor.value,'data.crime') && typeof(cursor.value.data.crime) == "string" && cursor.value.data.crime.match(crime)) {
+                    aLogs.push(cursor.value);
+                }
+                cursor = await cursor.continue();
+            };
+            return aLogs;
         }
         function loadChartSelect(){
             const select = document.getElementById("chartSelect");

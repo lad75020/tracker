@@ -12,6 +12,17 @@
             const commonObjects = array2.filter(item => map.has(item._id));
             return commonObjects;
         }
+        function hasNestedProperty(obj, propertyPath) {
+            const properties = propertyPath.split('.');
+            let currentObj = obj;
+            for (const property of properties) {
+                if (!currentObj || !currentObj.hasOwnProperty(property)) {
+                    return false;
+                }
+                currentObj = currentObj[property];
+            }
+            return true;
+        }
         async function retrieveLogsByLog(log, from, to) {
           const db = await idb.openDB("TORN",1);
           const value1 = await db.getAllFromIndex('logs', 'logIndex', log);
@@ -19,9 +30,59 @@
           const result = getCommonObjectsById(value1, value2);
           return result;
         }
+        async function retrieveLogsByCrimeAction(crime_action){
+            const db = await idb.openDB("TORN",1);
+            let cursor = await db.transaction('logs').store.openCursor();
+            const aLogs = new Array();
+            while(cursor) {
+                if(hasNestedProperty(cursor.value,'data.crime_action') && cursor.value.data.crime_action.match(crime_action)) {
+                    aLogs.push(cursor.value);
+                }
+                cursor = await cursor.continue();
+            };
+            return aLogs;
+        }
     </script>
 </head>
-<body onload="await retrieveLogsByLog(2290, 1727210881, 1727947420).then(objects => {objects.forEach(object => {document.getElementById('result').innerText = JSON.stringify(object);})});">
-<div id="result"></div>  
+<body onload="">
+<div id="result"></div>
+<script>
+    //retrieveLogsByLog(2290, 1727210881, 1727947420).then(objects => {objects.forEach(object => {document.getElementById('result').innerHTML+= JSON.stringify(object)+'<BR/>';})});
+    const allLogs = new Array();
+    retrieveLogsByCrimeAction('searching')
+    .then(objCrimeActions => {
+        return Promise.all([
+            retrieveLogsByLog(9015, 1727210881, 1737947420).then(objTimedLogs9015 => {
+                const commonObjects = getCommonObjectsById(objCrimeActions, objTimedLogs9015);
+                commonObjects.forEach(object => {
+                    allLogs.push(object);
+                });
+            }),
+            retrieveLogsByLog(9020, 1727210881, 1737947420).then(objTimedLogs9020 => {
+                const commonObjects = getCommonObjectsById(objCrimeActions, objTimedLogs9020);
+                commonObjects.forEach(object => {
+                    allLogs.push(object);
+                });
+            }),
+            retrieveLogsByLog(9150, 1727210881, 1737947420).then(objTimedLogs9150 => {
+                const commonObjects = getCommonObjectsById(objCrimeActions, objTimedLogs9150);
+                commonObjects.forEach(object => {
+                    allLogs.push(object);
+                });
+            }),
+            retrieveLogsByLog(9154, 1727210881, 1737947420).then(objTimedLogs9154 => {
+                const commonObjects = getCommonObjectsById(objCrimeActions, objTimedLogs9154);
+                commonObjects.forEach(object => {
+                    allLogs.push(object);
+                });
+            })
+        ]);
+    })
+    .then(() => {
+        allLogs.forEach(object => {
+            document.getElementById('result').innerHTML += JSON.stringify(object) + '<BR/>';
+        });
+    });
+</script>
 </body>
 </html>
