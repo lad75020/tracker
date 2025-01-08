@@ -44,15 +44,52 @@
             }
             return true;
         }
+        function createTable(data) {
+            // Créer un élément table
+            const table = document.createElement('table');
+            table.style.border = '2px solid black';
+        
+            // Parcourir chaque ligne de données
+            data.forEach((rowData, index) => {
+                const row = document.createElement('tr');
+                if (index === 0) {
+                     row.style.backgroundColor = 'darkgrey';
+                    row.style.color = 'white';
+                }
+        
+                rowData.forEach((cellData, index) => {
+                    const cell = document.createElement('td');;
+                    if (cellData !== undefined){
+                        if (cellData instanceof Date) {
+                            cell.innerText = cellData.toISOString().slice(0,10);
+                        }
+                        else
+                            cell.innerText = cellData;
+                    }
+                    cell.style.border = '1px solid black';
+        
+                    if (index !== rowData.length - 1) {
+                        row.appendChild(cell); 
+                    }
+                });
+        
+                // Ajouter la ligne à la table
+                table.appendChild(row);
+            });
+        
+            // Ajouter la table au corps du document ou à un élément spécifique
+            document.getElementById('debug2').appendChild(table);
+        }
+        
         async function retrieveLogsByLog(log, from, to) {
-          const db = await idb.openDB("TORN",1);
+          const db = await idb.openDB("TORN");
           const value1 = await db.getAllFromIndex('logs', 'logIndex', log);
           const value2 = await db.getAllFromIndex('logs', 'timestampIndex', IDBKeyRange.bound(from, to));
           const result = getCommonObjectsById(value1, value2);
           return result;
         }
         async function retrieveLogsByCrimeAction(crime_action){
-            const db = await idb.openDB("TORN",1);
+            const db = await idb.openDB("TORN");
             let cursor = await db.transaction('logs').store.openCursor();
             const aLogs = new Array();
             while(cursor) {
@@ -64,7 +101,7 @@
             return aLogs;
         }
         async function retrieveLogsByCrime(crime){
-            const db = await idb.openDB("TORN",1);
+            const db = await idb.openDB("TORN");
             let cursor = await db.transaction('logs').store.openCursor();
             const aLogs = new Array();
             while(cursor) {
@@ -109,7 +146,17 @@
                 }
         }  
         function insertLogs(url, highestTimestamp){
-            const request = indexedDB.open('TORN',1);
+            const request = indexedDB.open('TORN');
+            request.onupgradeneeded = (event) => {
+                const db = event.target.result;
+                if (!db.objectStoreNames.contains('logs')) {
+                    const targetStore = db.createObjectStore('logs', { keyPath: '_id' });
+                    targetStore.createIndex('logIndex', 'log', { unique: false });
+                    targetStore.createIndex('timestampIndex', 'timestamp', { unique: false });
+                    targetStore.createIndex('crime_actionIndex', 'data.crime_action', { unique: false });
+                    targetStore.createIndex('crimeIndex', 'data.crime', { unique: false });
+                }
+            };
             request.onsuccess = (event) => {
                 db = event.target.result;
                 
@@ -145,7 +192,7 @@
         }
 
         async function fetchAndStoreData(url) {
-            const request = indexedDB.open('TORN',1);
+            const request = indexedDB.open('TORN');
             request.onsuccess = async (event) => { 
                 const db = event.target.result;
                 const transaction = db.transaction(['logs'], 'readonly');
@@ -188,20 +235,6 @@
                 eventSource.close();
                 document.getElementById('wait').style.display = 'none';
             });
-
-            function getCommonObjectsById(array1, array2) { 
-                const map = new Map();
-                array1.forEach(item => { map.set(item._id, item); });
-                const commonObjects = array2.filter(item => map.has(item._id));
-                return commonObjects;
-            }
-            async function retrieveLogsByLog(log, from, to) {
-              const db = await idb.openDB("TORN",1);
-              const value1 = await db.getAllFromIndex('logs', 'logIndex', log);
-              const value2 = await db.getAllFromIndex('logs', 'timestampIndex', IDBKeyRange.bound(from, to));
-              const result = getCommonObjectsById(value1, value2);
-              return result;
-            }
         }
         async function getObjectsByProperties(idb,oStore,properties,startTimestamp,endTimestamp,crime) {
             return new Promise((resolve, reject) => {
@@ -466,7 +499,7 @@
                     .then(response=> response.text())
                     .then(data => {
                         const parsedData = JSON.parse(data);
-                        const skills = ['cracking', 'pickpocketing', 'graffiti', 'skimming', 'forgery', 'searching', 'shoplifting', 'bootlegging', 'burglary'];
+                        const skills = ['cracking', 'pickpocketing', 'graffiti', 'skimming', 'forgery', 'searching', 'shoplifting', 'bootlegging', 'burglary','hustling'];
                         skills.forEach(skill => {
                             const skillValue = parsedData[skill] ?? previous[skill];
                             i.push(skillValue);
@@ -493,7 +526,7 @@
             if(data2.length > 1){
                 document.getElementById("chartContainer").style.display="block";
 
-                document.getElementById("debug2").innerHTML = JSON.stringify(data2).replace(/\]\,/g,"],<BR/>");
+                createTable(data2);
                 chartData = google.visualization.arrayToDataTable(data2);
                 if(currentChart.type == "AllSkills" || currentChart.type == "skill")                    
                     chart = new google.charts.Line(document.getElementById('chartContainer'));

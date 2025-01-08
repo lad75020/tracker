@@ -32,15 +32,15 @@ $todayTimestamp = $today["0"];
 
 $jsonLogs = json_decode(file_get_contents("https://api.torn.com/v2/user?selections=log&key=". $TORN_API_KEY ."&from=". $doc->timestamp + 1 . "&to=" . $endFirstLoopTimestamp), false);
 
-foreach ($jsonLogs->log as $property => $value)
-    $collection->insertOne($value);
+/*foreach ($jsonLogs->log as $property => $value)
+    $collection->insertOne($value);*/
 usleep(500000);
 for ($t = $endFirstLoopTimestamp; $t <= $todayTimestamp; $t += $INTERVAL){
     $jsonLogs = json_decode(file_get_contents("https://api.torn.com/v2/user?selections=log&key=". $TORN_API_KEY ."&from=". $t . "&to=" . $t + $INTERVAL), false);
     echo 'data: ' . date("Y-m-d H:i:s", $t)."\n\n";
     ob_flush(); flush();
-    foreach ($jsonLogs->log as $property => $value)
-        $collection->insertOne($value);
+/*    foreach ($jsonLogs->log as $property => $value)
+        $collection->insertOne($value);*/
     usleep(500000);
 }
 echo "event: end\n";

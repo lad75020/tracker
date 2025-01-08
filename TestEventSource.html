@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test eventsource</title>
+    <script>
+        const HOME_URL = "https://tracker.dubertrand.fr/";
+        async function fetchLogs(){
+            const eventSource = new EventSource(`${HOME_URL}torntest.php?key=${localStorage.getItem('TornAPIKey')}`);
+            eventSource.onmessage = (event) => { 
+                document.getElementById("date").innerText = event.data;
+             }
+            eventSource.addEventListener('end', function(event) { 
+                alert("end received : data= "+event.data);
+                eventSource.close();
+            });
+        }
+    </script>
+</head>
+<body onload="fetchLogs();">
+  
+<div id="date"></div>  
+</body>
+</html>

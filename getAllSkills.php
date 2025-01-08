@@ -17,7 +17,8 @@ $crimeMapping = [
     "cracking" => "cracking",
     "forgery" => "forgery",
     "pickpocketing" => "pickpocketing",
-    "skimming" => "skimming"
+    "skimming" => "skimming",
+    "hustling" => "hustling"
 ];
 foreach ($collection->find($aFilter, $options) as $doc) {
     $crime = $doc->data->crime;

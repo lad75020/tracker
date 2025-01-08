@@ -605,7 +605,8 @@
             "Searching",
             "Shoplifting",
             "Bootlegging",
-            "Burglary"
+            "Burglary",
+            "Hustling"
 
         ],
         "crime": "all",
@@ -634,7 +635,7 @@
                 },
                 "3": {
                     "type": "line",
-                    "color": "yellow"
+                    "color": "gray"
                 },
                 "4": {
                     "type": "line",
@@ -655,6 +656,10 @@
                 "8": {
                     "type": "line",
                     "color": "green"
+                },
+                "9": {
+                    "type": "line",
+                    "color": "black"
                 }
             }
         }
