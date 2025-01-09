@@ -1,6 +1,6 @@
         const DAY_TO_SEC = 86400;
         const HOME_URL = "https://tracker.dubertrand.fr/";
-        google.charts.load('upcoming', {'packages':['corechart','line','bar']});
+        google.charts.load('upcoming', {'packages':['corechart']});
 
         let firstLogDate = new Date(0);
         let lastLogDate = new Date(0);
@@ -19,7 +19,6 @@
         let from = firstLogDate.getTime()/1000;
         let first = 0;
         let last = lastLogDate.getTime()/1000;
-        let data1 = [];
         let chartData;
         let progress = 0;
         let stop = false;
@@ -281,8 +280,10 @@
         
             function selectHandler() {
             const selectedItem = chart.getSelection()[0];
+            const chartName = chart.options.cc[0].title;
             if (selectedItem) {
                 const value = chartData.getValue(selectedItem.row, 0);
+                
                 if(firstSelectedDate == "" )
                     firstSelectedDate = value;
                 else if (secondSelectedDate == "")
@@ -300,7 +301,7 @@
                         day = String(dSecond.getDate()).padStart(2, '0');
                         document.getElementById("last").value = `${year}-${month}-${day}`;
                         initDisplay();
-                        drawChart(currentChartName);
+                        drawChart(chartName);
                     }
                     else{
                         alert("First Date must be before Last Date");
@@ -330,8 +331,7 @@
             last = lastDate.getTime()/1000;
         }
         async function drawChart(chartName){
-            data1 = new Array();
-            currentChartName = chartName;
+            const data1 = new Array();
             let total =0;
             let manual_skill =0;
             let intelligence_skill=0;
@@ -528,14 +528,9 @@
 
                 createTable(data2);
                 chartData = google.visualization.arrayToDataTable(data2);
-                if(currentChart.type == "AllSkills" || currentChart.type == "skill")                    
-                    chart = new google.charts.Line(document.getElementById('chartContainer'));
-                else if (currentChart.log == 2290 || currentChart.log == 8731)
-                    chart = new google.charts.Bar(document.getElementById('chartContainer'));
-                else
-                    chart = new google.visualization.ComboChart(document.getElementById('chartContainer'));
+                chart = new google.visualization.ComboChart(document.getElementById('chartContainer'));
                 google.visualization.events.addListener(chart, 'select', selectHandler);
-                chart.draw(chartData, (currentChart.type=="AllSkills" || currentChart.type == "skill" || currentChart.log == 2290 || currentChart.log == 8731) ? google.charts.Line.convertOptions(options) : options);
+                chart.draw(chartData, options);
                 
             }
             else{

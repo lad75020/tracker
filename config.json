@@ -550,7 +550,6 @@
         "type": "skill",
         "options": {
             "height": 480,
-            "backgroundColor": "rgba(255,255,255,0.01)",
             "animation": {
                 "startup": true
             },
@@ -568,7 +567,6 @@
         "type": "skill",
         "options": {
             "height": 480,
-            "backgroundColor": "rgba(255,255,255,0.01)",
             "animation": {
                 "startup": true
             },
@@ -586,7 +584,6 @@
         "type": "skill",
         "options": {
             "height": 480,
-            "backgroundColor": "rgba(255,255,255,0.01)",
             "animation": {
                 "startup": true
             },
@@ -614,12 +611,11 @@
         "type": "AllSkills",
         "options": {
             "height": 480,
-            "backgroundColor": "rgba(255,255,255,0.01)",
             "animation": {
                 "startup": true
             },
             "curveType": "function",
-            "title": "Skills",
+            "title": "All Skills",
             "series": {
                 "0": {
                     "type": "line",
@@ -675,7 +671,6 @@
         "type": "skill",
         "options": {
             "height": 480,
-            "backgroundColor": "rgba(255,255,255,0.01)",
             "animation": {
                 "startup": true
             },
@@ -693,7 +688,6 @@
         "type": "skill",
         "options": {
             "height": 480,
-            "backgroundColor": "rgba(255,255,255,0.01)",
             "animation": {
                 "startup": true
             },
@@ -711,7 +705,6 @@
         "type": "skill",
         "options": {
             "height": 480,
-            "backgroundColor": "rgba(255,255,255,0.01)",
             "animation": {
                 "startup": true
             },
@@ -729,7 +722,6 @@
         "type": "skill",
         "options": {
             "height": 480,
-            "backgroundColor": "rgba(255,255,255,0.01)",
             "animation": {
                 "startup": true
             },
@@ -747,7 +739,6 @@
         "type": "skill",
         "options": {
             "height": 480,
-            "backgroundColor": "rgba(255,255,255,0.01)",
             "animation": {
                 "startup": true
             },
