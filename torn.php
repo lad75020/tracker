@@ -25,28 +25,34 @@ if ($aFirstDateTime[4] >= 45 && $aFirstDateTime[4] <= 59){
 }
 $endFirstLoopTimestamp = mktime($endFirstLoopHour, $endFirstLoopMinute,0,$aFirstDateTime[1],$aFirstDateTime[2],$aFirstDateTime[0]);
 
-echo 'data: '. implode("-", $aFirstDateTime)."\n\n";
-ob_flush(); flush();
+
 $today = getdate();
 $todayTimestamp = $today["0"];
 
 $jsonLogs = json_decode(file_get_contents("https://api.torn.com/v2/user?selections=log&key=". $TORN_API_KEY ."&from=". $doc->timestamp + 1 . "&to=" . $endFirstLoopTimestamp), false);
-
+$count = 0;
 foreach ($jsonLogs->log as $property => $value){
+    $count++;
     $bsonDate =  new MongoDB\BSON\UTCDateTime($value->timestamp * 1000);
     $value->date = $bsonDate;
     $collection->insertOne($value);
 }
+echo 'data: '. implode("-", $aFirstDateTime).': '.$count."\n\n";
+ob_flush(); flush();
 usleep(500000);
+$count=0;
 for ($t = $endFirstLoopTimestamp; $t <= $todayTimestamp; $t += $INTERVAL){
     $jsonLogs = json_decode(file_get_contents("https://api.torn.com/v2/user?selections=log&key=". $TORN_API_KEY ."&from=". $t . "&to=" . $t + $INTERVAL), false);
-    echo 'data: ' . date("Y-m-d H:i:s", $t)."\n\n";
-    ob_flush(); flush();
+
     foreach ($jsonLogs->log as $property => $value){
+        $count++;
         $bsonDate =  new MongoDB\BSON\UTCDateTime($value->timestamp * 1000);
         $value->date = $bsonDate;
         $collection->insertOne($value);
     }
+    echo 'data: ' . date("Y-m-d H:i:s", $t).': '.$count."\n\n";
+    $count=0;
+    ob_flush(); flush();
     usleep(500000);
 }
 echo "event: end\n";

@@ -188,7 +188,7 @@
                 "startup": true
             },
             "title": "Pickpocketing Data",
-            "vAxis": {"scaleType":"log"},
+            
             "series": {
                 "0": {
                     "axis": "counts",
