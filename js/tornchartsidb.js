@@ -19,10 +19,9 @@
         let from = firstLogDate.getTime()/1000;
         let first = 0;
         let last = lastLogDate.getTime()/1000;
-        let chartData;
-        let progress = 0;
         let stop = false;
         let chart;
+        let chartData;
         let firstSelectedDate = "";
         let secondSelectedDate = "";
         let jsonCharts;
@@ -254,7 +253,7 @@
                         if (cursor) {
                             const match = Object.keys(properties).every(key => cursor.value[key] === properties[key]);
                             if (match) {
-                                if(crime != undefined && cursor.value.data.crime == crime){
+                                if(crime != undefined && cursor.value.data.crime.match( crime)){
                                     results.push(cursor.value);
                                 }
                                 if (crime === undefined){
@@ -278,7 +277,7 @@
             });
         }
         
-            function selectHandler() {
+        function selectHandler() {
             const selectedItem = chart.getSelection()[0];
             const chartName = chart.options.cc[0].title;
             if (selectedItem) {
@@ -330,18 +329,16 @@
             const lastDate = new Date(document.getElementById('last').value);
             last = lastDate.getTime()/1000;
         }
-        async function drawChart(chartName){
+        async function prepareData(chartName){
             const data1 = new Array();
             let total =0;
             let manual_skill =0;
             let intelligence_skill=0;
             let endurance_skill = 0;
-            let options = new Object();
             const headers = new Array();
             const previous = new Object();
             const currentChart = jsonCharts.find(chart => chart.name === chartName);
             if (currentChart) {
-                options = currentChart.options;
                 currentChart.header.forEach(header => {
                     headers.push(header);
                 });
@@ -465,13 +462,15 @@
                     await retrieveLogsByLog(2290, t, t+DAY_TO_SEC).then(objects => {i[1] = objects.length;});
                     await retrieveLogsByLog(2291, t, t+DAY_TO_SEC).then(objects => {i[2] = objects.length;});
                     i.push('color: red');
-                    data1.push(i);
+                    if(i[1] > 0 || i[2] > 0)
+                        data1.push(i);
                 }
                 if (log == 5410){
                     await retrieveLogsByLog(5410, t, t+DAY_TO_SEC).then(objects => {i[1] = objects.length;});
                     await retrieveLogsByLog(5415, t, t+DAY_TO_SEC).then(objects => {i[2] = objects.length;});
                     i.push('color: red');
-                    data1.push(i);
+                    if(i[1] > 0 || i[2] > 0)
+                        data1.push(i);
                 }
                 if (log == 8731){
                     for (const result of ['win', 'lose']){
@@ -480,8 +479,9 @@
                             .then(data => { i.push((parseInt(data)) ? parseInt(data) : 0);});
             
                     };
-                    i.push('color: black');
-                    data1.push(i);
+                    i.push('color: red');
+                    if(i[1] > 0 || i[2] > 0)
+                        data1.push(i);
                 }
                 if (crime != undefined && crime !="" && type != "AllSkills"){
                     await getObjectsByProperties('TORN','logs',{log:9005},t,t+DAY_TO_SEC, crime)
@@ -514,23 +514,28 @@
                 document.getElementById("date").innerHTML =  thisDay.toISOString().slice(0,10);
                 
             }
-            const nbCol = data1[0].length;
             const data2 = new Array();
             data1.forEach((item) => {
-                if (item.length === nbCol) {
+                if (item.length === data1[0].length) {
                     data2.push(item);
                 }
             });
+            return(data2);
+        }
+        async function drawChart(chartName){
+            const data = await prepareData(chartName);
+            const currentChart = jsonCharts.find(chart => chart.name === chartName);
+
             document.getElementById("wait").style.display="none";
             document.getElementById("controls").style.display="block";
-            if(data2.length > 1){
+            if(data.length > 1){
                 document.getElementById("chartContainer").style.display="block";
 
-                createTable(data2);
-                chartData = google.visualization.arrayToDataTable(data2);
+                createTable(data);
+                chartData = google.visualization.arrayToDataTable(data);
                 chart = new google.visualization.ComboChart(document.getElementById('chartContainer'));
                 google.visualization.events.addListener(chart, 'select', selectHandler);
-                chart.draw(chartData, options);
+                chart.draw(chartData, currentChart.options);
                 
             }
             else{

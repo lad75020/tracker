@@ -700,7 +700,7 @@
             "Date",
             "Skill"
         ],
-        "crime": "searching",
+        "crime": "search",
         "log": 9005,
         "type": "skill",
         "options": {
