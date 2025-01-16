@@ -12,7 +12,7 @@ if ($credential) {
     // Verify the credential using WebAuthn library
     // ...
 
-    echo json_encode(['success' => true, 'password'=>'71bd9e8b-d943-4cb7-a4aa-f107c741d720']);
+    echo json_encode(['success' => true, 'password'=>'']);
 } else {
     echo json_encode(['success' => false, 'message' => 'Invalid credential']);
 }
