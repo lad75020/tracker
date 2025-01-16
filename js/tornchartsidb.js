@@ -461,13 +461,15 @@
                 if(log == 2290){
                     await retrieveLogsByLog(2290, t, t+DAY_TO_SEC).then(objects => {i[1] = objects.length;});
                     await retrieveLogsByLog(2291, t, t+DAY_TO_SEC).then(objects => {i[2] = objects.length;});
-                    i.push('color: red');
-                    if(i[1] > 0 || i[2] > 0)
+                    await retrieveLogsByLog(6005, t, t+DAY_TO_SEC).then(objects => {i[3] = objects[0] !== undefined ? objects[0].data.rehab_times : 0;});
+                    i.push('color: green');
+                    if(i[1] > 0 || i[2] > 0 || i[3] > 0)
                         data1.push(i);
                 }
                 if (log == 5410){
                     await retrieveLogsByLog(5410, t, t+DAY_TO_SEC).then(objects => {i[1] = objects.length;});
                     await retrieveLogsByLog(5415, t, t+DAY_TO_SEC).then(objects => {i[2] = objects.length;});
+                    
                     i.push('color: red');
                     if(i[1] > 0 || i[2] > 0)
                         data1.push(i);
@@ -496,12 +498,11 @@
                 }
                 if (type=="AllSkills"){
                     await fetch(`${HOME_URL}getAllSkills.php?from=${t}&to=${t+DAY_TO_SEC}`)
-                    .then(response=> response.text())
+                    .then(response=> response.json())
                     .then(data => {
-                        const parsedData = JSON.parse(data);
                         const skills = ['cracking', 'pickpocketing', 'graffiti', 'skimming', 'forgery', 'searching', 'shoplifting', 'bootlegging', 'burglary','hustling'];
                         skills.forEach(skill => {
-                            const skillValue = parsedData[skill] ?? previous[skill];
+                            const skillValue = data[skill] ?? previous[skill];
                             i.push(skillValue);
                             previous[skill] = skillValue;
                         });

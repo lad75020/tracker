@@ -6,7 +6,8 @@
         "header": [
             "Date",
             "Success",
-            "Overdose"
+            "Overdose",
+            "Rehab"
         ],
         "options": {
             "height": 480,
@@ -28,6 +29,11 @@
                     "axis": "counts",
                     "type": "bars",
                     "color": "red"
+                },
+                "2": {
+                    "axis": "counts",
+                    "type": "bars",
+                    "color": "green"
                 }
             }
         }
