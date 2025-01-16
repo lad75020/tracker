@@ -18,6 +18,7 @@ if ($_COOKIE['authkey'] != $authkey) {
         <script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/idb@8/build/umd.js"></script>
         <script type="text/javascript" src="js/tornchartsidb.js"></script>
         <script type="text/javascript" src="js/auto-complete.js"></script>
+        <script type="text/javascript" src="js/jsonview.js"></script>
     </head>
     <body onload="loadConfig();fetchDateRange();initAutoComplete();">
         <header id="controls">

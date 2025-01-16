@@ -135,7 +135,9 @@
                     if (!response.ok) { 
                         throw new Error('Network response was not ok for config fetch'); }
                     const text = await response.text();
-                    document.getElementById("debug2").innerText = text;
+                    const tree = jsonview.create(text);
+                    jsonview.render(tree, document.getElementById('debug2'));
+                    jsonview.expand(tree);
                     jsonCharts = JSON.parse(text);
                     loadChartSelect();
                 }
