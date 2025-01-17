@@ -12,7 +12,8 @@
         "php-http/httplug": "^2.4",
         "gemini-api-php/client": "^1.4",
         "aeon-php/calendar": "^1.0",
-        "web-auth/webauthn-lib": "^5.0"
+        "web-auth/webauthn-lib": "^5.0",
+        "ramsey/uuid": "^4.7"
     },
     "config": {
         "allow-plugins": {

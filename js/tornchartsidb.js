@@ -28,8 +28,7 @@
         function getCommonObjectsById(array1, array2) { 
             const map = new Map();
             array1.forEach(item => { map.set(item._id, item); });
-            const commonObjects = array2.filter(item => map.has(item._id));
-            return commonObjects;
+            return array2.filter(item => map.has(item._id));
         }
         function hasNestedProperty(obj, propertyPath) {
             const properties = propertyPath.split('.');
