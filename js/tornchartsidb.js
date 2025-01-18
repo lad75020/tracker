@@ -419,6 +419,7 @@
                     else 
                         i.push('color:rgb(173, 20, 20)');         
                     data1.push(i);
+                    
                 }
                 if(type=="Attack"){
                     await fetch(`${HOME_URL}getTornAttacks.php?from=${t}&to=${t+DAY_TO_SEC}`)

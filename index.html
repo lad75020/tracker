@@ -33,10 +33,9 @@
             .then(response => response.json())
             .then(data => {
                 if (data.success) {
-                    document.cookie = `authkey=${data.authkey}; path=/; expires=Fri, 31 Dec 9999 23:59:59 GMT; Secure; SameSite=Strict`;
-                    document.cookie = `username=${username}; path=/; expires=Fri, 31 Dec 9999 23:59:59 GMT; Secure; SameSite=Strict`;
+                    localStorage.setItem('TornAPIKey', data.TornAPIKey);
+                    localStorage.setItem('TornUserID', data.TornUserID);
                     window.location.href = `https://tracker.dubertrand.fr/TornChartsIDB.php`;
-
                 } else {
                     alert('Login failed: ' + data.message);
                     document.getElementById('passkey').value = '';

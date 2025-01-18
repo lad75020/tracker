@@ -1,8 +1,15 @@
 <?php
+session_start([ 'cookie_secure' => true,'cookie_httponly' => true, 'cookie_samesite' => 'Strict'  ]);
 require_once __DIR__ . '/vendor/autoload.php';
 $collection = (new MongoDB\Client())->TORN->users;
-$authkey = $collection->findOne(['username' => $_COOKIE['username']])['authkey'];
-if ($_COOKIE['authkey'] != $authkey) {
+
+if (!isset($_SESSION['username']) || !isset($_SESSION['authkey'])) {
+    header('Location: index.html');
+    die();
+}
+
+$authkey = $collection->findOne(['username' => $_SESSION['username']])['authkey'];
+if ($_SESSION['authkey'] != $authkey) {
     header('Location: index.html');
     die();
 }
@@ -31,7 +38,7 @@ if ($_COOKIE['authkey'] != $authkey) {
             <label for="autocomplete-input">Items</label><input type="text" id="autocomplete-input" placeholder="Type to search...">&nbsp;$&nbsp;<span id="price"></span>
             <input type="hidden" id="itemID"/>
             <input type="button" id="updatePrice" value="Update" onclick="updatePrice();" disabled/>
-            <input type="button" id="logout" value="Logout" onclick="document.cookie = 'authkey=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';document.cookie = 'username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';window.location.href='index.html';"/>
+            <input type="button" id="logout" value="Logout" onclick="localStorage.clear();window.location.href='index.html';"/>
             <div id="autocomplete-suggestions" class="autocomplete-suggestions"></div>
             <div id="debug"></div>
         </header>
