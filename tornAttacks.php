@@ -25,14 +25,26 @@ $todayTimestamp = $today["0"];
 
 $jsonLogs = json_decode(file_get_contents("https://api.torn.com/v2/user?selections=attacks&key=". $TORN_API_KEY ."&from=". $firstTimeStamp + 1 . "&to=" . $nextDayTimestamp -1 , false));
 
-foreach ($jsonLogs->attacks as $property => $value)
-    $collection->insertOne($value);
+// Supprimer les doublons basés sur la propriété 'code'
+$uniqueLogs = [];
+foreach ($jsonLogs->attacks as $property => $value) {
+    if (!isset($uniqueLogs[$value->code])) {
+        $uniqueLogs[$value->code] = $value;
+        $collection->insertOne($value);
+    }
+}
 usleep(500000);
 for ($t = $nextDayTimestamp; $t <= $todayTimestamp; $t += $INTERVAL){
     $jsonLogs = json_decode(file_get_contents("https://api.torn.com/v2/user?selections=attacks&key=". $TORN_API_KEY ."&from=". $t . "&to=" . $t + $INTERVAL), false);
     echo date("Y-m-d H:i:s", $t) ;
-    foreach ($jsonLogs->attacks as $property => $value)
-        $collection->insertOne($value);
+    // Supprimer les doublons basés sur la propriété 'code'
+    $uniqueLogs = [];
+    foreach ($jsonLogs->attacks as $property => $value) {
+        if (!isset($uniqueLogs[$value->code])) {
+            $uniqueLogs[$value->code] = $value;
+            $collection->insertOne($value);
+        }
+    }
     usleep(500000);
 }
 ?>

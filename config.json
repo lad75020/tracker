@@ -521,7 +521,7 @@
             "Failures",
             "Items"
         ],
-        "crime_action": "cutting|printing|signing|drafting|laminating|perforating",
+        "crime_action": "cutting|printing|signing|drafting|laminating|perforating|sealing|Plate|rubbing|painting|typewriting",
         "type": "S/F",
         "options": {
             "height": 480,
