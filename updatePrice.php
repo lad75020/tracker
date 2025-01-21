@@ -1,10 +1,15 @@
 <?php
-require 'vendor/autoload.php';
-use MongoDB\Client;
+session_start([ 'cookie_secure' => true,'cookie_httponly' => true, 'cookie_samesite' => 'Strict'  ]);
+require_once __DIR__ . '/vendor/autoload.php';
+$collection = (new MongoDB\Client())->TORN->users;
+
+if ($_SESSION['authkey'] != $collection->findOne(['username' => $_SESSION['username']])['authkey']) {
+    die("Invalid session");
+}
 
     try {
         $id = $_GET['id'];
-        $key = $_GET['key'];
+        $key = $_SESSION['TornAPIKey'];
         $data = json_decode(file_get_contents("https://api.torn.com/v2/market/$id/itemmarket?key=$key&offset=0"));
 
         $price = $data->itemmarket->listings[0]->price;

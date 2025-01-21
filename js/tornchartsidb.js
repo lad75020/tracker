@@ -120,7 +120,7 @@
         }
         function updatePrice(){
             const itemID = document.getElementById('itemID').value;
-            fetch(`${HOME_URL}updatePrice.php?id=${itemID}&key=${localStorage.getItem('TornAPIKey')}`)
+            fetch(`${HOME_URL}updatePrice.php?id=${itemID}`)
             .then(response => response.text())
             .then(data => {
                 document.getElementById('price').style.color = 'rgb(157, 255, 0)';
@@ -221,10 +221,10 @@
             document.getElementById('chartContainer').style.display = 'none';
             document.getElementById('date').innerText = "";
             document.getElementById('percent').innerText = "";
-            await fetch(`${HOME_URL}tornAttacks.php?key=${localStorage.getItem('TornAPIKey')}`)
+            await fetch(`${HOME_URL}tornAttacks.php`)
             .then(response=> response.text())
             .then(data => { document.getElementById("date").innerText= data });
-            const eventSource = new EventSource(`${HOME_URL}torn.php?key=${localStorage.getItem('TornAPIKey')}`);
+            const eventSource = new EventSource(`${HOME_URL}torn.php`);
             eventSource.onmessage = (event) => { 
                 document.getElementById("date").innerText = event.data;
              }
