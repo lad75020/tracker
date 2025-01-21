@@ -8,8 +8,7 @@ if (!isset($_SESSION['username']) || !isset($_SESSION['authkey'])) {
     die();
 }
 
-$authkey = $collection->findOne(['username' => $_SESSION['username']])['authkey'];
-if ($_SESSION['authkey'] != $authkey) {
+if ($_SESSION['authkey'] != $collection->findOne(['username' => $_SESSION['username']])['authkey']) {
     header('Location: index.html');
     die();
 }

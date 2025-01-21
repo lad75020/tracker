@@ -1,9 +1,15 @@
 <?php
+session_start([ 'cookie_secure' => true,'cookie_httponly' => true, 'cookie_samesite' => 'Strict'  ]);
 require_once __DIR__ . '/vendor/autoload.php';
+$collection = (new MongoDB\Client())->TORN->users;
+
+if ($_SESSION['authkey'] != $collection->findOne(['username' => $_SESSION['username']])['authkey']) {
+    die("Invalid session");
+}
 
 $collection = (new MongoDB\Client)->TORN->attacks;
 
-$TORN_API_KEY = $_GET['key'];
+$TORN_API_KEY = $_SESSION['TornAPIKey'];
 $INTERVAL = 86400;
 $aFirstDateTime = [];
 $firstTimestamp = 0;
@@ -30,7 +36,10 @@ $uniqueLogs = [];
 foreach ($jsonLogs->attacks as $property => $value) {
     if (!isset($uniqueLogs[$value->code])) {
         $uniqueLogs[$value->code] = $value;
-        $collection->insertOne($value);
+        // Vérifier si le document existe déjà dans la collection
+        if ($collection->countDocuments(['code' => $value->code]) == 0) {
+            $collection->insertOne($value);
+        }
     }
 }
 usleep(500000);
@@ -42,7 +51,10 @@ for ($t = $nextDayTimestamp; $t <= $todayTimestamp; $t += $INTERVAL){
     foreach ($jsonLogs->attacks as $property => $value) {
         if (!isset($uniqueLogs[$value->code])) {
             $uniqueLogs[$value->code] = $value;
-            $collection->insertOne($value);
+            // Vérifier si le document existe déjà dans la collection
+            if ($collection->countDocuments(['code' => $value->code]) == 0) {
+                $collection->insertOne($value);
+            }
         }
     }
     usleep(500000);

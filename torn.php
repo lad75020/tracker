@@ -2,12 +2,18 @@
 header('Content-Type: text/event-stream');
 header('Cache-Control: no-cache');
 header('Connection: keep-alive');
+session_start([ 'cookie_secure' => true,'cookie_httponly' => true, 'cookie_samesite' => 'Strict'  ]);
 require_once __DIR__ . '/vendor/autoload.php';
+$collection = (new MongoDB\Client())->TORN->users;
+
+if ($_SESSION['authkey'] != $collection->findOne(['username' => $_SESSION['username']])['authkey']) {
+    die("Invalid session");
+}
 
 $collection = (new MongoDB\Client)->TORN->logs;
 $doc = $collection->findOne([],['sort' => ["timestamp" => -1],'limit' => 1]);
 
-$TORN_API_KEY = $_GET['key'];
+$TORN_API_KEY = $_SESSION['TornAPIKey'];
 $INTERVAL = 900;
 
 $aFirstDateTime = explode("-", date("Y-m-d-H-i-s", $doc->timestamp + 1));

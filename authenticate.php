@@ -19,6 +19,7 @@ if ($user && password_verify($passkey, $user['passkey'])) {
     $collection->updateOne(['username' => $username], ['$set' => ['authkey' => $uuid->toString()]]);
     $_SESSION['username'] = $username;
     $_SESSION['authkey'] = $uuid->toString();
+    $_SESSION['TornAPIKey'] = $user->TornAPIKey;
     echo json_encode(['success' => true, 'TornAPIKey'=>$user->TornAPIKey,'TornUserID'=>$user->TornUserID]);
 } else {
     echo json_encode(['success' => false, 'message' => 'Invalid credentials']);
