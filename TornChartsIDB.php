@@ -25,6 +25,11 @@ if ($_SESSION['authkey'] != $collection->findOne(['username' => $_SESSION['usern
         <script type="text/javascript" src="js/tornchartsidb.js"></script>
         <script type="text/javascript" src="js/auto-complete.js"></script>
         <script type="text/javascript" src="js/jsonview.js"></script>
+        
+        <script>
+            w = new Worker('js/service-worker.js');
+            w.onMessage = function(event) { document.getElementById("logFetching").style.display =  event.data; };
+        </script>
     </head>
     <body onload="loadConfig();fetchDateRange();initAutoComplete();">
         <header id="controls">
@@ -33,11 +38,11 @@ if ($_SESSION['authkey'] != $collection->findOne(['username' => $_SESSION['usern
             <select id="chartSelect" onchange="this.options[0].text = 'Clear Chart' ;if (this.value != 'empty') {initDisplay();drawChart(this.value);} else {chart.clearChart();document.getElementById('debug2').innerHTML='';this.options[0].text = 'Select Chart';}"></select>
             <label for="showData">Show Data</label><input type="checkbox" id="showData" onchange="document.getElementById('debug2').style.display = this.checked ? 'block':'none'"/>
             <input type="button" id="setLogDates" value="Set Max Dates" onclick="setInitialDates()"/>
-            <input type="button" id="fetchLogs" value="Fetch Logs" onclick="fetchLogs()"/>
+            <span id="logFetching" style="display:none"><img src="images/wait.gif" width="20px" height="20px"/></span>
             <label for="autocomplete-input">Items</label><input type="text" id="autocomplete-input" placeholder="Type to search...">&nbsp;$&nbsp;<span id="price"></span>
             <input type="hidden" id="itemID"/>
             <input type="button" id="updatePrice" value="Update" onclick="updatePrice();" disabled/>
-            <input type="button" id="logout" value="Logout" onclick="destroySession();"/>
+            <input type="button" id="logout" value="Logout" onclick="destroySession();w.terminate();w=undefined;"/>
             <div id="autocomplete-suggestions" class="autocomplete-suggestions"></div>
             <div id="debug"></div>
         </header>
