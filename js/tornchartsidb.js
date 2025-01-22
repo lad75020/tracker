@@ -25,6 +25,11 @@
         let firstSelectedDate = "";
         let secondSelectedDate = "";
         let jsonCharts;
+        function destroySession(){
+            fetch(`${HOME_URL}destroySession.php`)
+            .then(response => response.text())
+            .then(data => { location.href = "index.html"; });
+        }
         function getCommonObjectsById(array1, array2) { 
             const map = new Map();
             array1.forEach(item => { map.set(item._id, item); });
@@ -178,6 +183,11 @@
                                     console.log("skipping "+item._id);
                                 }
                             }
+                            count_id.onerror = (event) => {
+                                console.error('Error counting id:', event.target.error);
+                                console.log("inserting "+item._id);
+                                objectStore.put(item);
+                            }
                         }
                     })
                     .catch(error => {
@@ -192,20 +202,40 @@
 
         async function fetchAndStoreData(url) {
             const request = indexedDB.open('TORN');
+            request.onupgradeneeded = (event) => {
+                const db = event.target.result;
+                if (!db.objectStoreNames.contains('logs')) {
+                    const targetStore = db.createObjectStore('logs', { keyPath: '_id' });
+                    targetStore.createIndex('logIndex', 'log', { unique: false });
+                    targetStore.createIndex('timestampIndex', 'timestamp', { unique: false });
+                    targetStore.createIndex('crime_actionIndex', 'data.crime_action', { unique: false });
+                    targetStore.createIndex('crimeIndex', 'data.crime', { unique: false });
+                }
+            };
             request.onsuccess = async (event) => { 
                 const db = event.target.result;
-                const transaction = db.transaction(['logs'], 'readonly');
-                const objectStore = transaction.objectStore('logs');
-                const index = objectStore.index('timestampIndex');
-                const cursorRequest = await index.openCursor(null, 'prev');
-                cursorRequest.onsuccess = (event) => {
-                    const cursor = event.target.result;
-                    if (cursor) {
-                        const record = cursor.value;
-                        insertLogs(url, record.timestamp);
-                    }
-                };
-                cursorRequest.onerror = (event) => { reject('Error retrieving data: ' + event.target.error); };
+                if (!db.objectStoreNames.contains('logs')) {
+                    const targetStore = db.createObjectStore('logs', { keyPath: '_id' });
+                    targetStore.createIndex('logIndex', 'log', { unique: false });
+                    targetStore.createIndex('timestampIndex', 'timestamp', { unique: false });
+                    targetStore.createIndex('crime_actionIndex', 'data.crime_action', { unique: false });
+                    targetStore.createIndex('crimeIndex', 'data.crime', { unique: false });
+                    insertLogs(url, 0);
+                }
+                else{
+                    const transaction = db.transaction(['logs'], 'readonly');
+                    const objectStore = transaction.objectStore('logs');
+                    const index = objectStore.index('timestampIndex');
+                    const cursorRequest = await index.openCursor(null, 'prev');
+                    cursorRequest.onsuccess = (event) => {
+                        const cursor = event.target.result;
+                        if (cursor) {
+                            const record = cursor.value;
+                            insertLogs(url, record.timestamp);
+                        }
+                    };
+                    cursorRequest.onerror = (event) => {  reject('Error retrieving data: ' + event.target.error); };
+                }
             };
         
             request.onupgradeneeded = (event) => {

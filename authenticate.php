@@ -1,4 +1,5 @@
 <?php
+ini_set('session.gc_maxlifetime', 864000);
 session_start([ 'cookie_secure' => true,'cookie_httponly' => true, 'cookie_samesite' => 'Strict'  ]);
 header('Content-Type: application/json');
 

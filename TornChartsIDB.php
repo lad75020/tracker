@@ -37,7 +37,7 @@ if ($_SESSION['authkey'] != $collection->findOne(['username' => $_SESSION['usern
             <label for="autocomplete-input">Items</label><input type="text" id="autocomplete-input" placeholder="Type to search...">&nbsp;$&nbsp;<span id="price"></span>
             <input type="hidden" id="itemID"/>
             <input type="button" id="updatePrice" value="Update" onclick="updatePrice();" disabled/>
-            <input type="button" id="logout" value="Logout" onclick="localStorage.clear();window.location.href='index.html';"/>
+            <input type="button" id="logout" value="Logout" onclick="destroySession();"/>
             <div id="autocomplete-suggestions" class="autocomplete-suggestions"></div>
             <div id="debug"></div>
         </header>

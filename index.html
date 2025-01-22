@@ -33,8 +33,6 @@
             .then(response => response.json())
             .then(data => {
                 if (data.success) {
-                    localStorage.setItem('TornAPIKey', data.TornAPIKey);
-                    localStorage.setItem('TornUserID', data.TornUserID);
                     window.location.href = `https://tracker.dubertrand.fr/TornChartsIDB.php`;
                 } else {
                     alert('Login failed: ' + data.message);
