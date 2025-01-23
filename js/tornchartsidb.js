@@ -124,6 +124,7 @@
             }); 
         }
         function updatePrice(){
+            document.getElementById('logFetching').style.visibility = 'visible';
             const itemID = document.getElementById('itemID').value;
             fetch(`${HOME_URL}updatePrice.php?id=${itemID}`)
             .then(response => response.text())
@@ -131,6 +132,7 @@
                 document.getElementById('price').style.color = 'rgb(157, 255, 0)';
                 document.getElementById('price').innerText = data;
                 initAutoComplete();
+                document.getElementById('logFetching').style.visibility = 'hidden';
             });
         }
         async function loadConfig() {
@@ -338,17 +340,17 @@
                 }
                 if(type=="Attack"){
                     await fetch(`${HOME_URL}getTornAttacks.php?from=${t}&to=${t+DAY_TO_SEC}`)
-                    .then(response=> response.text())
+                    .then(response=> response.json())
                     .then(data => { 
-                        let {wins, losses,attacks,defends} = JSON.parse(data);
+                        let {wins, losses,attacks,defends} = data;
                         data1.push([thisDay, attacks,defends,wins,losses,'color: red']);
                     });
                 }
                 if(type=="Trains"){
                     await fetch(`${HOME_URL}getCompanyTrains.php?from=${t}&to=${t+DAY_TO_SEC}`)
-                    .then(response=> response.text())
+                    .then(response=> response.json())
                     .then(data => { 
-                        let {manual, intelligence, endurance, trains} = JSON.parse(data);
+                        let {manual, intelligence, endurance, trains} = data;
                         manual_skill += parseInt(manual);
                         intelligence_skill += parseInt(intelligence);
                         endurance_skill += parseInt(endurance);
@@ -357,19 +359,18 @@
                 }                   
                 if (category == "Gym"){
                     await fetch(`${HOME_URL}getTornGymStats.php?from=${t}&to=${t+DAY_TO_SEC}}`)
-                    .then(response=> response.text())
+                    .then(response=> response.json())
                     .then(data => {
-                        if (data != "[]"){
-                            const oJSON = JSON.parse(data);
-                            i[1] = oJSON.speed ?? previous.speed;
-                            previous.speed = oJSON.speed ?? previous.speed;
-                            i[2] = oJSON.defense ?? previous.defense;
-                            previous.defense = oJSON.defense ?? previous.defense;
-                            i[3] = oJSON.dexterity ?? previous.dexterity;
-                            previous.dexterity = oJSON.dexterity ?? previous.dexterity; 
-                            i[4] = oJSON.strength ?? previous.strength;
-                            previous.strength = oJSON.strength ?? previous.strength;
-                            i[5] = oJSON.energy_used;
+                        if (data){
+                            i[1] = data.speed ?? previous.speed;
+                            previous.speed = data.speed ?? previous.speed;
+                            i[2] = data.defense ?? previous.defense;
+                            previous.defense = data.defense ?? previous.defense;
+                            i[3] = data.dexterity ?? previous.dexterity;
+                            previous.dexterity = data.dexterity ?? previous.dexterity; 
+                            i[4] = data.strength ?? previous.strength;
+                            previous.strength = data.strength ?? previous.strength;
+                            i[5] = data.energy_used;
                         }
                     });
                     i.push('color: black');
@@ -390,7 +391,7 @@
                         data1.push(i);
                 }
                 if (log == 5410){
-                    await retrieveLogsByLog(5410, t, t+DAY_TO_SEC).then(objects => {i[1] = objects.length;});
+                    await retrieveLogsByLog(log, t, t+DAY_TO_SEC).then(objects => {i[1] = objects.length;});
                     await retrieveLogsByLog(5415, t, t+DAY_TO_SEC).then(objects => {i[2] = objects.length;});
                     
                     i.push('color: red');

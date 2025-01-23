@@ -34,6 +34,7 @@ function insertLogs(url, highestTimestamp){
                                     console.log("skipping "+item._id);
                                 }
                             }
+                            postMessage("hidden");
                             count_id.onerror = (event) => {
                                 console.error('Error counting id:', event.target.error);
                             }
@@ -100,7 +101,7 @@ function insertLogs(url, highestTimestamp){
             eventSource.onmessage = (event) => { 
                 console.log(event.data);
             };
-            eventSource.addEventListener('end', function(event) { 
+            eventSource.addEventListener('end', (event) => { 
                 console.log("Attacks done");
                 eventSource.close();
             });
@@ -109,7 +110,7 @@ function insertLogs(url, highestTimestamp){
             eventSource2.onmessage = (event) => { 
                 console.log(event.data);
             };
-            eventSource2.addEventListener('end', function(event) { 
+            eventSource2.addEventListener('end', (event) => { 
                 fetchAndStoreData(`${HOME_URL}getAllTornLogs.php`);
                 eventSource2.close();
             });
