@@ -26,7 +26,8 @@ function insertLogs(url, highestTimestamp){
                             count_id.onsuccess = (event) => {
                                 if (event.target.result == 0) {
                                     count++;
-                                    console.log("inserting "+item._id);
+                                    const date = new Date();
+                                    console.log("inserting "+item._id+" at "+ date.toUTCString());
                                     objectStore.put(item);
                                 }
                                 else{
@@ -35,8 +36,6 @@ function insertLogs(url, highestTimestamp){
                             }
                             count_id.onerror = (event) => {
                                 console.error('Error counting id:', event.target.error);
-                                console.log("inserting "+item._id);
-                                objectStore.put(item);
                             }
                         }
                     })
@@ -97,12 +96,13 @@ function insertLogs(url, highestTimestamp){
         }
                
         async function fetchLogs(){
-            await fetch(`${HOME_URL}tornAttacks.php`)
-            .then(response=> response.text())
-            .then(data => { /*document.getElementById("date").innerText= data */ });
-            const eventSource = new EventSource(`${HOME_URL}torn.php`);
+            let eventSource= new EventSource(`${HOME_URL}tornAttacks.php`);
             eventSource.onmessage = (event) => { 
-                //document.getElementById("date").innerText = event.data;
+                console.log(event.data);
+             }
+            eventSource = new EventSource(`${HOME_URL}torn.php`);
+            eventSource.onmessage = (event) => { 
+                console.log(event.data);
              }
             eventSource.addEventListener('end', function(event) { 
                 fetchAndStoreData(`${HOME_URL}getAllTornLogs.php`);

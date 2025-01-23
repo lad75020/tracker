@@ -273,7 +273,7 @@
 
                 let i = [thisDay];
                 let {log, crime, crime_action, category,type} = currentChart;
-                if (log != 9005 && log != 5410 && log !=2290 && log!= 8731 && category != "Gym" && type != "Attack" && type != "Trains" && type != "AllSkills" && type != "graffiti" && type != "Casino"){
+                if (log != 9005 && log != 5410 && log !=2290 && log!= 8731 && log != 2340 && category != "Gym" && type != "Attack" && type != "Trains" && type != "AllSkills" && type != "graffiti" && type != "Casino"){
                     await fetch(`${HOME_URL}getTornLogCount.php?from=${t}&to=${t+DAY_TO_SEC}&log=${log}&crime_action=${crime_action}`)
                     .then(response=> response.text())
                     .then(data => { i.push ( parseInt(data));});
@@ -376,11 +376,17 @@
                     data1.push(i);
                 }
                 if(log == 2290){
-                    await retrieveLogsByLog(2290, t, t+DAY_TO_SEC).then(objects => {i[1] = objects.length;});
+                    await retrieveLogsByLog(log, t, t+DAY_TO_SEC).then(objects => {i[1] = objects.length;});
                     await retrieveLogsByLog(2291, t, t+DAY_TO_SEC).then(objects => {i[2] = objects.length;});
                     await retrieveLogsByLog(6005, t, t+DAY_TO_SEC).then(objects => {i[3] = objects[0] !== undefined ? objects[0].data.rehab_times : 0;});
                     i.push('color: green');
                     if(i[1] > 0 || i[2] > 0 || i[3] > 0)
+                        data1.push(i);
+                }
+                if(log == 2340){
+                    await retrieveLogsByLog(log, t, t+DAY_TO_SEC).then(objects => {i[1] = objects.length;});
+                    i.push('color: black');
+                    if(i[1] > 0)
                         data1.push(i);
                 }
                 if (log == 5410){

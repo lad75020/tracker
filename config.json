@@ -935,5 +935,32 @@
                 }
             }
         }
+    },
+    {
+        "name": "Blood Withdrawal",
+        "log": 2340,
+        "type": "Health",
+        "header": [
+            "Date",
+            "Count"
+        ],
+        "options": {
+            "height": 480,
+            "animation": {
+                "startup": true
+            },
+            "title": "Blood Withdrawal",
+            "vAxis": {
+                "title": "Count"
+            },
+            "seriesType": "bars",
+            "series": {
+                "0": {
+                    "axis": "counts",
+                    "type": "bars",
+                    "color": "black"
+                }
+            }
+        }
     }
 ]

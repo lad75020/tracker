@@ -7,7 +7,7 @@ require_once __DIR__ . '/vendor/autoload.php';
 $collection = (new MongoDB\Client())->TORN->users;
 
 if ($_SESSION['authkey'] != $collection->findOne(['username' => $_SESSION['username']])['authkey']) {
-    die("Invalid session");
+    die("data: Invalid session\n\n");
 }
 
 $collection = (new MongoDB\Client)->TORN->logs;

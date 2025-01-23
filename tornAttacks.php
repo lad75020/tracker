@@ -1,10 +1,13 @@
 <?php
+header('Content-Type: text/event-stream');
+header('Cache-Control: no-cache');
+header('Connection: keep-alive');
 session_start([ 'cookie_secure' => true,'cookie_httponly' => true, 'cookie_samesite' => 'Strict'  ]);
 require_once __DIR__ . '/vendor/autoload.php';
 $collection = (new MongoDB\Client())->TORN->users;
 
 if ($_SESSION['authkey'] != $collection->findOne(['username' => $_SESSION['username']])['authkey']) {
-    die("Invalid session");
+    die("data: Invalid session\n\n");
 }
 
 $collection = (new MongoDB\Client)->TORN->attacks;
@@ -24,8 +27,9 @@ else{
     $firstTimeStamp = $doc->timestamp;
 }
 $nextDayTimestamp = mktime(0,0,0,$aFirstDateTime[1],$aFirstDateTime[2]+1,$aFirstDateTime[0]);
+echo 'data: ' . implode("-", $aFirstDateTime)."\n\n";
+ob_flush(); flush();
 
-echo implode("-", $aFirstDateTime) . "\n";
 $today = getdate();
 $todayTimestamp = $today["0"];
 
@@ -45,7 +49,8 @@ foreach ($jsonLogs->attacks as $property => $value) {
 usleep(500000);
 for ($t = $nextDayTimestamp; $t <= $todayTimestamp; $t += $INTERVAL){
     $jsonLogs = json_decode(file_get_contents("https://api.torn.com/v2/user?selections=attacks&key=". $TORN_API_KEY ."&from=". $t . "&to=" . $t + $INTERVAL), false);
-    echo date("Y-m-d H:i:s", $t) ;
+    echo 'data: '.date("Y-m-d H:i:s", $t).'\n\n';
+    ob_flush(); flush();
     // Supprimer les doublons basés sur la propriété 'code'
     $uniqueLogs = [];
     foreach ($jsonLogs->attacks as $property => $value) {
@@ -59,4 +64,7 @@ for ($t = $nextDayTimestamp; $t <= $todayTimestamp; $t += $INTERVAL){
     }
     usleep(500000);
 }
+echo "event: end\n";
+echo "data: End of stream\n\n";
+ob_flush(); flush();
 ?>
