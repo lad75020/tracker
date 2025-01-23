@@ -9,6 +9,8 @@
             "Overdose",
             "Rehab"
         ],
+        "total": 0,
+        "totalTitle":"Taken",
         "options": {
             "height": 480,
             "animation": {
@@ -47,6 +49,8 @@
             "Successes",
             "Failures"
         ],
+        "total" : 0,
+        "totalTitle": "Successes",
         "options": {
             "height": 480,
             "animation": {
@@ -762,6 +766,8 @@
             "EnergyUsed"
         ],
         "category": "Gym",
+        "total":4,
+        "totalTitle":"Energy",
         "options": {
             "height": 480,
             "animation": {
@@ -913,6 +919,8 @@
         "log": 8300,
         "type": "Casino",
         "category": "Slots",
+        "total":0,
+        "totalTitle":"P&L",
         "header": [
             "Date",
             "Win/Loss"
@@ -944,6 +952,8 @@
             "Date",
             "Count"
         ],
+        "total" : 0,
+        "totalTitle":"Total",
         "options": {
             "height": 480,
             "animation": {

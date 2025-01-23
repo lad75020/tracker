@@ -10,6 +10,8 @@ body {background-color: rgb(236, 243, 247);height: 100%;  }
 #date {font-family:'Lucida Console';font-size: 22px;}
 #percent {font-family:'Lucida Console';font-size: 22px}
 #debug2 {background-color:white;font-family: 'Lucida Console';position:absolute;top:520px; height:480px;overflow-y: auto; border: 5px solid #ccc;display:none;}
+#fetchStatus {font-family:'Lucida Console';font-size: 14px;color:rgb(255, 255, 255);font-weight:bold}
+#Total {font-family:'Lucida Console';font-size: 88px;color:black;position:absolute;top:520px;right:2px;border: 5px solid #ccc;display:none;}
 .autocomplete-suggestions {
     border: 1px solid #ccc;
     max-height: 150px;

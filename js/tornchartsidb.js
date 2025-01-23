@@ -80,7 +80,7 @@
             });
         
             // Ajouter la table au corps du document ou à un élément spécifique
-            document.getElementById('debug2').appendChild(table);
+            return (table);
         }
         
         async function retrieveLogsByLog(log, from, to) {
@@ -235,6 +235,7 @@
             if(chart)
                 chart.clearChart();
             document.getElementById("chartContainer").style.display = "none";
+            document.getElementById("Total").style.display = "none";
             document.getElementById("debug").innerHTML = "";
             document.getElementById("debug2").innerHTML = "";
             document.getElementById('wait').style.display = 'block';
@@ -385,7 +386,7 @@
                         data1.push(i);
                 }
                 if(log == 2340){
-                    await retrieveLogsByLog(log, t, t+DAY_TO_SEC).then(objects => {i[1] = objects.length;});
+                    await retrieveLogsByLog(log, t, t+DAY_TO_SEC).then(objects => {i[1] = objects.length; });
                     i.push('color: black');
                     if(i[1] > 0)
                         data1.push(i);
@@ -455,8 +456,19 @@
             document.getElementById("controls").style.display="block";
             if(data.length > 1){
                 document.getElementById("chartContainer").style.display="block";
-
-                createTable(data);
+                if(currentChart.total !== undefined){
+                    let total = 0;
+                    let isFirstItem = true;
+                    data.forEach((item) => {
+                        if (item[currentChart.total +1] !== undefined && !isFirstItem)
+                            total += parseInt(item[currentChart.total +1]);
+                        if (isFirstItem) 
+                            isFirstItem = false;
+                    });
+                    document.getElementById("Total").innerText = `${currentChart.totalTitle} ${total}`;
+                    document.getElementById("Total").style.display='block';
+                }
+                document.getElementById('debug2').appendChild(createTable(data));
                 chartData = google.visualization.arrayToDataTable(data);
                 chart = new google.visualization.ComboChart(document.getElementById('chartContainer'));
                 google.visualization.events.addListener(chart, 'select', selectHandler);

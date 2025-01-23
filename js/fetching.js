@@ -35,6 +35,7 @@ function insertLogs(url, highestTimestamp){
                                 }
                             }
                             postMessage("hidden");
+                            postMessage("&nbsp;");
                             count_id.onerror = (event) => {
                                 console.error('Error counting id:', event.target.error);
                             }
@@ -99,16 +100,16 @@ function insertLogs(url, highestTimestamp){
         async function fetchLogs(){
             const eventSource = new EventSource(`${HOME_URL}tornAttacks.php`);
             eventSource.onmessage = (event) => { 
-                console.log(event.data);
+                postMessage(event.data);
             };
             eventSource.addEventListener('end', (event) => { 
-                console.log("Attacks done");
+                postMessage("Attacks done");
                 eventSource.close();
             });
 
             const eventSource2 = new EventSource(`${HOME_URL}torn.php`);
             eventSource2.onmessage = (event) => { 
-                console.log(event.data);
+                postMessage(event.data);
             };
             eventSource2.addEventListener('end', (event) => { 
                 fetchAndStoreData(`${HOME_URL}getAllTornLogs.php`);
