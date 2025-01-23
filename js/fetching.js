@@ -96,16 +96,21 @@ function insertLogs(url, highestTimestamp){
         }
                
         async function fetchLogs(){
-            let eventSource= new EventSource(`${HOME_URL}tornAttacks.php`);
+            const eventSource = new EventSource(`${HOME_URL}tornAttacks.php`);
             eventSource.onmessage = (event) => { 
                 console.log(event.data);
-             }
-            eventSource = new EventSource(`${HOME_URL}torn.php`);
-            eventSource.onmessage = (event) => { 
-                console.log(event.data);
-             }
+            };
             eventSource.addEventListener('end', function(event) { 
-                fetchAndStoreData(`${HOME_URL}getAllTornLogs.php`);
+                console.log("Attacks done");
                 eventSource.close();
+            });
+
+            const eventSource2 = new EventSource(`${HOME_URL}torn.php`);
+            eventSource2.onmessage = (event) => { 
+                console.log(event.data);
+            };
+            eventSource2.addEventListener('end', function(event) { 
+                fetchAndStoreData(`${HOME_URL}getAllTornLogs.php`);
+                eventSource2.close();
             });
         }
