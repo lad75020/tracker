@@ -117,7 +117,7 @@
         function loadChartSelect(){
             const select = document.getElementById("chartSelect");
             select.innerHTML = ""; // Clear existing options
-            select.options.add(new Option("Select Chart Data", "empty")); // Add default option
+            select.options.add(new Option("Select a Chart", "empty")); // Add default option
             jsonCharts.sort((a, b) => { if (a.name < b.name) { return -1; } if (a.name > b.name) { return 1; } return 0; });
             jsonCharts.forEach(oChart => {
                 select.options.add(new Option(oChart.name, oChart.name));
@@ -240,7 +240,7 @@
             document.getElementById("debug2").innerHTML = "";
             document.getElementById('wait').style.display = 'block';
             document.getElementById('controls').style.display = 'none';
-            document.getElementById("chartContainer").innerHTML = "";
+            document.getElementById("Total").innerHTML = "";
 
             const fromDate = new Date(document.getElementById('from').value);
             from = fromDate.getTime()/1000;
@@ -276,7 +276,7 @@
 
                 let i = [thisDay];
                 let {log, crime, crime_action, category,type} = currentChart;
-                if (log != 9005 && log != 5410 && log !=2290 && log!= 8731 && log != 2340 && category != "Gym" && type != "Attack" && type != "Trains" && type != "AllSkills" && type != "graffiti" && type != "Casino"){
+                if (log != 9005 && log != 5410 && log !=2290 && log!= 8731 && log != 2340 && log != 6000 && log != 5510 && category != "Gym" && type != "Attack" && type != "Trains" && type != "AllSkills" && type != "graffiti" && type != "Casino"){
                     await fetch(`${HOME_URL}getTornLogCount.php?from=${t}&to=${t+DAY_TO_SEC}&log=${log}&crime_action=${crime_action}`)
                     .then(response=> response.text())
                     .then(data => { i.push ( parseInt(data));});
@@ -387,7 +387,15 @@
                 }
                 if(log == 2340){
                     await retrieveLogsByLog(log, t, t+DAY_TO_SEC).then(objects => {i[1] = objects.length; });
-                    i.push('color: black');
+                    await retrieveLogsByLog(2100, t, t+DAY_TO_SEC).then(objects => {i[2] = 0 - objects.length; });
+                    i.push('color: red');
+                    if(i[1] > 0 || i[2] < 0)
+                        data1.push(i);
+                }
+                if(log == 6000){
+                    i[1] = 0;
+                    await retrieveLogsByLog(log, t, t+DAY_TO_SEC).then(objects => {for (object of objects) {i[1] += object.data.duration / 3600;}});
+                    i.push('color: blue');
                     if(i[1] > 0)
                         data1.push(i);
                 }
@@ -397,6 +405,16 @@
                     
                     i.push('color: red');
                     if(i[1] > 0 || i[2] > 0)
+                        data1.push(i);
+                }
+                if (log == 5510){
+                    i[1] = 0;
+                    i[2] = 0;
+                    await retrieveLogsByLog(log, t, t+DAY_TO_SEC).then(objects => {for (obj of objects) {i[1] += obj.data.worth;}});
+                    await retrieveLogsByLog(5511, t, t+DAY_TO_SEC).then(objects => {for (obj of objects) {i[2] -= obj.data.worth;}});
+                    
+                    i.push('color: red');
+                    if(i[1] > 0 || i[2] < 0)
                         data1.push(i);
                 }
                 if (log == 8731){
@@ -425,7 +443,7 @@
                     await fetch(`${HOME_URL}getAllSkills.php?from=${t}&to=${t+DAY_TO_SEC}`)
                     .then(response=> response.json())
                     .then(data => {
-                        const skills = ['cracking', 'pickpocketing', 'graffiti', 'skimming', 'forgery', 'searching', 'shoplifting', 'bootlegging', 'burglary','hustling'];
+                        const skills = ['cracking', 'pickpocketing', 'graffiti', 'skimming', 'forgery', 'searching', 'shoplifting', 'bootlegging', 'burglary','hustling','scamming'];
                         skills.forEach(skill => {
                             const skillValue = data[skill] ?? previous[skill];
                             i.push(skillValue);
@@ -457,15 +475,17 @@
             if(data.length > 1){
                 document.getElementById("chartContainer").style.display="block";
                 if(currentChart.total !== undefined){
-                    let total = 0;
-                    let isFirstItem = true;
-                    data.forEach((item) => {
-                        if (item[currentChart.total +1] !== undefined && !isFirstItem)
-                            total += parseInt(item[currentChart.total +1]);
-                        if (isFirstItem) 
-                            isFirstItem = false;
-                    });
-                    document.getElementById("Total").innerText = `${currentChart.totalTitle} ${total}`;
+                    for(const [key, value] of Object.entries(currentChart.total)){
+                        let total = 0;
+                        let isFirstItem = true;
+                        data.forEach((item) => {
+                            if (item[value +1] !== undefined && !isFirstItem)
+                                total += parseInt(item[value+1]);
+                            if (isFirstItem) 
+                                isFirstItem = false;
+                        });
+                        document.getElementById("Total").innerHTML+= `${key} ${total}<BR/>`;
+                    }
                     document.getElementById("Total").style.display='block';
                 }
                 document.getElementById('debug2').appendChild(createTable(data));

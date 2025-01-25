@@ -1,10 +1,11 @@
 
 importScripts('/js/fetching.js');
 let myInterval;
+
 onmessage = (e) => {
     if (e.data === 'once') {
         console.log('Once fetch');
-        periodicFetch();
+        periodicFetch()
     }
     else if (e.data === 'stop') {
         console.log('Stopping interval');
@@ -15,14 +16,14 @@ onmessage = (e) => {
         console.log('Restarting interval');
         myInterval = setInterval(periodicFetch, 60*60*1000);
     }
-    else 
+    else
         console.error('Unknown command: ' + e.data);
 }
-function periodicFetch() {
-    console.log('Fetch at ' + new Date());
+async function periodicFetch() {
+    postMessage(new Date());
     postMessage("visible");
     fetchLogs();
 }
 console.log("Web worker started");
-periodicFetch();
+postMessage("fetching");
 myInterval = setInterval(periodicFetch, 60*60*1000);

@@ -31,9 +31,19 @@ if ($_SESSION['authkey'] != $collection->findOne(['username' => $_SESSION['usern
                 if (event.data == 'visible' || event.data == 'hidden') {
                     document.getElementById("logFetching").style.visibility =  event.data; 
                 }
+                else if (event.data == "fetching") {
+                    if(new Date() - new Date(localStorage.getItem('lastFetch') >= 30*60*1000)){
+                        localStorage.setItem('lastFetch', new Date().toISOString());
+                        w.postMessage("once");
+                    }
+                }
+                else if(event.data instanceof Date) {
+                    localStorage.setItem( "lastFetch", event.data.toISOString());
+                }
                 else {
                     document.getElementById("fetchStatus").innerHTML = event.data;
                 }
+                
             };
                 
         </script>        
@@ -43,18 +53,18 @@ if ($_SESSION['authkey'] != $collection->findOne(['username' => $_SESSION['usern
         <header id="controls">
             <label for="from">Start date</label><input type="date" id="from" onchange ="if (this.value > document.getElementById('last').value) this.value = document.getElementById('last').value"/>
             <label for="last">End date</label><input type="date" id="last" onchange="if(this.value < document.getElementById('from').value) this.value = document.getElementById('from').value"/>
+            <input type="button" id="setLogDates" title="Set max date range" value="&#x2B05;&nbsp;&#x1F4C5;&nbsp;&#x27A1;" onclick="setInitialDates()"/>
             <select id="chartSelect" onchange="this.options[0].text = 'Clear Chart' ;if (this.value != 'empty') {initDisplay();drawChart(this.value);} else {chart.clearChart();document.getElementById('debug2').innerHTML='';this.options[0].text = 'Select Chart';}"></select>
-            <input type="button" id="setLogDates" value="Set Max Dates" onclick="setInitialDates()"/>
             <input type="checkbox" title="Show Data" id="showData" onchange="document.getElementById('debug2').style.display = this.checked ? 'block':'none'"/>
             <label for="autocomplete-input">Items</label><input type="text" id="autocomplete-input" placeholder="Type to search...">&nbsp;$&nbsp;<span id="price"></span>
             <input type="hidden" id="itemID"/>
-            <input type="button" id="updatePrice" title="Fetch latest price" value="Update" onclick="updatePrice();" disabled/>
+            <input type="button" id="updatePrice" title="Fetch latest price" value="&#x1F504;&nbsp;$" onclick="updatePrice();" disabled/>
             <span id="logFetching" style="display:inline;visibility:visible;z-index:100"><img src="images/wait.gif" width="20px" height="20px"/></span>
             <span id="fetchStatus" style="display:inline">&nbsp;</span>
-            <input type="button" value="&#x1F504;" title="Fetch logs once" onclick="w.postMessage('once');"/>
-            <input type="button" value="&#x1F6D1;" title="Stop automatic log fetching" onclick="w.postMessage('stop');"/>
-            <input type="button" value="&#x25B6;" title="Restart automatic log fetching" onclick="w.postMessage('restart');"/>
-            <input type="button" id="logout" value="Logout" onclick="destroySession();w.terminate();w=undefined;"/>
+            <input type="button" value="&#x1F50D;" title="Fetch logs once" onclick="if(new Date() - new Date(localStorage.getItem('lastFetch') >= 30*60*1000)) w.postMessage('once');"/>
+            <input type="button" value="&#x1F6D1;" id="btnStop2" title="Stop automatic log fetching" onclick="w.postMessage('stop');document.getElementById('btnRestart').disabled = false;this.disabled = true;"/>
+            <input type="button" value="&#x25B6;" id="btnRestart" title="Restart automatic log fetching" onclick="w.postMessage('restart');document.getElementById('btnStop2').disabled = false;this.disabled = true;" disabled/>
+            <input type="button" title="Log out" id="logout" value="&#x1F6AA;" onclick="w.terminate();w=undefined;destroySession();"/>
             <div id="autocomplete-suggestions" class="autocomplete-suggestions"></div>
             <div id="debug"></div>
             <div id="Total" style="display:none;z-index:100"></div>

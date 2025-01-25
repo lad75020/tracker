@@ -5,7 +5,7 @@ $collection = (new MongoDB\Client())->TORN->users;
 
 if ($_SESSION['authkey'] != $collection->findOne(['username' => $_SESSION['username']])['authkey']) {
 
-    die("Invalid session");
+    die(json_encode((object)["error"=>"Invalid session"]));
 }
 $collection = (new MongoDB\Client)->TORN->logs;
 $aFilter = ['timestamp' => [ '$gt' => (int)$_GET['from'], '$lt' => (int)$_GET['to']]];
@@ -25,7 +25,8 @@ $crimeMapping = [
     "forgery" => "forgery",
     "pickpocketing" => "pickpocketing",
     "skimming" => "skimming",
-    "hustling" => "hustling"
+    "hustling" => "hustling",
+    "scamming" => "scamming"
 ];
 foreach ($collection->find($aFilter, $options) as $doc) {
     $crime = $doc->data->crime;

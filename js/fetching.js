@@ -1,5 +1,5 @@
 const HOME_URL = "https://tracker.dubertrand.fr/";
-function insertLogs(url, highestTimestamp){
+async function insertLogs(url, highestTimestamp){
             const request = indexedDB.open('TORN');
             request.onupgradeneeded = (event) => {
                 const db = event.target.result;
@@ -25,21 +25,22 @@ function insertLogs(url, highestTimestamp){
                             const count_id = await objectStore.count(item._id);
                             count_id.onsuccess = (event) => {
                                 if (event.target.result == 0) {
-                                    count++;
+                                    postMessage(++count);
                                     const date = new Date();
-                                    console.log("inserting "+item._id+" at "+ date.toUTCString());
+                                    console.log(`inserting ${item._id} from ${item.timestamp} at ${date.toUTCString()}`);
                                     objectStore.put(item);
                                 }
                                 else{
                                     console.log("skipping "+item._id);
                                 }
                             }
-                            postMessage("hidden");
-                            postMessage("&nbsp;");
+
                             count_id.onerror = (event) => {
                                 console.error('Error counting id:', event.target.error);
                             }
                         }
+                        postMessage("hidden");
+                        postMessage("&nbsp;");
                     })
                     .catch(error => {
                         console.error('Mongo Logs Fetch error:', error);

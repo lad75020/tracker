@@ -49,7 +49,7 @@ foreach ($jsonLogs->attacks as $property => $value) {
 usleep(500000);
 for ($t = $nextDayTimestamp; $t <= $todayTimestamp; $t += $INTERVAL){
     $jsonLogs = json_decode(file_get_contents("https://api.torn.com/v2/user?selections=attacks&key=". $TORN_API_KEY ."&from=". $t . "&to=" . $t + $INTERVAL), false);
-    echo 'data: '.date("Y-m-d H:i:s", $t)."\n\n";
+    echo 'data: '.date("Y-m-d", $t)."\n\n";
     ob_flush(); flush();
     // Supprimer les doublons basés sur la propriété 'code'
     $uniqueLogs = [];

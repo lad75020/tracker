@@ -9,8 +9,7 @@
             "Overdose",
             "Rehab"
         ],
-        "total": 0,
-        "totalTitle":"Taken",
+        "total": {"Success" : 0, "Overdose" : 1, "Rehab" : 2},
         "options": {
             "height": 480,
             "animation": {
@@ -49,8 +48,7 @@
             "Successes",
             "Failures"
         ],
-        "total" : 0,
-        "totalTitle": "Successes",
+        "total" : {"Successes":0, "Failures":1},
         "options": {
             "height": 480,
             "animation": {
@@ -613,7 +611,8 @@
             "Shoplifting",
             "Bootlegging",
             "Burglary",
-            "Hustling"
+            "Hustling",
+            "Scamming"
 
         ],
         "crime": "all",
@@ -666,6 +665,10 @@
                 "9": {
                     "type": "line",
                     "color": "black"
+                },
+                "10": {
+                    "type": "line",
+                    "color": "blue"
                 }
             }
         }
@@ -766,8 +769,7 @@
             "EnergyUsed"
         ],
         "category": "Gym",
-        "total":4,
-        "totalTitle":"Energy",
+        "total":{"Energy":4},
         "options": {
             "height": 480,
             "animation": {
@@ -919,8 +921,7 @@
         "log": 8300,
         "type": "Casino",
         "category": "Slots",
-        "total":0,
-        "totalTitle":"P&L",
+        "total": {"P&L":0},
         "header": [
             "Date",
             "Win/Loss"
@@ -945,21 +946,21 @@
         }
     },
     {
-        "name": "Blood Withdrawal",
+        "name": "Blood Transactions",
         "log": 2340,
         "type": "Health",
         "header": [
             "Date",
-            "Count"
+            "Withdrawal",
+            "Healing"
         ],
-        "total" : 0,
-        "totalTitle":"Total",
+        "total" : {"Withdraw":0, "Healing":1},
         "options": {
             "height": 480,
             "animation": {
                 "startup": true
             },
-            "title": "Blood Withdrawal",
+            "title": "Blood Transactions",
             "vAxis": {
                 "title": "Count"
             },
@@ -968,7 +969,74 @@
                 "0": {
                     "axis": "counts",
                     "type": "bars",
-                    "color": "black"
+                    "color": "blue"
+                },
+                "1": {
+                    "axis": "counts",
+                    "type": "bars",
+                    "color": "red"
+                }
+            }
+        }
+    },
+    {
+        "name": "Travel time",
+        "log": 6000,
+        "type": "Bars",
+        "header": [
+            "Date",
+            "Hours"
+        ],
+        "total" : {"Total":0},
+        "options": {
+            "height": 480,
+            "animation": {
+                "startup": true
+            },
+            "title": "Travel Time",
+            "vAxis": {
+                "title": "Hours"
+            },
+            "seriesType": "bars",
+            "series": {
+                "0": {
+                    "axis": "counts",
+                    "type": "bars",
+                    "color": "blue"
+                }
+            }
+        }
+    },
+    {
+        "name": "Stock transactions",
+        "log": 5510,
+        "type": "Stock",
+        "header": [
+            "Date",
+            "Purchase",
+            "Sale"
+        ],
+        "total" : {"Purchase":0, "Sale":1},
+        "options": {
+            "height": 480,
+            "animation": {
+                "startup": true
+            },
+            "title": "Stock Transactions",
+            "vAxis": {
+                "title": "Count"
+            },
+            "seriesType": "bars",
+            "series": {
+                "0": {
+                    "axis": "counts",
+                    "type": "bars",
+                    "color": "green"
+                },
+                "1": {
+                    "axis": "counts",
+                    "type": "bars",
+                    "color": "red"
                 }
             }
         }
