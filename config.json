@@ -5,17 +5,17 @@
         "type": "count",
         "header": [
             "Date",
-            "Success",
+            "Taken",
             "Overdose",
             "Rehab"
         ],
-        "total": {"Success" : 0, "Overdose" : 1, "Rehab" : 2},
+        "total": {"Taken" : 0, "Overdose" : 1, "Rehab" : 2},
         "options": {
             "height": 480,
             "animation": {
                 "startup": true
             },
-            "title": "Xanax Taken",
+            "title": "Xanax History",
             "vAxis": {
                 "title": "Count"
             },
@@ -51,6 +51,7 @@
         "total" : {"Successes":0, "Failures":1},
         "options": {
             "height": 480,
+            "isStacked": true,
             "animation": {
                 "startup": true
             },
@@ -1040,5 +1041,51 @@
                 }
             }
         }
+    },
+    {
+        "name": "Market Transactions",
+        "log": 1112,
+        "type": "Item Market",
+        "header": [
+            "Date",
+            "Buy",
+            "Sell"
+        ],
+        "total" : {"Bought":0, "Sold":1},
+        "options": {
+            "height": 480,
+            "animation": {
+                "startup": true
+            },
+            "title": "Market Transactions",
+            "vAxis": {
+                "title": "Count",
+                "logScale":true
+            },
+            "seriesType": "bars",
+            "series": {
+                "0": {
+                    "axis": "counts",
+                    "type": "bars",
+                    "color": "red"
+                },
+                "1": {
+                    "axis": "counts",
+                    "type": "bars",
+                    "color": "green"
+                }
+            }
+        }
+    },
+    {
+        "name":"Networth",
+        "type":"discrete",
+        "header":["Date","Networth"]
+    },
+    {
+        "name":"Faction Balance",
+        "log":6738,
+        "type":"discrete",
+        "header":["Date","Balance"]
     }
 ]

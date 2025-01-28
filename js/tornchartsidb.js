@@ -267,16 +267,27 @@
             else {
                 document.getElementById("debug").innerText = `${chartName} Chart not found`;
                 return;
-            }        
-
+            }
+            if(currentChart.name == "Networth"){
+                const data2 = new Array(["Date", "Value"]);
+                await fetch(`${HOME_URL}getNetworth.php`)
+                .then(response=> response.json())
+                .then(data => { for (networth of data) { data2.push([new Date(networth.date), networth.value])}});
+                return (data2);
+            }   
+            if(currentChart.name == "Faction Balance"){
+                const data2 = new Array(["Date", "Balance"]);
+                await retrieveLogsByLog(currentChart.log, 0, 9999999999).then(objects => {for (balance of objects) {data2.push([new Date(balance.timestamp * 1000), balance.data.balance_after]);}});
+                return (data2);
+            }
             for (t=first; t<=last; t += DAY_TO_SEC){
-                if (stop) break;
+                if (stop) return (data1);
                 const thisDay = new Date(0);
                 thisDay.setUTCSeconds(t);
 
                 let i = [thisDay];
                 let {log, crime, crime_action, category,type} = currentChart;
-                if (log != 9005 && log != 5410 && log !=2290 && log!= 8731 && log != 2340 && log != 6000 && log != 5510 && category != "Gym" && type != "Attack" && type != "Trains" && type != "AllSkills" && type != "graffiti" && type != "Casino"){
+                if (log != 9005 && log != 5410 && log != 1112 && log !=2290 && log !=6738 && log!= 8731 && log != 2340 && log != 6000 && log != 5510 && category != "Gym" && type != "Attack" && type != "Trains" && type != "AllSkills" && type != "graffiti" && type != "Casino"){
                     await fetch(`${HOME_URL}getTornLogCount.php?from=${t}&to=${t+DAY_TO_SEC}&log=${log}&crime_action=${crime_action}`)
                     .then(response=> response.text())
                     .then(data => { i.push ( parseInt(data));});
@@ -292,7 +303,7 @@
                                         if(currentChart.header[k] == "Items")
                                             i.push(parseInt(data));                                  
                                     });
-                    i.push('color: blue');
+                    i.push('color: black');
                     data1.push(i);
                 }
                 if ( type == "graffiti"){
@@ -415,6 +426,16 @@
                     
                     i.push('color: red');
                     if(i[1] > 0 || i[2] < 0)
+                        data1.push(i);
+                }
+                if (log == 1112){
+                    i[1] = 0;
+                    i[2] = 0;
+                    await retrieveLogsByLog(log, t, t+DAY_TO_SEC).then(objects => {for (obj of objects) {i[1] += obj.data.cost_total;}});
+                    await retrieveLogsByLog(1113, t, t+DAY_TO_SEC).then(objects => {for (obj of objects) {i[2] += obj.data.cost_total;}});
+                    
+                    i.push('color: green');
+                    if(i[1] > 0 || i[2] > 0)
                         data1.push(i);
                 }
                 if (log == 8731){
