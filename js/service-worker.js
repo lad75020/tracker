@@ -119,6 +119,21 @@ async function fetchLogs(){
         eventSource2.close();
     });
 }
+async function checkSession() {
+    try {
+      const response = await fetch('https://tracker.dubertrand.fr/checkSession.php');
+      const data = await response.json();
+  
+      if (data.session_active) {
+        postMessage('active');
+      } else {
+        postMessage('inactive');
+      }
+    } catch (error) {
+      console.error('Error checking session:', error);
+    }
+  }
+  
 onmessage = (e) => {
     if (e.data === 'once') {
         console.log('Once fetch');
@@ -144,3 +159,4 @@ async function periodicFetch() {
 console.log("Web worker started");
 postMessage("fetching");
 myInterval = setInterval(periodicFetch, 60*60*1000);
+setInterval(checkSession, 60*1000);

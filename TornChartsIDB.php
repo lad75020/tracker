@@ -37,6 +37,12 @@ if ($_SESSION['authkey'] != $collection->findOne(['username' => $_SESSION['usern
                         w.postMessage("once");
                     }
                 }
+                else if (event.data == "active") {
+                    document.getElementById("logout").style.backgroundColor = "green";
+                }
+                else if (event.data == "inactive") {
+                    location.href = "index.html";
+                }
                 else if(event.data instanceof Date) {
                     localStorage.setItem( "lastFetch", event.data.toISOString());
                 }

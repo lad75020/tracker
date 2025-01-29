@@ -1087,5 +1087,47 @@
         "log":6738,
         "type":"discrete",
         "header":["Date","Balance"]
+    },
+    {
+        "name": "Revive Payments",
+        "header": [
+            "Date",
+            "Money",
+            "Xanax"
+        ],
+        "log":4810,
+        "type": "Money/Items",
+        "options": {
+            "height": 480,
+            "animation": {
+                "startup": true
+            },
+            "title": "Revive Payments",
+            "series": {
+                "0": {
+                    "axis": "money",
+                    "targetAxisIndex": 1,
+                    "type": "line",
+                    "color": "green"
+                },
+                "1": {
+                    "axis": "xanax",
+                    "targetAxisIndex": 0,
+                    "type": "bars",
+                    "color": "blue"
+                }
+            },
+            "axes": {
+                "y": {
+                    "xanax": {
+                        "label": "Xanax"
+                    },
+                    "money": {
+                        "side": "right",
+                        "label": "Money"
+                    }
+                }
+            }
+        }
     }
 ]
