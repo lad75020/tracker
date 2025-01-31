@@ -149,7 +149,7 @@ onmessage = (e) => {
         myInterval = setInterval(periodicFetch, 60*60*1000);
     }
     else
-        console.error('Unknown command: ' + e.data);
+        console.error(`Unknown command: ${e.data}`);
 }
 async function periodicFetch() {
     postMessage(new Date());
@@ -160,3 +160,4 @@ console.log("Web worker started");
 postMessage("fetching");
 myInterval = setInterval(periodicFetch, 60*60*1000);
 setInterval(checkSession, 60*1000);
+fetch(`${HOME_URL}insertNetworth.php`);

@@ -12,7 +12,10 @@ $options['projection'] = ['_id'=>0];
 
 $json = [];
 foreach ($collection->find([], $options) as $doc) {
-    array_push($json,$doc);
+    $jsonItem = new stdClass();
+    $jsonItem->date = $doc->date->toDateTime()->format(DateTime::ISO8601);
+    $jsonItem->value =$doc->value;
+    array_push($json, $jsonItem);
 }
 header('Content-Type: application/json');
 echo json_encode($json);

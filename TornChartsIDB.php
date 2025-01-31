@@ -62,7 +62,8 @@ if ($_SESSION['authkey'] != $collection->findOne(['username' => $_SESSION['usern
             <input type="button" id="setLogDates" title="Set max date range" value="&#x2B05;&nbsp;&#x1F4C5;&nbsp;&#x27A1;" onclick="setInitialDates()"/>
             <select id="chartSelect" onchange="this.options[0].text = 'Clear Chart' ;if (this.value != 'empty') {initDisplay();drawChart(this.value);} else {chart.clearChart();document.getElementById('debug2').innerHTML='';this.options[0].text = 'Select Chart';}"></select>
             <input type="checkbox" title="Show Data" id="showData" onchange="document.getElementById('debug2').style.display = this.checked ? 'block':'none'"/>
-            <label for="autocomplete-input">Items</label><input type="text" id="autocomplete-input" placeholder="Type to search...">&nbsp;$&nbsp;<span id="price"></span>
+            <label id="lblItems" for="autocomplete-input" onclick="document.getElementById('autocomplete-input').value='';">Items</label>
+            <input type="text" id="autocomplete-input" placeholder="Type to search...">&nbsp;$&nbsp;<span id="price"></span>
             <input type="hidden" id="itemID"/>
             <input type="button" id="updatePrice" title="Fetch latest price" value="&#x1F504;&nbsp;$" onclick="updatePrice();" disabled/>
             <span id="logFetching" style="display:inline;visibility:visible;z-index:100"><img src="images/wait.gif" width="20px" height="20px"/></span>

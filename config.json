@@ -1097,6 +1097,8 @@
         ],
         "log":4810,
         "type": "Money/Items",
+        "total":{"Total Xanax":1},    
+
         "options": {
             "height": 480,
             "animation": {

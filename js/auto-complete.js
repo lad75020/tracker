@@ -2,11 +2,13 @@ function initAutoComplete(){
 
     const input = document.getElementById('autocomplete-input');
     const suggestionsContainer = document.getElementById('autocomplete-suggestions');
-    suggestionsContainer.style.left = `${input.offsetLeft +150}px`;
+    const rect = input.getBoundingClientRect();
+    suggestionsContainer.style.left = (rect.left + 140) +'px';
     // Fetch JSON data from a file
     fetch('https://tracker.dubertrand.fr/getAllTornItems.php')
         .then(response => response.json())
         .then(data => {
+            input.placeholder = data.length + ' items';
             input.addEventListener('input', () => {
                 const query = input.value.toLowerCase();
                 suggestionsContainer.innerHTML = '';

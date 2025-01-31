@@ -404,10 +404,10 @@
                         data1.push(i);
                 }
                 if(log == 4810){
-                    await retrieveLogsByLog(log, t, t+DAY_TO_SEC).then(objects => {for (obj of objects) {if (obj.data.sender != 3277171 && obj.data.sender != 3333632) total += obj.data.money;} });
+                    await retrieveLogsByLog(log, t, t+DAY_TO_SEC).then(objects => {for (obj of objects) {if (obj.data.sender != 3277171 && obj.data.sender != 3333632 && obj.data.money < 5000001) total += obj.data.money;} });
                     i.push(total);
                     let xanax = 0;
-                    await retrieveLogsByLog(4103, t, t+DAY_TO_SEC).then(objects => {for (obj of objects){if (obj.data.items[0] !== undefined && obj.data.items[0].id == 206) xanax += obj.data.items[0].qty; }});
+                    await retrieveLogsByLog(4103, t, t+DAY_TO_SEC).then(objects => {for (obj of objects){if (obj.data.items[0] !== undefined && obj.data.items[0].id == 206 && obj.data.sender != 3277171) xanax += obj.data.items[0].qty; }});
                     i.push(xanax);
                     i.push('color: blue');
                     data1.push(i);
