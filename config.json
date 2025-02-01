@@ -1025,7 +1025,8 @@
             },
             "title": "Stock Transactions",
             "vAxis": {
-                "title": "Count"
+                "title": "Count",
+                "logScale":true
             },
             "seriesType": "bars",
             "series": {

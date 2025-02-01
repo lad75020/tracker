@@ -12,8 +12,8 @@
             firstLogDate = new Date(0);
             lastLogDate = new Date(0);
             await fetch(`${HOME_URL}getMaxDateRange.php`)
-            .then(response=> response.text())
-            .then(data => { const range = JSON.parse(data); firstLogDate.setUTCSeconds(range.firstTimestamp);lastLogDate.setUTCSeconds(range.lastTimestamp);setInitialDates();});
+            .then(response=> response.json())
+            .then(data => { firstLogDate.setUTCSeconds(data.firstTimestamp);lastLogDate.setUTCSeconds(data.lastTimestamp);setInitialDates();});
         }
         
         let from = firstLogDate.getTime()/1000;
@@ -269,15 +269,15 @@
                 return;
             }
             if(currentChart.name == "Networth"){
-                const data2 = new Array(["Date", "Value"]);
+                const data2 = new Array(["Date", "Value",{ role: 'style' }]);
                 await fetch(`${HOME_URL}getNetworth.php`)
                 .then(response=> response.json())
-                .then(data => { for (networth of data) { data2.push([new Date(networth.date), networth.value])}});
+                .then(data => { for (networth of data) { data2.push([new Date(networth.date), networth.value,'color: green'])}});
                 return (data2);
             }   
             if(currentChart.name == "Faction Balance"){
-                const data2 = new Array(["Date", "Balance"]);
-                await retrieveLogsByLog(currentChart.log, 0, 9999999999).then(objects => {for (balance of objects) {data2.push([new Date(balance.timestamp * 1000), balance.data.balance_after]);}});
+                const data2 = new Array(["Date", "Balance",{ role: 'style' }]);
+                await retrieveLogsByLog(currentChart.log, 0, 9999999999).then(objects => {for (balance of objects) {data2.push([new Date(balance.timestamp * 1000), balance.data.balance_after,'color:green']);}});
                 return (data2);
             }
             for (t=first; t<=last; t += DAY_TO_SEC){

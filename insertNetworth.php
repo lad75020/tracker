@@ -19,10 +19,21 @@ $headers = [
 // Create a context with the headers
 $context = stream_context_create($headers);
 $collection = (new MongoDB\Client)->TORN->Networth;
+$twentyFourHoursAgo = new DateTime();
+$twentyFourHoursAgo->modify('-12 hours');
+$twentyFourHoursAgoBSON = new MongoDB\BSON\UTCDateTime($twentyFourHoursAgo);
+
+// Check if a document with a date less than 24 hours ago exists
+$existingDocument = $collection->findOne(['date' => ['$gte' => $twentyFourHoursAgoBSON]]);
+
+if ($existingDocument) {
+    die("A document with a date less than 24 hours ago already exists.");
+}
+
 $networth = json_decode(file_get_contents("https://api.torn.com/v2/user/personalstats?cat=networth" , false,$context));
 $lightNetworth = new stdClass();
 $lightNetworth->date = new MongoDB\BSON\UTCDateTime(new DateTime());
-$lightNetworth->networth = $networth->personalstats->networth->total;
+$lightNetworth->value = $networth->personalstats->networth->total;
     
 $collection->insertOne($lightNetworth);
 ?>
