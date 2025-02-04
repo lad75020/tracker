@@ -75,6 +75,7 @@ if ($_SESSION['authkey'] != $collection->findOne(['username' => $_SESSION['usern
             <div id="autocomplete-suggestions" class="autocomplete-suggestions"></div>
             <div id="debug"></div>
             <div id="Total" style="display:none;z-index:100"></div>
+            <div id="Average" style="display:none;z-index:100"></div>
         </header>
         <main>
             <div id="wait">

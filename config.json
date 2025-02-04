@@ -10,6 +10,7 @@
             "Rehab"
         ],
         "total": {"Taken" : 0, "Overdose" : 1, "Rehab" : 2},
+        "average" : {"Avg Taken/d" : 0},
         "options": {
             "height": 480,
             "animation": {

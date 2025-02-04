@@ -43,7 +43,7 @@ ob_flush(); flush();
 $today = getdate();
 $todayTimestamp = $today["0"];
 
-$jsonLogs = json_decode(file_get_contents("https://api.torn.com/v2/attacks?from=". $firstTimeStamp + 1 . "&to=" . $nextDayTimestamp -1 , false,$context));
+$jsonLogs = json_decode(file_get_contents("https://api.torn.com/v2/user/attacks?from=". $firstTimeStamp + 1 . "&to=" . $nextDayTimestamp -1 , false,$context));
 
 
 

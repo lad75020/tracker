@@ -241,6 +241,8 @@
             document.getElementById('wait').style.display = 'block';
             document.getElementById('controls').style.display = 'none';
             document.getElementById("Total").innerHTML = "";
+            document.getElementById("Average").innerHTML = "";
+            document.getElementById("Average").style.display = "none";
 
             const fromDate = new Date(document.getElementById('from').value);
             from = fromDate.getTime()/1000;
@@ -517,6 +519,21 @@
                         document.getElementById("Total").innerHTML+= `${key} ${total}<BR/>`;
                     }
                     document.getElementById("Total").style.display='block';
+                }
+                if(currentChart.average !== undefined){
+                    for(const [key, value] of Object.entries(currentChart.average)){
+                        let total = 0;
+                        let isFirstItem = true;
+                        data.forEach((item) => {
+                            if (item[value +1] !== undefined && !isFirstItem)
+                                total += parseInt(item[value+1]);
+                            if (isFirstItem) 
+                                isFirstItem = false;
+                        });
+                        const average = total/ (last - first) * DAY_TO_SEC;
+                        document.getElementById("Average").innerHTML+= `${key} ${average.toFixed(2)}<BR/>`;
+                    }
+                    document.getElementById("Average").style.display='block';
                 }
                 document.getElementById('debug2').appendChild(createTable(data));
                 chartData = google.visualization.arrayToDataTable(data);
